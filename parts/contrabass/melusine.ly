@@ -1,14 +1,15 @@
 \paper {
   #(set-paper-size "a4")
-  top-margin = 2\cm
-  bottom-margin = 1\cm
-  left-margin = 1\cm
-  right-margin = 1\cm
+  top-margin = 3\cm
+  bottom-margin = 1.2\cm
+  left-margin = 1.2\cm
+  right-margin = 2\cm
 
-  markup-markup-spacing #'basic-distance = #20
-  markup-system-spacing #'basic-distance = #20
-  last-bottom-spacing #'basic-distance = #12
-  system-system-spacing #'basic-distance = #16
+  markup-markup-spacing.basic-distance = #20
+  markup-system-spacing.basic-distance = #20
+  last-bottom-spacing.basic-distance = #12
+  system-system-spacing.basic-distance = #16
+  score-markup-spacing.basic-distance = #50
 
   print-page-number = ##t
   print-all-headers = ##f
@@ -58,6 +59,7 @@
       \compressEmptyMeasures
       \relative c
       {
+        \set Score.markFormatter = #format-mark-alphabet
         \clef bass %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
         \override Hairpin #'minimum-length = #6
 
@@ -233,7 +235,7 @@
             R1*3/2
           }
           {
-            s2. s4 s^"Vc." s
+            s2. s4 s s^"Vc."
             s1*3/2
             s1*3/2
             s1*3/2
@@ -246,7 +248,7 @@
           }
         >>
         \revert MultiMeasureRest #'staff-position
-        d,4^"Cb. (pizz.)" r r r2.
+        d,4^"(pizz.)" r r r2.
         d4 r r r2.
         d4 r r r2.
         d4 r r r2.
@@ -298,9 +300,181 @@
         c4 ees aes c c,8 c c c 
         des2 r4 f\f-. ges-. g-.
         aes4.( des,8) des4 a'4.( des,8) des4
-
+        bes'2. bes4 bes bes 
+        ces2. f,
+        ges ges,
+        r2. ees'4-.\f f-. g!-.
+        aes4. aes,8 aes4 r2.
+        r f'4-. g-. a-. 
+        bes4. bes,8 bes4 r2.
+        b'4.\ff b,8 b4 r2. 
+        b'2\sf b,4 b'2\sf b,4 
+        b'2\sf b,4 b'2\sf b,4 
+        c2 r4 r2.
+        R1*3/2*1^\markup{\number 1}
+        r2. c4\p^"pizz." r r 
+        c r r c r r 
+        c r r r2.
+        R1*3/2*1^\markup{\number 1}
+        r2. c4 r r 
+        c r r c r r 
+        c r r r2.
+        R1*3/2*1^\markup{\number 1}
+        r2. c4 r r 
+        R1*3/2*1^\markup{\number 1}
+        r2. c4 r r 
+        r4 r c\pp^"arco" c2 c4
+        des2.( aes)
+        bes2.( f)
+        des'( a)
+        bes1.(
+        c)~
+        c~
+        c~
+        c~
+        c4 r r r2. 
+        R1*3/2*3
+        f,2.~ f2_\markup{\italic cresc.} f4
+        a2.~ a2 a4
+        bes2\< bes4 bes2 bes4
+        b1.\! 
+        c~\>
+        c\!
+        R1*3/2*2
+        \mark \default
+        a1._\markup{\italic cresc.}( 
+        bes2.) r2.
+        a( f 
+        bes) r  
+        << 
+          {
+            b( g 
+            c) r
+          }{ 
+            s4. s_\markup{\italic cresc.} s2.
+            s1.
+          } 
+        >>
+        b2.\mf( g 
+        c) r
+        b_\markup{\italic {molto cresc.}} g
+        c des\f~ 
+        des des 
+        ges( f 
+        ees des)
+        c r  
+        r des( 
+        c) r 
+        \break
+        r des( 
+        c ges'\p)
+        f4 r r f r r 
+        ges r r ees r r 
+        aes r r ges2.( 
+        f ees)
+        des4 r r f r r 
+        ges r r ees r r 
+        aes r r aes, r r 
+        \mark \default 
+        des1. 
+        c_\markup{\italic cresc.}
+        bes2. aes 
+        g f 
+        e r 
+        \break
+        r f'( 
+        e) r 
+        r f( 
+        e2) r4 bes\p r r 
+        aes r r aes r r 
+        bes1. 
+        c4 r r c r r 
+        des1. 
+        d4 r r d r r 
+        c r r r2.
+        c4 r r r2.
+        c4 r r r2.
+        c4 r r r2.
+        r4 aes8_\markup{\italic cresc.} aes aes aes aes4 c8 c c c 
+        c4 c' bes aes aes8 aes aes aes
+        aes4 aes8 aes aes aes aes4  c8 c c c 
+        c4 e bes aes bes\f aes 
+        g2 r4 c,2 r4 
+        f2 r4 aes2 r4 
+        g2 r4 c,2 r4 
+        des2 r4 des'2 r4 
+        c2 r4 f,2 r4 
+        bes2 r4 r c8 c c c 
+        c4( b) g2 bes8 bes bes bes 
+        bes4( aes) f2 f8 f f f 
+        f4( e) c2 ees8 ees ees ees 
+        % \break
+        ees2 r4 des2 r4_\markup{\italic {"sempre più"} \dynamic "f" }
+        a'2 r4 bes2 r4 
+        aes!2 r4 g2 r4 
+        r des'8\ff des des des des4( c) g 
+        r des'8 des des des des4( c) g 
+        r des'8 des des des des4( c) g 
+        r des'8 des des des des4( c) g 
+        \mark \default 
+        aes2 aes,4 aes2 aes4
+        aes2 aes4 aes aes8 aes aes aes 
+        bes2 bes4 bes2 bes4
+        bes2 bes4 bes bes8 bes bes bes 
+        c2. c2 c4 
+        c2.~ c4 bes8\ff bes bes bes 
+        aes2 aes4 aes2 aes4
+        aes2 aes4 aes aes8 aes aes aes 
+        aes2 aes4 aes2 aes4
+        aes2 aes4 aes des8 des des des 
+        des2 des4 des2 des4 
+        des2 des4 c2 c4 
+        b2 r4 r2. 
+        b2 r4 r2. 
+        b2 r4 r2. 
+        R1*3/2*1^\markup{\number 1}
+        R1*3/2*2^\markup{\italic ritard.}
+        \pageBreak
+        \bar "||" 
+        \key f \major
+        \tempo "a tempo"
+        R1*3/2*7
+        c4\pp^"pizz." r r r2.
+        R1*3/2*1^\markup{\number 1}
+        c4 r r r2.
+        R1*3/2*1^\markup{\number 1}
+        c4 r r r2.
+        R1*3/2*6
+        r2. g4 r r 
+        c r r r2. 
+        R1*3/2*1^\markup{\number 1}
+        r2. c4 r r 
+        d r r bes r r 
+        c r r r2. 
+        R1*3/2*1^\markup{\number 1}
+        r2. c4 r r 
+        \mark #11 
+        f r r r2.
+        r c4 r r 
+        f r r r2.
+        R1*3/2*1^\markup{\number 1}
+        r2. c4 r r 
+        r2. c4 r r 
+        c4 r r c4 r r 
+        f,1.~^\markup{\halign #0 "arco"}
+        f~
+        f~
+        f~
+        f2. r  
+        f4^"pizz." r r r2. 
+        f4 r r r2. 
+        r2. f4 r r 
+        f r r r2.
+        r2. f4 r r 
+        f r r r2.  
+        f4 r r r2. 
+        f4 r r r2. 
         \bar "|."
-
       }
 
     >>
@@ -311,6 +485,15 @@
     }
   }
 
+  \markup{
+    \fill-line{
+      \hbracket{
+        \pad-around #1 {
+          \fontsize #2 {\caps{Memo}}
+        }
+      }
+    }
+  }
 }
 
 \version "2.22.2"
