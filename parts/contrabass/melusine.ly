@@ -111,9 +111,9 @@
         bes'2 r4 r bes,8 bes bes bes
         bes'2 r4 r bes,8  bes bes bes
         c4 r c( e g bes
-        des\sf c) c,( f g bes
+        des\sf c) c,( f aes c
         des\sf c) c,( e g bes
-        des\sf c) c,( f g bes
+        des\sf c) c,( f aes c
         des\sf c) c,( e g bes
         des\sf c) c,( e g bes
         des\sf c) r4 r2.
@@ -180,8 +180,8 @@
         R1*3/2*1^\markup{\number 1}
         r2. des''4 r r
         bes r r aes r r
-        g4 fes8->\f f-> f-> f-> ees4 fes8-> f-> f-> f->
-        ees4 fes8-> f-> f-> f-> ees4 fes8-> f-> f-> f->
+        g4 fes8->\f fes8-> fes8-> fes8-> ees4 fes8-> fes8-> fes8-> fes8->
+        ees4 fes8-> fes8-> fes8-> fes8-> ees4 fes8-> fes8-> fes8-> fes8->
         ees4 r r des\p r r
         c r r c r r
         des1.
@@ -260,8 +260,8 @@
         d r r g r r 
         e! r r ees r r 
         d r r g, r r 
-        e!4\pp^"arco" e8 e e e e4 e8 e e e 
-        e'4-. e-. e-. e-. e-. e-. 
+        e'!4\pp^"arco" e8 e e e e4 e8 e e e 
+        e4-. e-. e-. e-. e-. e-. 
         ees2 r4 r2.
         r2. r4 ees8\p ees ees ees
         d4 d8 d d d d4 d8 d d d 
@@ -320,9 +320,9 @@
         c r r c r r 
         c r r r2.
         R1*3/2*1^\markup{\number 1}
-        r2. c4 r r 
+        c4 r r r2.
         R1*3/2*1^\markup{\number 1}
-        r2. c4 r r 
+        c4 r r r2. 
         r4 r c\pp^"arco" c2 c4
         des2.( aes)
         bes2.( f)
@@ -458,7 +458,7 @@
         r c4 r r 
         f r r r2.
         R1*3/2*1^\markup{\number 1}
-        r2. c4 r r 
+        c4 r r r2. 
         r2. c4 r r 
         c4 r r c4 r r 
         f,1.~^\markup{\halign #0 "arco"}
