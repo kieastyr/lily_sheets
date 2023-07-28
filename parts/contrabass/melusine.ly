@@ -60,13 +60,16 @@
       \relative c
       {
         \set Score.markFormatter = #format-mark-alphabet
+        \set Staff.midiInstrument = "cello"
         \clef bass %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
         \override Hairpin #'minimum-length = #6
 
         \key f \major  %%調
-        \tempo "Allegro con moto"  %%BPM
+        \tempo "Allegro con moto"
         \partial 4
-        r4
+        r4 
+        \once \omit Score.MetronomeMark
+        \tempo 2. = 84 %%BPM
         R1*3/2*7
         r2. r4 r c^"pizz."
         f, r r r r f
@@ -483,6 +486,7 @@
     \layout {
       \context { \Staff \RemoveEmptyStaves }
     }
+    \midi{}
   }
 
   \markup{
