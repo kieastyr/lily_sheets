@@ -33,7 +33,10 @@ fpp = #(make-dynamic-script "fpp")
   system-system-spacing.basic-distance = #16
   score-markup-spacing.basic-distance = #20
 
-  print-page-number = ##f
+  print-page-number = ##t
+  
+  print-first-page-number = ##t
+  first-page-number = 2
 
 }
 
@@ -150,12 +153,14 @@ fpp = #(make-dynamic-script "fpp")
       fis2 e
       d1)
       R1
-      d1_\markup{\italic {cresc.}}
+      \override TextSpanner.bound-details.left.text = "string."
+      d1_\markup{\italic {cresc.}}\startTextSpan
       R1
-      d2 r
+      d2 r\stopTextSpan
+      \override TextSpanner.bound-details.left.text = "al"
+      d\startTextSpan r
       d r
-      d r
-      d r
+      d r\stopTextSpan
       \bar "||"
       \key d \major
       \tempo "Allegro giusto."
@@ -361,6 +366,7 @@ fpp = #(make-dynamic-script "fpp")
       f1\<(
       e8\sfz) r r4 r2
       R1*7
+      \break
       r4 ees\p^"pizz." r ees 
       r ees r ees 
       r ees r ees 
