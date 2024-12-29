@@ -1,0 +1,81 @@
+
+\relative c'{
+  \numericTimeSignature
+  \time 4/4 %%拍子
+  \set Staff.midiInstrument = "contrabass"
+  \clef bass %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
+  \override Hairpin.minimum-length = #6
+
+  \key a \major  %%調
+  \tempo 4=144  %%BPM
+  R1*2
+  \mark \default
+  \repeat volta 2 {
+    cis8\mf cis b fis a e r cis'~
+    cis cis b fis a e fis e
+    gis b4. r2
+    R1
+    b8 b b b b cis4 d8~
+    d4 d8 d cis b4 a8~ 
+    a1
+    \alternative{
+      {R1}
+      {cis8 cis b b a[ a}
+    }
+  }
+  g g]
+  \bar "||"
+  \mark \markup { \musicglyph "scripts.segno" }
+  d'8 fis gis fis \acciaccatura gis a gis fis \acciaccatura gis a~
+  a gis fis2.
+  d8 fis gis fis \acciaccatura gis a gis fis \acciaccatura gis a~
+  a gis fis2.
+  r4 gis8\p gis\<~ gis2~
+  gis4 gis,8 gis~ gis2
+  b'4->\f b8 b gis8 gis4 gis8~
+  gis2 r2
+  d4-.-> r8 d4-.-> r8 d4-.->
+  \bar "||"
+  \time 2/4
+  r8 b-.\ff b-. b-.
+  \bar "||"
+  \time 4/4
+  \mark \default
+  e8\mf e cis a e'4 cis8 a
+  b b gis e~ e4 r
+  d'8 d d e fis e d cis~
+  cis2. r4
+  e4 cis8 a e'4 cis8 a
+  fis' fis e d~ d4 r8 cis~
+  cis e e fis c( b) a a~
+  a2. r4
+  \mark \markup{\small "To Coda"}
+  dis8->\mf e\> e dis-> e e  dis-> e\!
+  \mark \default
+  a,-.\p a-. cis-. e-. dis( e-.) dis( e-.)
+  a,-. a-. cis-. e-. dis( e-.) dis( e-.)
+  e,-. e-. gis-. b-. ais( b-.) ais( b-.)
+  e,-. e-. gis-. b-. ais( b-.) ais( b-.)
+  e,-. e-. gis-. b-. ais( b-.) ais( b-.)
+  e,-. e-. gis-. b-. ais( b-.) ais( b-.)
+  a!-.\< a-. cis-. e-. dis( e-.) dis( e-.)
+  cis cis b b a a g\! <<{g} {s16 s_"D.S."}>>
+  \bar "||"
+  \break
+  \mark \markup { \musicglyph "scripts.coda" }
+  a'8\< a g g fis fis e e
+  \mark \default
+  \clef treble
+  cis'8\ff cis a e cis'4 a8 e
+  gis!8 gis e b~ b4 r4
+  b'8 b b cis d cis b a~
+  a2. r4
+  cis4 a8 e cis'4 a8 e
+  d' d cis b~ b4 r8 gis~
+  gis cis cis d gis,( fis) e e~
+  e2. r4
+  dis8-> e e dis-> e e  dis-> e
+  dis8-> e e dis-> e e  dis-> e
+  r4 e-> r2
+  \bar "|."
+}
