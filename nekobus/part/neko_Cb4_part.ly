@@ -56,7 +56,5 @@ fpp = #(make-dynamic-script "fpp")
     \new Staff
     \compressEmptyMeasures
     \include "../data/neko_cb4.lyi"
-      
-
   >>
 }

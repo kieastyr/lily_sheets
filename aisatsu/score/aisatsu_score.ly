@@ -2,16 +2,16 @@
 \header {
   title = \markup {
           \override #'(font-name . "HGSSoeiKakupoptai")
-          "ネコバス"
+          "愛の挨拶"
   }
   tagline = c
   composer = \markup {
           \override #'(font-name . "HGSSoeiKakupoptai")
-          "久石 譲"
+          "Edward Elgar"
   }
   arranger = \markup {
           \override #'(font-name . "HGSSoeiKakupoptai")
-          "kie"
+          "金益 研二"
   }
 }
 
@@ -56,16 +56,15 @@ fpp = #(make-dynamic-script "fpp")
       instrumentName = "Contrabass I "
     }{
       \compressEmptyMeasures
-      \include "../data/neko_duo_cb1.lyi"
+      \include "../data/aisatsu_Cb1.lyi"
     }
-    
+       
     \new Staff \with {
       instrumentName = "Contrabass II "
     }{
       \compressEmptyMeasures
-      \include "../data/neko_duo_cb2.lyi"
+      \include "../data/aisatsu_Cb2.lyi"
     }
-
   >>
   \layout{}
   \midi{}

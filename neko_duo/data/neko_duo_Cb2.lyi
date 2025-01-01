@@ -50,7 +50,7 @@
   e'4-. r e2->
   dis8->\f e\> e dis-> e e  dis-> e
   \bar "||"
-  \mark \markup{"To Coda"}
+  \mark \markup{"To" \coda}
   dis8-> e e dis8-> e e  dis-> e\!
   \mark \default
   a-.\p a-. cis-. e-. dis( e-.) dis( e-.)

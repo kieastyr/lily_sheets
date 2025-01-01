@@ -51,8 +51,9 @@
   cis e e fis c( b) a a~
   a2. r4
   \bar "||"
-  \mark \markup{"To Coda"}
+  \mark \markup{"To" \coda}
   R1
+  \break
   \mark \default
   \clef treble
   cis'8\p cis b fis a e r cis'~

@@ -1,0 +1,117 @@
+\relative c'{
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+  \numericTimeSignature
+  \time 2/4 %%拍子
+  \set Staff.midiInstrument = "contrabass"
+  \clef bass %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
+  \override Hairpin.minimum-length = #6
+
+  \key d \major  %%調
+  \tempo Andantino 4=88  %%BPM
+  \mark \default
+  fis4\mp\downbow( a,8_\markup{\italic dolce} fis')
+  e_\markup{\italic legato}[( d) cis d](
+  g4\<) g
+  g\>( a,8) r\!
+  fis'4( ais,8 fis')
+  e[( d) cis d](
+  e4\<) e
+  e4.\>( eis8)
+  fis4\<( a,8 fis')
+  e\![( d) cis d\<](
+  b'4) b--\sf
+  b\>( a8 g)
+  fis4\p( e8 d)
+  \acciaccatura d8 b4\>( cis)
+  << d2~\! {s4 s^\markup{\italic rit.}}>>
+  d4 a--
+  \mark \default
+  <<fis'4\p( {s8 s^\markup{\italic {a tempo}}}>> a,8_\markup{\italic dolce} fis')
+  e[( d) cis d](
+  g4\<) g
+  g\>( a,8) r\!
+  fis'4( ais,8 fis')
+  e[( d) cis d](
+  e4\<) e
+  <<{e4.\!( eis8)} {s4 s\>}>>
+  fis4\<( a,8 fis')
+  e\![( d) cis d\<](
+  b'4) b--\sf
+  b\>( a8 g)
+  fis4\p( e8 d)
+  \acciaccatura d8 b4\>( cis)
+  << d2~\! {s4 s^\markup{\italic rit.}}>>
+  d2
+  \mark \default
+  \acciaccatura s8 R1*1/2^\markup{\italic {a tempo}}
+  R1*1/2*3
+  \clef treble
+  bes4\downbow( c8 d)
+  e4( f8 g)
+  a4 \acciaccatura a8 c8\>( bes)
+  a4.\>( g8)
+  a4\p( g8 f)
+  <<d4 {s8 s_\markup{\italic {cresc. molto}}}>> e8\<( f)
+  \acciaccatura f8 a8\sf[( g) f!-- e--]
+  cis4( d8 e)
+  f4( g8 a)
+  bes^\markup{\italic {rit. molto}}( bes,) f'8.\ff\fermata( e16)
+  \mark \default
+  \clef bass
+  <<d4\pp( {s8 s^\markup{\italic {a tempo}}}>> cis8 b)
+  a4( gis8 a)
+  b4( g!8 fis)
+  e4 dis8( e)
+  g2~
+  g4 dis8( e)
+  g4.\<( b8)
+  \clef treble
+  <<b'4^\markup{\italic rit.}\!( {s8 s\>}>> a8 g)
+  \mark \default
+  <<fis4\!( {s8 s^\markup{\italic {a tempo}}}>> a,8 fis')
+  e[( d) cis d](
+  g4\<) g
+  g\>( a,8) r\!
+  fis'4( ais,8 fis')
+  e[( d) cis d](
+  e4\<) e
+  <<{e4.\!( eis8)} {s4 s\>}>>
+  fis4\<( a,8 fis')
+  e\![( d) cis d](
+  b'4) b--
+  b8( b,)\> cis d
+  g8\mp( <<e4 {s8 s\>}>> d8)
+  c( bes) r4\!
+  R1*1/2
+  r4 \clef bass a8.\downbow( bes16
+  g'8->\ff) e4( d8)
+  c( bes) r4
+  R1*1/2
+  <<R1*1/2 {s4 s^\markup{\italic accel.}}>>
+  R1*1/2
+  r8 b,!\upbow[( e g)]
+  fis2
+  << f2( {s4 s^\markup{\italic rit.}}>>
+  e4) r4
+  R1*1/2\fermata
+  a4\downbow( g)
+  fis_\markup{\italic dim.}( e)
+  \mark \default
+  << fis'4\pp( {s8 \tempo "Tempo più lento" s}>> a,8 fis')
+  e( d) cis d(
+  g4) g
+  g\>( fis8 e)
+  \slashedGrace d8 fis4\ppp( a,8 fis')
+  e[( d) cis d](
+  g4) g--
+  g^\markup{\italic rit.}( fis8 e)
+  \slashedGrace d8 fis2~
+  fis~
+  fis4 d
+  fis,4.( a8)
+  a2~^\markup{\italic {rall. e dim.}}
+  a~
+  a~\downbow\fermata
+  a4 r\fermata
+  \bar "|."
+}

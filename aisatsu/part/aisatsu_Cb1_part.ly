@@ -2,21 +2,22 @@
 \header {
   title = \markup {
           \override #'(font-name . "HGSSoeiKakupoptai")
-          "ネコバス"
+          "愛の挨拶"
   }
   tagline = c
   composer = \markup {
           \override #'(font-name . "HGSSoeiKakupoptai")
-          "久石 譲"
+          "Edward Elgar"
   }
   arranger = \markup {
           \override #'(font-name . "HGSSoeiKakupoptai")
-          "kie"
+          "金益 研二"
   }
+  instrument = \markup{\bold "Contrabass 1st"}
 }
 
 
-#(set-global-staff-size 20)
+#(set-global-staff-size 24)
 #(set-default-paper-size "a4" )
 
 %%以下、定義
@@ -46,27 +47,14 @@ fpp = #(make-dynamic-script "fpp")
 
 
 \layout {
-  indent = 3.0\cm %%0にするといい
+  indent = 1.0\cm %%0にするといい
 }
 
 
 \score {
-  \new ChoirStaff <<    
-    \new Staff \with {
-      instrumentName = "Contrabass I "
-    }{
-      \compressEmptyMeasures
-      \include "../data/neko_duo_cb1.lyi"
-    }
-    
-    \new Staff \with {
-      instrumentName = "Contrabass II "
-    }{
-      \compressEmptyMeasures
-      \include "../data/neko_duo_cb2.lyi"
-    }
-
+  <<    
+    \new Staff
+    \compressEmptyMeasures
+    \include "../data/aisatsu_Cb1.lyi"
   >>
-  \layout{}
-  \midi{}
 }
