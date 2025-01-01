@@ -47,7 +47,8 @@
   d!-. d-. fis,-. a-. gis( a-.) gis( a-.)
   e'4-. r e2->
   dis8->\f e\> e dis-> e e  dis-> e
-  \mark \markup{\small "To Coda"}
+  \bar "||"
+  \mark \markup{"To" \coda}
   dis8-> e e dis8-> e e  dis-> e\!
   \mark \default
   R1*2

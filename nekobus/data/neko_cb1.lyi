@@ -47,7 +47,8 @@
   r2 r8 fis,16( gis a b cis d)
   e4-. r4 r2
   R1
-  \mark \markup{\small "To Coda"}
+  \bar "||"
+  \mark \markup{"To" \coda}
   R1
   \mark \default
   \clef treble

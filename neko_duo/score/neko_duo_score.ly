@@ -37,10 +37,10 @@ fpp = #(make-dynamic-script "fpp")
   system-system-spacing.basic-distance = #16
   score-markup-spacing.basic-distance = #20
 
-  print-page-number = ##f
+  print-page-number = ##t
   
-  print-first-page-number = ##f
-  first-page-number = 1
+  print-first-page-number = ##t
+  first-page-number = 2
 
 }
 

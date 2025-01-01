@@ -13,11 +13,11 @@
           \override #'(font-name . "HGSSoeiKakupoptai")
           "kie"
   }
-  instrument = \markup{\bold "Contrabass 2nd"}
+  instrument = \markup{\bold "Contrabass 3rd"}
 }
 
 
-#(set-global-staff-size 24)
+#(set-global-staff-size 21)
 #(set-default-paper-size "a4" )
 
 %%以下、定義

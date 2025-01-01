@@ -17,7 +17,7 @@
 }
 
 
-#(set-global-staff-size 24)
+#(set-global-staff-size 21)
 #(set-default-paper-size "a4" )
 
 %%以下、定義
