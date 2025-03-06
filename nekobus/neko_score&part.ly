@@ -33,16 +33,16 @@ fpp = #(make-dynamic-script "fpp")
 \bookpart {
   \header {
     title = \markup {
-      \override #'(font-name . "HGSSoeiKakupoptai")
+      \override #'(font-name . "Yu Gothic UI Semibold")
       "ネコバス（コントラバス四重奏）"
     }
     tagline = c
     composer = \markup {
-      \override #'(font-name . "HGSSoeiKakupoptai")
+      \override #'(font-name . "Yu Gothic UI Semibold")
       "久石譲"
     }
     arranger = \markup {
-      \override #'(font-name . "HGSSoeiKakupoptai")
+      \override #'(font-name . "Yu Gothic UI Semibold")
       "kie"
     }
   }
@@ -86,16 +86,16 @@ fpp = #(make-dynamic-script "fpp")
 \bookpart {
   \header {
     title = \markup {
-            \override #'(font-name . "HGSSoeiKakupoptai")
+            \override #'(font-name . "Yu Gothic UI Semibold")
             "ネコバス（コントラバス四重奏）"
     }
     tagline = c
     composer = \markup {
-            \override #'(font-name . "HGSSoeiKakupoptai")
+            \override #'(font-name . "Yu Gothic UI Semibold")
             "久石譲"
     }
     arranger = \markup {
-            \override #'(font-name . "HGSSoeiKakupoptai")
+            \override #'(font-name . "Yu Gothic UI Semibold")
             "kie"
     }
     instrument = \markup{\bold "Contrabass 1st"}
@@ -115,16 +115,16 @@ fpp = #(make-dynamic-script "fpp")
 \bookpart {
   \header {
     title = \markup {
-            \override #'(font-name . "HGSSoeiKakupoptai")
+            \override #'(font-name . "Yu Gothic UI Semibold")
             "ネコバス（コントラバス四重奏）"
     }
     tagline = c
     composer = \markup {
-            \override #'(font-name . "HGSSoeiKakupoptai")
+            \override #'(font-name . "Yu Gothic UI Semibold")
             "久石譲"
     }
     arranger = \markup {
-            \override #'(font-name . "HGSSoeiKakupoptai")
+            \override #'(font-name . "Yu Gothic UI Semibold")
             "kie"
     }
     instrument = \markup{\bold "Contrabass 2nd"}
@@ -144,16 +144,16 @@ fpp = #(make-dynamic-script "fpp")
 \bookpart {
   \header {
     title = \markup {
-            \override #'(font-name . "HGSSoeiKakupoptai")
+            \override #'(font-name . "Yu Gothic UI Semibold")
             "ネコバス（コントラバス四重奏）"
     }
     tagline = c
     composer = \markup {
-            \override #'(font-name . "HGSSoeiKakupoptai")
+            \override #'(font-name . "Yu Gothic UI Semibold")
             "久石譲"
     }
     arranger = \markup {
-            \override #'(font-name . "HGSSoeiKakupoptai")
+            \override #'(font-name . "Yu Gothic UI Semibold")
             "kie"
     }
     instrument = \markup{\bold "Contrabass 3rd"}
@@ -173,16 +173,16 @@ fpp = #(make-dynamic-script "fpp")
 \bookpart {
   \header {
     title = \markup {
-            \override #'(font-name . "HGSSoeiKakupoptai")
+            \override #'(font-name . "Yu Gothic UI Semibold")
             "ネコバス（コントラバス四重奏）"
     }
     tagline = c
     composer = \markup {
-            \override #'(font-name . "HGSSoeiKakupoptai")
+            \override #'(font-name . "Yu Gothic UI Semibold")
             "久石譲"
     }
     arranger = \markup {
-            \override #'(font-name . "HGSSoeiKakupoptai")
+            \override #'(font-name . "Yu Gothic UI Semibold")
             "kie"
     }
     instrument = \markup{\bold "Contrabass 4th"}

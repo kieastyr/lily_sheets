@@ -1,0 +1,18 @@
+\relative c'{
+  \mergeDifferentlyHeadedOn
+  \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
+  \numericTimeSignature
+  \time 4/4 %%拍子
+  \set Staff.midiInstrument = "contrabass"
+  \clef bass %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
+  \override Hairpin.minimum-length = #6
+
+  \key ees \major  %%調
+  \tempo "Andante" 4=72  %%BPM
+  \time 5/4
+  R1*5/4*5
+  \mark #18
+  R1*5/4*5
+  
+  \bar "|."
+}

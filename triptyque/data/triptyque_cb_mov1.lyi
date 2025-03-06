@@ -1,0 +1,180 @@
+\relative c'{
+  \mergeDifferentlyHeadedOn
+  \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
+  \numericTimeSignature
+  \time 4/4 %%拍子
+  \set Staff.midiInstrument = "contrabass"
+  \clef bass %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
+  \override Hairpin.minimum-length = #6
+
+  \key a \minor  %%調
+  \tempo "Allegro" 4=138  %%BPM
+  a8-.\f a16-. b-. a8-. c-. b-. d-. c16( b-.) a-.  g-.
+  a8-. a16-. b-. a8-. e'-. d-. fis-. e4
+  g16( fis-.) e-. d-. e8-. e16-. d-. e8-. g-. fis16( g-.) fis-. e-.
+  d-. e-. c8-. b16-. c-. a8-. c16( b-.) a-. g-. a8-. a16-. g-.
+  a( b-.) c-. b-. a8-. a16-. g-. a8-. a16-. b-. a4
+  \acciaccatura d8\glissando e4\sf \acciaccatura d8\glissando e4\sf \acciaccatura d8\glissando e4\sf \acciaccatura d8\glissando e4\sf
+  \mark \default
+  R1
+  r2 r8 gis->-. e->-. a,->-.
+  R1
+  r2 r8 gis'->-. e->-. a,->-.
+  R1
+  r2  
+    <<
+      {f'2 \glissando}
+      {        
+        s8 
+        \override NoteColumn.glissando-skip = ##t 
+        \hide Stem  
+        {
+          \set fontSize = -4
+          e16 ees^\markup{\italic "gliss."} d des c b
+          \set fontSize =  0
+         }
+        \undo \hide Stem
+        \revert NoteColumn.glissando-skip
+      } 
+    >>
+   bes2( a\mf)
+  aes\mp( g\p)
+  \mark \default
+  des4\f^\markup{\italic "pizz."} aes'8 aes des des des des
+  des,4 aes'8 aes des[ des] des[ aes,]
+  des aes' des aes des,!4 des'8 des
+  des, aes' des aes r aes, des aes'
+  <<{ \voiceOne a8\rest a! a a } \new Voice{ \voiceTwo d,!2}>> <<{ \voiceOne a'8\rest a a a } \new Voice{ \voiceTwo d,2}>>
+  <<{ \voiceOne a'8\rest a a a } \new Voice{ \voiceTwo d,2}>> <<{ \voiceOne a'8\rest a a a } \new Voice{ \voiceTwo d,2}>>
+  \oneVoice
+  R1*2
+  \mark \default
+  fis2.\mp^\markup{\italic "(pizz.)"} fis4~
+  fis2 fis~
+  fis4 fis2.
+  fis2. fis4~
+  fis2 fis~
+  fis4 fis2.
+  \mark \default
+  fis2. fis4~
+  fis2 fis
+  fis2. fis4~
+  fis2 fis~
+  fis4 fis2.
+  fis2. fis8->-.\f^\markup{\italic "arco"} c'->-.
+  \mark \default
+  a8-. a16( g) a8-. a16( g) a8-. a16( g) a8-. b16-. c-.
+  d-. e-. c8-. b16-. c-. a8-. c16( b-.) a-. g-. a8-. a16-. g-.
+  a( b-.) c-. b-. a8-. a16-. g-. a8-. a16-. b-. a4
+  \mark \default
+  ges8\fsempre^\markup{\italic "pizz."} ges ges ges ges ges ges ges
+  ges ges ges ges ges ges ges ges 
+  ges ges ges ges ges ges ges ges 
+  f f f f f f f f 
+  e e e e e e e e 
+  ees ees ees ees ees ees ees ees 
+  d d d d d d d d 
+  d d d d d d d d 
+  R1
+  \mark \default
+  R1*2
+  \pageBreak
+  r2 r4 c'\mf
+  g2 r4 g'
+  a,2 r2
+  aes ees'4 ees,
+  \mark \default
+  c4.\f g'8 c4 g,
+  \time 3/4
+  c4. g'8 c4
+  \time 2/4
+  c8 g c, g
+  \time 4/4
+  R1*2
+  fis'8^\markup{\italic "arco"} fis16 fis fis8 fis16 fis fis8 fis16 fis fis8 fis16 fis 
+  f!8 f16 f16 f8 f16 f16 f8 f16 f16 f8 f16 f16
+  <e b'>8\sf r r4 r4 r16 dis'8-> e,,16->
+  \mark \default
+  a4-> <e a e' a>^\markup{\italic "pizz."}\sf q\sf r
+  r q\sf r q8\sf q\sf
+  q4\sf r q\sf q\sf
+  q8\sf q\sf q4\sf r q\sf
+  r q\sf q\sf a'\>^\markup{\italic "arco"}~
+  \time 3/4 
+  a aes( g)\!
+  \mark \default
+  \time 4/4
+  \stemUp
+  <fis, cis'>8-.\p q16( <a e'> <fis cis'>8-.) q-. q-. q16( <a e'> <fis cis'>8-.) q-.
+  q-. q16( <a e'> <fis cis'>8-.) q-. q-. q16( <a e'> <fis cis'>8-.) q-.
+  <g d'>8-. q16( <bes f'> <g d'>8-.) q-. q-. q16( <bes f'> <g d'>8-.) q-.
+  q8-. q16( <bes f'> <g d'>8-.) q-. q-. q16( <bes f'> <g d'>8-.) q-.
+  <fis cis'>8-. q16( <a e'> <fis cis'>8-.) q-. q-. q16( <a e'> <fis cis'>8-.) q-.
+  q-. q16( <a e'> <fis cis'>8-.) q-. q-. q16( <a e'> <fis cis'>8-.) q-.
+  <f! c'!>8-. q16( <aes ees'> <f c'>8-.) q-. q-. q16( <aes ees'> <f c'>8-.) q-.
+  q-. q16( <aes ees'> <f c'>8-.) q-. q-. q16( <aes ees'> <f c'>8-.) q-.
+  <e b'>8-. q16( <g d'> <e b'>8-.) q-. q-. q16( <g d'> <e b'>8-.) q-. 
+  q-. q16( <g d'> <e b'>8-.) q-. q-. q16( <g d'> <e b'>8-.) q-.
+  \mark \default
+  <bes' ees>8-. q16( <des ges> <bes ees>8-.) q-. q-. q16( <des ges> <bes ees>8-.) q-.
+  q-. q16( <des ges> <bes ees>8-.) q-. q-. q16( <des ges> <bes ees>8-.) q-.
+  <g! d'!>8-. q16( <bes f'> <g d'>8-.) q-. q-. q16( <bes f'> <g d'>8-.) q-.
+  q8-. q16( <bes f'> <g d'>8-.) q-. q-. q16( <bes f'> <g d'>8-.) q-.
+  <e b'!>8-. q16( <g d'> <e b'>8-.) q-. q-. q16( <g d'> <e b'>8-.) q-. 
+  q-. q16( <g d'> <e b'>8-.) q-. q-. q16( <g d'> <e b'>8-.) q-.
+  \mark \default
+  <bes' ees>8-. q16( <des ges> <bes ees>8-.)_\markup{\italic "cresc."} q-. q-. q16( <des ges> <bes ees>8-.) q-.
+  q-. q16( <des ges> <bes ees>8-.) q-. q-. q16( <des ges> <bes ees>8-.) q-.
+  <b! e!>8-. q16( <d g> <b e>8-.) q-. q-. q16( <d g> <b e>8-.) q-.
+  q-.\mf q16( <d g> <b e>8-.) q-. q-. q16( <d g> <b e>8-.) q-.
+  <bes ees>8-. q16( <des ges> <bes ees>8-.) q-._\markup{\italic "dim."} q-. q16( <des ges> <bes ees>8-.) q-.
+  q-. q16( <des ges> <bes ees>8-.) q-. q-.[ <des ges>-.] q-.[ <bes ees>]
+  \mark \default
+  \stemNeutral
+  <<{ees8^>\ffsub} \\ {ees_>}>> r r4 r2
+  \time 1/4
+  r4
+  \time 4/4
+  R1*3
+  d4\f^\markup{\italic "unis. pizz."} a'8 a d d d d
+  des,4 aes'8 aes des des des des
+  \mark \default
+  des ees des ees des ees des ees
+  des ees des ees des ees des ees
+  c d! c d c d c d 
+  b c b c b c b c 
+  bes c bes c bes c bes c
+  a b! a b a b a b
+  a b a b a b a b 
+  R1
+  \mark \default
+  R1*2
+  r2 r4 c\mf
+  g2 r4 g'
+  a,2 r2
+  aes ees'4 ees,
+  \mark \default
+  c4.\f g'8 c4 g,
+  \time 3/4
+  c4. g'8 c4
+  \time 2/4
+  c8 g c, g
+  \time 4/4
+  R1*2
+  fis'8^\markup{\italic "arco"} fis16 fis fis8 fis16 fis fis8 fis16 fis fis8 fis16 fis 
+  f!8 f16 f16 f8 f16 f16 f8 f16 f16 f8 f16 f16
+  <e b'>8\sf r r4 r4 r16 dis'8-> e,,16->
+  \mark \default
+  a8\ff a16-. g-. a8-. c-. b-. d-. c16( b-.) a-.  g-.
+  a8-. a16-. b-. a8-. e'-. d-. fis-. e4
+  g16( fis-.) e-. d-. e8-. e16-. d-. e8-. g-. fis16( g-.) f-. e-.
+  d-. e-. c-. d-. b-. c-. a-. b-. c16( b-.) a-. g-. a8-. a16-. g-.
+  \time 3/4
+  a( b-.) c-. b-. a8-. a16-. g-. a8-. a16-. b-. 
+  \time 2/4
+  a4~ a16 r8.
+  \time 4/4
+  bes''8->_\markup{\italic "cresc."} bes16-> bes-> bes-> bes-> bes-> bes-> bes-> bes-> bes-> bes-> \tuplet 6/4 {bes-> bes-> bes-> bes-> bes-> bes->}
+  r4 <e,,, a d a'>\sff r2
+  \bar "|."
+}

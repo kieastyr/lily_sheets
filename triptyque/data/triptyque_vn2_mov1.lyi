@@ -1,0 +1,182 @@
+%%fsempre = _\markup { \dynamic f \italic sempre}
+%%fsub = _\markup { \dynamic f \italic sub.}
+%%ffsub = _\markup { \dynamic ff \italic sub.}
+\relative c'{
+  \mergeDifferentlyHeadedOn
+  \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
+  \numericTimeSignature
+  \time 4/4 %%拍子
+  \set Staff.midiInstrument = "violin"
+  \clef treble %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
+  \override Hairpin.minimum-length = #6
+  
+  \key a \minor  
+  \tempo "Allegro" 4=138 
+  a8\f a16-. b-. a8-. c-. b-. d-. c16( b-.) a-.  g-.
+  a8-. a16-. b-. a8-. e'-. d-. fis-. e4
+  g16( fis-.) e-. d-. e8-. e16-. d-. e8-. g-. fis16( g-.) fis-. e-.
+  d-. e-. c-. d-. b-. c-. a-. b-. c16( b-.) a-. g-. a8-. a16-. g-.
+  a( b-.) c-. b-. a8-. a16-. g-. a8-. a16-. b-. a4
+  \set glissandoMap = #'((0 . 0) (1 . 2))
+  \acciaccatura <g' d'>8\glissando <a e' e\flageolet>4\sf \acciaccatura <g d'>8\glissando <a e' e\flageolet>4\sf \acciaccatura <g d'>8\glissando <a e' e\flageolet>4\sf \acciaccatura <g d'>8\glissando <a e' e\flageolet>4\sf
+  \mark \default
+  <<{\tweak Accidental.X-offset #-1 e8-.\f^\markup{\italic "div."}[ c-.]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees-.[ c-.]}>>
+   <<{\tweak Accidental.X-offset #-1 e!8-.[ c-.]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees-.[ c-.]}>>
+    <<{\tweak Accidental.X-offset #-1 e!8-.[ c-.]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees-.[ c-.]}>>
+     <<{\tweak Accidental.X-offset #-1 e!8-.[ c-.]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees-.[ c-.]}>>
+  <<{\tweak Accidental.X-offset #-1 e!8^\markup{\italic "stacc. sempre"}[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+   <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+    <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+     <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+  <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+   <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+    <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+     <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+  <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+   <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+    <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+     <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+  <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+   <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+    <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+     <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+  <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+   <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+    <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+     <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
+  d4^\markup{\italic "unis."} d cis\mf cis
+  c!\mp c b\p b
+  \mark \default
+  <b' a'!>8^._>\f\downbow q^._>\downbow r4 des16( ees) des ees beses4
+  <b! a'!>8^._>\downbow q^._>\downbow r4 des16( ees) des ees beses4
+  <bes aes'>8-.\downbow q-.\downbow r q-.\upbow <b a'>-.\downbow q-.\downbow r q-.
+  <c bes'>-. q-. r q-. <b a'>-. q-. r q-.
+  <bes aes'>-. q-. r q-. d16( e) d e gis,8( a)
+  <bes aes'>-. q-. r q-. d16( e) d e gis,8( a)
+  ges8\p\< ges16 ges g8 g16 g16 aes8 aes16 aes16 a8 a16 a
+  bes8 bes16 bes b8 b16 b c8 c16 c des des des des\ff
+  \mark \default
+  r4 r8^\markup{\italic "pizz."} cis,\f r4 r8 cis
+  r a r4 r8 cis r cis
+  r4 r8 cis r a r4
+  r8 cis r4 r8 a r a
+  r cis r4 r8 cis r4
+  r8 a r a r cis r4
+  \mark \default
+  cis2\f\>^\markup{\italic "arco"} c
+  b bes
+  a\mp( gis)
+  a( gis)
+  a8\fsub a16 g! <<{a8\glissando( a')} s4^\markup{\rotate #30 \italic \tiny "gliss."}>> a,8-. bes4( a8)
+  d4 a c8-. bes4( a8)
+  \mark \default
+  a8-. a16( g) a8-. a16( g) a8-. a16( g) a8-. b!16-. c-.
+  d-. e-. c-. d-. b-. c-. a-. b-. c( b-.) a-. g-. a8-. a16-. g-.
+  a( b-.) c-. b-. a8-. a16-. g-. a8-. a16-. b-. a4
+  \mark \default
+  R1
+  r8 des16\fsempre ees f8-. des16 ees f8-. des-. ees-. f-.
+  ees-. bes-. ees4~ ees8 bes-. ees4
+  e!8-. ees16 d ees8-. d16 des d8-. des16 c des8-. c16 b
+  c8-. b16 a c4~ c8 b16 a c8-. c16 d
+  ees8-. d16 c ees4~ ees8 d16 c ees8-. f-.
+  fis-. a,16 b cis8-. a16 b cis8-. a-. b-. cis-.
+  b8. a16 ais b c! cis d dis e f! fis g gis a
+  ais b c! cis d dis e f! fis g gis a r4
+  \mark \default
+  <fis, g>8-.^\markup{\italic "div. saltato"}( q16-. q-.) q8-.( q-.) q8-.( q16-. q-.) q8-.( q-.)
+  <f! g>8-.( q16-. q-.) q8-.( q-.) q8-.( q16-. q-.) q8-.( q-.)
+  q-.( q16-. q-.) q8-.( q-.) q8-.( q16-. q-.) q8-.( q-.)
+  <e g>8-.( q16-. q-.) q8-.( q-.) q8-.( q16-. q-.) q8-.( q-.)
+  q-.( q16-. q-.) q8-.( q-.) q8-.( q16-. q-.) q8-.( q-.)
+  <ees ges>8-.( q16-. q-.) q8-.( q-.) q8-.( q16-. q-.) q8-.( q-.)
+  \mark \default
+  <c d>-.^\markup{\italic "non div."} q-. q-. q-. q-. q-. q-. q-.
+  \time 3/4
+  q-.[ q-. q-. q-.] q-. q-.
+  \time 2/4
+  q-.[ q-. q-. q-.]
+  \time 4/4
+  <g d'>8 q16 q q8 q16 q q8 q16 q q8 q16 q
+  <g e'>8 q16 q q8 q16 q q8 q16 q q8 q16 q
+  <a ees'>8 q16 q q8 q16 q q8 q16 q q8 q16 q
+  <gis d'>8 q16 q q8 q16 q q8 q16 q q8 q16 q
+  <gis e' b' e>8\sf <dis'' e>16->[ q->] q-> q-> q-> q-> q8-> e,16->[ e->] e8-> r
+  \mark \default
+  <a, e' a e'>4\sf^\markup{\italic "pizz."} a8-.^\markup{\italic "arco"} c-. b-. d-. c16( b-.) a-.  g-.
+  a8-. a16-. b-. a8-. e'-. d-. fis-. e4
+  g16( fis-.) e-. d-. e8-. e16-. d-. e8-. g-. fis16( g-.) fis-. e-.
+  d-. e-. c-. d-. b-. c-. a-. b-. c16( b-.) a-. g-. a8-. a16-. g-.
+  a( b-.) c-. b-. a8-. a16-. g-. a8-. a16-. b-. a4\>~
+  \time 3/4
+  a\p r r
+  \mark \default
+  \time 4/4
+  R1*10
+  \pageBreak
+  \mark \default
+  ees'1\p
+  ees2.( f4)
+  g2( f4 ees)
+  d2.( c4)
+  b2 c8( b e4)
+  fis( g a g)
+  \mark \default
+  ees2\< d'!
+  b! \tuplet 3/2 { bes4 b des }
+  e!2\f f,!
+  aes2\> b4 c
+  <bes bes'>1~
+  q
+  \mark \default
+  ees,8-.->\!\ffsub^\markup{\italic "unis."} ees16->( ges ees8-.) e'!-.-> c-.->[ ees->]~ ees[ d-.->]
+  \time 1/4
+  des16->( c b8-.)
+  \time 4/4
+  ges-.\p ges-. r ges-.[ ges-.] r ges-. ges-.
+  ges8\< ges16 ges g8 g16 g aes8 aes16 aes a8 a16 a 
+  bes8 bes16 bes b8 b16 b c8 c16 c des des des des
+  d8\f d16 d d d d d ees8 ees16 ees ees ees ees ees
+  e8 e16 e e e e e f8 f16 f f f f f
+  \mark \default
+  ges8 des,16\fsempre ees f8-. des16 ees f8-. des-. ees-. f-.
+  ees-. bes-. ees4~ ees8 bes-. ees4
+  e!8-. ees16 d ees8-. d16 des d8-. des16 c des8-. c16 b
+  c8-. b16 a c4~ c8 b16 a c8-. c16 d
+  ees8-. d16 c ees4~ ees8 d16 c ees8-. f-.
+  fis-. a,16 b cis8-. a16 b cis8-. a-. b-. cis-.
+  b8. a16 ais b c! cis d dis e f! fis g gis a
+  ais b c! cis d dis e f! fis g gis a r4
+  \mark \default
+  <fis, g>16^\markup{\italic "div."} q q q q8-. q-. q16 q q q q8-. q-.
+  <f! g>16 q q q q8-. q-. q16 q q q q8-. q-.
+  q16 q q q q8-. q-. q16 q q q q8-. q-.
+  <e g>16 q q q q8-. q-. q16 q q q q8-. q-.
+  q16 q q q q8-. q-. q16 q q q q8-. q-.
+  <ees ges>16 q q q q8-. q-. q16 q q q q8-. q-.
+  \mark \default
+  <c d>-.^\markup{\italic "unis."} q-. q-. q-. q-. q-. q-. q-.
+  \time 3/4
+  q-.[ q-. q-. q-.] q-. q-.
+  \time 2/4
+  q-.[ q-. q-. q-.]
+  \time 4/4
+  <g d'>8 q16 q q8 q16 q q8 q16 q q8 q16 q
+  <g e'>8 q16 q q8 q16 q q8 q16 q q8 q16 q
+  <a ees'>8 q16 q q8 q16 q q8 q16 q q8 q16 q
+  <gis d'>8 q16 q q8 q16 q q8 q16 q q8 q16 q
+  <gis e' b' e>8\sf <dis'' e>16->[ q->] q-> q-> q-> q-> q8-> e,16->[ e->] e8-> r
+  \mark \default
+  <a, e' a e'>8\ff a16-. g-. a8-. c-. b-. d-. c16( b-.) a-.  g-.
+  a8-. a16-. b-. a8-. e'-. d-. fis-. e4
+  g16( fis-.) e-. d-. e8-. e16-. d-. e8-. g-. fis16( g-.) fis-. e-.
+  d-. e-. c-. d-. b-. c-. a-. b-. c16( b-.) a-. g-. a8-. a16-. g-.
+  \time 3/4
+  a( b-.) c-. b-. a8-. a16-. g-. a8-. a16-. b-. 
+  \time 2/4
+  a4~ a16 bes-. c-. d-.
+  \time 4/4
+  <f a>8->_\markup{\italic "cresc."} q16-> q-> q-> q-> q-> q-> q-> q-> q-> q-> \tuplet 6/4 {q-> q-> q-> q-> q-> q->}
+  r4 <b, f' a e'>4\sff r2
+  \bar "|."
+}
