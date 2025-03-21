@@ -1,0 +1,313 @@
+%{
+twoStacc = \markup {
+  \center-align{
+    \musicglyph "scripts.staccato"
+    \musicglyph "scripts.staccato"
+  }
+}
+%}
+\relative c'{
+  \mergeDifferentlyHeadedOn
+  \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
+  \numericTimeSignature
+  \time 4/4 %%拍子
+  \set Staff.midiInstrument = "contrabass"
+  \clef bass %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
+  \override Hairpin.minimum-length = #6
+  \override StemTremolo.beam-thickness = #0.3
+  \override Beam.collision-interfaces = ##f
+
+  \key b \minor  %%調
+  \tempo "Presto" 4=152  %%BPM
+  \time 2/4
+  \newSpacingSection
+  \override Score.SpacingSpanner.spacing-increment = #4
+  b8\p^\markup{\italic "Pizz."} cis b8 cis
+  \time 3/8
+  \newSpacingSection
+  \revert Score.SpacingSpanner.spacing-increment
+  \mark \markup{\teeny {\note {8} #1 "=" \note {8} #1 }}
+  b[ cis] b[ 
+  cis] b[ cis]
+  \time 2/4
+  \mark \markup{\hspace #14 {\teeny {\note {8} #1 "=" \note {8} #1 } \small \italic "sempre simile"}}
+  b[ cis]  b[ cis]
+  \time 3/8
+  b[ cis] b[ 
+  cis] b[ cis]
+ 
+  b[ cis]  \once \override Stem.details.beamed-lengths = #'(3) b[ 
+  \mark #32
+  \time 5/8
+  cis] b[ cis] b[ cis]
+  \time 3/8
+  b[ cis] b[ 
+  cis] b[ cis]
+  \mark \default
+  \time 2/4
+  b16-.\f^\markup{\italic "arco"} b-. cis->( b) b-. b-. cis->( b)
+  \time 3/8
+  b-.[ b-. cis->( b)] b-.[ b-. 
+  cis->( b)] b-.[ b-. cis->( b)]
+  \time 2/4
+  b-.[ b-. cis->( b)] b-.[ b-. cis->( b)] 
+  \time 3/8
+  b-.[ b-. cis->( b)] b-.[ b-. 
+  cis->( b)] b-.[ b-. cis->( b)]
+  b-.[ b-. cis->( b)] cis-. b-.
+  \mark \default
+  \time 2/4
+  g-. g-. d'8-. g,16-. g-. d'8-.
+  \time 1/4
+  g,16-. g-. d'8-.
+  \time 2/4
+  a16-. a-. a8-. a16-. a-. a8-.
+  a16-.\> a-. a8-. a16-. a-. a8-.
+  <g, d'>2->\downbow
+  \mark \default
+  b'8\p^\markup{\italic "Pizz."} cis b8 cis
+  \time 3/8
+  b[ cis] b[ 
+  cis] b[ cis]
+  \time 2/4b[ cis]  b[ cis]
+  \time 3/8
+  b[ cis] b[ 
+  cis] b[ cis]
+  b[ cis] b[ 
+  \mark \default
+  \time 5/8
+  cis] b[ cis] b[ cis]
+  \time 3/8
+  b[ cis] b[ 
+  cis] b[ cis]
+  \mark \default
+  \time 2/4
+  fis,16-.\f fis-. fis8-. fis16-. fis-. fis8-.
+  \time 3/8
+  fis8-. fis16-.[ fis-. fis8-.]
+  a8-. fis16-.[ fis-. fis8-.]
+  \time 2/4
+  a16-. fis-. a-. b-. cis8-. cis16-. cis-.
+  \time 3/8
+  fis8-. cis16-.[ cis-. cis8-.]
+  fis-.[ cis-.] cis16-.[ cis-.]
+  fis8-. cis16-.[ cis-. cis8-.]
+  cis16-.\< cis-. b8-. a16-.[ a-.
+  g8-.] fis16-. fis-. e8-.
+  \mark \default
+  d8-.\ff a'16-. a-. a8-.
+  fis-. fis,16-. fis-. fis8-.
+  b4\mf r8
+  cis4 r8
+  \time 2/8
+  d4
+  \time 3/8
+  e4 r8
+  eis4 r8
+  fis4 r8
+  g4 r8
+  ais4 r8
+  \mark \default
+  b4 b,8
+  cis4 r8
+  \time 2/8
+  d4
+  \time 3/8
+  e4 r8
+  eis4 r8
+  fis4 r8
+  g4 r8
+  fis-. fis16( e fis e)
+  fis8-. fis,-. fis'-.
+  \mark \default
+  b,:16_\twoStacc[ cis:_\twoStacc fis,:_\twoStacc
+  g:_\twoStacc] b:_\twoStacc[ fis:_\twoStacc
+  \time 2/8
+  g:_\twoStacc b:_\twoStacc]
+  \time 3/8
+  fis:_\twoStacc[ g:_\twoStacc b:_\twoStacc
+  cis:_\twoStacc] b:_\twoStacc[ cis:_\twoStacc 
+  fis,:_\twoStacc g:_\twoStacc] b:^\twoStacc[
+  c:^\twoStacc e:^\twoStacc g:^\twoStacc]
+  fis:_\twoStacc cis:_\twoStacc fis,:_\twoStacc
+  \mark \default
+  d''8-. cis16( c b bes)
+  a8-.\> gis16( g fis f)
+  e8-. d-. cis-. 
+  fis,-. cis'-. fis-.
+  cis'-. fis,-. cis-.
+  fis,\p fis'( e)
+  fis, fis'( e)
+  fis, fis'( e)
+  R1*3/8*2
+  \mark \default
+  \time 2/4
+  b'8\p^\markup{\italic "Pizz."}[ cis]  b[ cis]
+  \time 3/8
+  b[ cis] b[ 
+  cis] b[ cis]
+  \time 2/4
+  b[ cis]  b[ cis]
+  \time 3/8
+  b[ cis] b[ 
+  cis] b[ cis]
+  R1*3/8
+  \mark \default
+  <fis,, cis'>8-.\p^\markup{\italic "col legno"} q16-.[( q-. q8-.)]
+  q-._\markup{\italic "crescendo"} q-. q-.
+  q-. q16-.[( q-. q8-.)]
+  \time 2/8
+  q8-.[( q16-. q-.)]
+  \time 3/8
+  q8-. q16-.\f[( q-. q8-.)]
+  R1*3/8
+  \tweak X-offset #-3 \mark \default
+  fis'8\p\<^\markup{\italic "Pizz."} cis' fis, cis' fis, cis'\f
+  \tweak X-offset #-1 \tempo \markup{\normal-text \italic \small "poco a poco accel."}
+  R1*3/8*2
+  <<<gis, dis'>4.-> {s8\f\>^\markup{\italic "arco"} s s\p}>>
+  R1*3/8*2
+  <<<gis dis'>4.-> {s8\f\> s s\p}>>
+  R1*3/8
+  <<<gis dis'>4.-> {s8\f\> s s\p}>>
+  \mark \default
+  \tempo "Piu mosso"
+  \bar "||"
+  R1*3/8
+  <gis' dis'>8-.\p\< q-. q-.
+  \time 4/8
+  <fis cis'>-. q-. q-. q-.
+  \time 3/8
+  q-.\f q-._\markup{\italic "cresc. sempre"} q-.
+  <gis dis'>-. q-. q-.
+  <a e'>-. q-. q-.
+  q-. q-. q-.
+  \time 2/8 
+  <gis dis'>16^\markup{\italic "détaché"}[ q q q]
+  \mark \default
+  \time 3/8
+  <a e'>8-. q-. q-.
+  q-. q-. q-.
+  <gis dis'> q16 q q8
+  <a e'>-. q-. q-.
+  <gis dis'>16\fff[ q q q] q q
+  R1*3/8^\fermata
+  \mark \default
+  \time 3/4
+  \tweak X-offset #3 \tempo "Adagio"
+  \bar "||"
+  <<b2.\p {s4 s_\markup{\italic "tranquillo"} s} >>
+  e,2.
+  fis
+  cis2( dis4)
+  \time 2/4
+  d!( e)
+  \time 3/4
+  fis2.
+  \mark \default
+  e4( fis) gis8( d')
+  cis4( b s)
+  g( fis e)
+  \time 2/4
+  d2
+  cis4( b)
+  << a2 {s4 s_\markup{\italic "dim."}}>>
+  << d2 {s4 \tempo "rit." s}>>
+  cis2
+  \mark \default
+  \tweak X-offset #2 \tempo "Tempo I"
+  \time 3/8
+  \bar "||"
+  b'8\p^\markup{\italic "Pizz."}[ cis_\markup{\italic "poco a poco cresc."}]  b[ 
+  cis] b[ cis]
+  b[ cis] b[ 
+  cis] b[ cis]
+  b[ cis] b[ 
+  cis] b[ cis]
+  b8 cis4
+  \time 2/4
+  cis16\<^\markup{\italic "arco"} b a g fis e d cis
+  \mark \default
+  \time 3/8
+  b4\mf r8
+  cis4 r8
+  \time 2/8
+  d4
+  \time 3/8
+  e4 r8
+  eis4 r8
+  fis4 r8
+  g4 r8
+  ais4 r8
+  \mark \default
+  b16( cis b cis b cis)
+  d( cis d cis d cis)
+  \time 2/8
+  b[( cis b cis)]
+  \time 3/8
+  d( cis d cis d cis)
+  b( cis b cis b cis)
+  d( cis d cis d cis)
+  d( e d e d e)
+  \mark \default
+  fis8-.\< fis,16( e fis e)
+  fis8-. fis,-. fis'-.
+  fis16-.\ff[ fis-. cis'8-.] fis,16-.[ fis-. 
+  cis'8-.] fis,16-.[ fis-. cis'8-.]
+  fis4\>( eis8~
+  eis e4)
+  \mark \default
+  \time 2/4
+  b8\p^\markup{\italic "Pizz."} cis b8 cis
+  \time 3/8
+  b[ cis] b[ 
+  cis] b[ cis]
+  \time 2/4
+  b[ cis]  b[ cis]
+  \time 3/8
+  b[ cis] b[ 
+  cis] b[ cis]
+  b[ cis] b[ 
+  \mark \default
+  \time 5/8
+  cis] b[ cis] b[ cis]
+  \time 3/8
+  b[ cis] b[ 
+  cis] b[ cis]
+  \mark \default
+  \time 2/4
+  b16-.\f^\markup{\italic "arco"} b-. cis->( b) b-. b-. cis->( b)
+  \time 3/8
+  b-.[ b-. cis->( b)] b-.[ b-. 
+  cis->( b)] b-.[ b-. cis->( b)]
+  \time 2/4
+  b-.[ b-. cis->( b)] b-.[ b-. cis->( b)] 
+  \time 3/8
+  b-.[ b-. cis->( b)] b-.[ b-. 
+  cis->( b)] b-.[ b-. cis->( b)]
+  b-.[ b-. cis->( b)] b-. b-.
+  cis8-. fis,16 b-. cis8-.
+  fis,-. \tempo "rit." cis'16-. b-. fis8-.
+  \mark \default
+  \time 3/4
+  \tempo "Adagio"
+  \bar "||"
+  <d a'>2.\ff
+  d
+  \time 2/4
+  e2
+  \time 3/4
+  fis4( b, cis)
+  \time 2/4
+  fis2
+  e4( d)
+  cis2~-\tweak X-offset #-1.5 _\markup{\italic "non dim. e rit."}
+  cis4 r
+  \tempo "Tempo I"
+  b16-.\fff b-. cis8-. b16-. b-. cis8-.
+  b-. cis16-. cis-. d-. d-. cis-. cis-.
+  \time 3/8
+  b-. b-. cis-. cis-. fis8-.
+  b-.-\tweak X-offset #-1.5 \sf b,-.\sff\downbow r
+  \bar "|." 
+}

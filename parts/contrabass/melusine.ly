@@ -21,7 +21,7 @@
     }
   }
   oddHeaderMarkup = \markup {
-    \on-the-fly \not-first-page
+    \unless \on-first-page
     \fill-line{
       \fromproperty #'page:page-number-string
       \fromproperty #'header:instrument
@@ -59,10 +59,10 @@
       \compressEmptyMeasures
       \relative c
       {
-        \set Score.markFormatter = #format-mark-alphabet
+        \set Score.rehearsalMarkFormatter = #format-mark-alphabet
         \set Staff.midiInstrument = "cello"
         \clef bass %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
-        \override Hairpin #'minimum-length = #6
+        \override Hairpin.minimum-length = #6
 
         \key f \major  %%調
         \tempo "Allegro con moto"
@@ -230,7 +230,7 @@
         \pageBreak
         R1*3/2*4
         <<
-          \override MultiMeasureRest #'staff-position = #-6
+          \override MultiMeasureRest.staff-position = #-6
           {
             R1*3/2
             R1*3/2
@@ -250,7 +250,7 @@
             \stemUp a8( e cis e a b cis a e a c e)
           }
         >>
-        \revert MultiMeasureRest #'staff-position
+        \revert MultiMeasureRest.staff-position
         d,4^"(pizz.)" r r r2.
         d4 r r r2.
         d4 r r r2.
@@ -500,4 +500,12 @@
   }
 }
 
-\version "2.22.2"
+\version "2.24.0"
+
+
+%{
+convert-ly.py (GNU LilyPond) 2.24.3  convert-ly.py: Processing `'...
+Applying conversion: 2.23.1, 2.23.2, 2.23.3, 2.23.4, 2.23.5, 2.23.6,
+2.23.7, 2.23.8, 2.23.9, 2.23.10, 2.23.11, 2.23.12, 2.23.13, 2.23.14,
+2.24.0
+%}

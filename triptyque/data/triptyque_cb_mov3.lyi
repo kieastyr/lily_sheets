@@ -1,0 +1,352 @@
+%{
+twoStacc = \markup {
+  \center-align{
+    \musicglyph "scripts.staccato"
+    \musicglyph "scripts.staccato"
+  }
+}
+%}
+\relative c''{
+  \mergeDifferentlyHeadedOn
+  \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
+  \numericTimeSignature
+  \time 4/4 %%拍子
+  \set Staff.midiInstrument = "contrabass"
+  \clef bass %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
+  \override Hairpin.minimum-length = #6
+  \override StemTremolo.beam-thickness = #0.3
+
+  \key b \minor  %%調
+  \tempo "Presto" 4=152  %%BPM
+  \time 2/4
+  \newSpacingSection
+  \override Score.SpacingSpanner.spacing-increment = #10
+  R1*1/2
+  \newSpacingSection
+  \revert Score.SpacingSpanner.spacing-increment
+  \mark \markup{\teeny {\note {8} #1 "=" \note {8} #1 }}
+  \time 3/8
+  R1*3/8*2
+  \mark \markup{\hspace #14 {\teeny {\note {8} #1 "=" \note {8} #1 } \small \italic "sempre simile"}}
+  \time 2/4
+  R1*1/2
+  \time 3/8
+  R1*3/8*3
+  \mark #32
+  \time 5/8
+  R1*5/8
+  \time 3/8
+  <<
+    \override MultiMeasureRest.staff-position = #-6
+    {
+      R1*3/8*2
+    }
+    \new CueVoice {
+      \cueClef treble
+      \stemUp b16^"Vln.1."[ cis d cis] b cis
+      g[ a b cis] d e
+    }
+  >>
+  \cueClefUnset
+  \revert MultiMeasureRest.staff-position
+  \mark \default
+  \time 2/4
+  fis,16-.\f fis-. fis8-. fis16-. fis-. fis8-.
+  \time 3/8
+  fis8-. fis16-.[ fis-. fis8-.]
+  a8-. fis16-.[ fis-. fis8-.]
+  \time 2/4
+  fis16-. e-. d-. cis-. b8-. fis16-. fis
+  \time 3/8
+  b,8-. fis'16-.[ fis-. fis8-.]
+  fis-.[ cis'-.] cis16-.[ cis-.]
+  fis,8-. fis16-.[ fis-. cis'8-]
+  \mark \default
+  \time 2/4
+  g8-. g16-. g-. g8-. g16-. g-. 
+  \time 1/4
+  g8-. g16-. g-. 
+  \time 2/4 
+  r8 a,^\markup{\italic "Pizz."} a'4
+  r8\> c, a'4
+  g,2->\!
+  \mark \default
+  R1*1/2
+  \time 3/8
+  R1*3/8*2
+  \time 2/4
+  R1*1/2
+  \time 3/8
+  R1*3/8*3
+  \mark \default
+  \time 5/8
+  R1*5/8
+  \time 3/8
+  <<
+    \override MultiMeasureRest.staff-position = #-6
+    {
+      R1*3/8*2
+    }
+    \new CueVoice {
+      \cueClef treble
+      \stemUp b''16^"Vln.1."[ cis d cis] b cis
+      g[ a b cis] d e
+    }
+  >>
+  \cueClefUnset
+  \revert MultiMeasureRest.staff-position
+  \mark \default
+  \mark \default
+  \time 2/4
+  fis,,16-.\f fis-. fis8-. fis16-. fis-. fis8-.
+  \time 3/8
+  fis8-. fis16-.[ fis-. fis8-.]
+  a8-. fis16-.[ fis-. fis8-.]
+  \time 2/4
+  a16-. fis-. a-. b-. cis8-. cis16-. cis-.
+  \time 3/8
+  fis8-. cis16-.[ cis-. cis8-.]
+  fis-.[ cis-.] cis16-.[ cis-.]
+  fis8-. cis16-.[ cis-. cis8-.]
+  cis16-.\< cis-. b8-. a16-.[ a-.
+  g8-.] fis16-. fis-. e8-.
+  \mark \default
+  d8-.\ff r a'-.
+  fis-. r r
+  b,4.\mf^\markup{\italic "Pizz."}
+  cis
+  \time 2/8
+  d4
+  \time 3/8
+  e4.
+  eis
+  fis
+  g
+  ais
+  \mark \default
+  b4 b,8
+  cis4.
+  \time 2/8
+  d4
+  \time 3/8
+  e4.
+  eis
+  fis
+  g
+  fis
+  fis,8 fis'4
+  \mark \default
+  b4.:32^\markup{\italic "arco"}
+  cis:
+  \time 2/8
+  d4:
+  \time 3/8
+  e4.:
+  eis:
+  fis:
+  g:
+  fis8:16^\twoStacc cis:^\twoStacc fis,:^\twoStacc
+  \mark \default
+  cis-. fis,-. r
+  fis4.^\markup{\italic "Pizz."}
+  R1*3/8
+  fis'4.\mp
+  fis'4.\p
+  R1*3/8*5
+  \mark \default
+  \time 2/4
+  R1*1/2
+  \time 3/8
+  R1*3/8*2
+  \time 2/4
+  <<
+    \override MultiMeasureRest.staff-position = #-6
+    {
+      R1*1/2
+      \time 3/8
+      R1*3/8
+    }
+    \new CueVoice {
+      \cueClef treble
+      \stemUp a16-.^"Vln.1."[ fis-. a-. b-.] cis8-.( cis16-. cis)
+      fis8-. cis16-.[( cis-. cis8-.)]
+    }
+  >>
+  \cueClefUnset
+  \revert MultiMeasureRest.staff-position
+  R1*3/8
+  fis,,8\p^\markup{\italic "Pizz."} cis'_\markup{\italic "crescendo"} fis,
+  \mark \default
+  cis' fis, cis'
+  fis, cis' fis,
+  cis' fis, cis'
+  \time 2/8
+  fis,[ cis' 
+  \time 3/8
+  fis,] cis'\f fis, 
+  cis' fis, cis'
+  \mark \default
+  fis, cis' fis,
+  cis' fis, cis'
+  \newSpacingSection
+  \override Score.SpacingSpanner.spacing-increment = #5.5
+  \tempo \markup{\normal-text \italic \small "poco a poco accel."}
+  R1*3/8*2
+  \newSpacingSection
+  \revert Score.SpacingSpanner.spacing-increment
+  <<dis4.->^\markup{\italic "arco"} {s8\f\> s s\p}>>
+  R1*3/8*2
+  <<dis4.-> {s8\f\> s s\p}>>
+  R1*3/8
+  <<dis4.-> {s8\f\> s s\p}>>
+  \mark \default
+  \tempo "Piu mosso"
+  \bar "||"
+  R1*3/8
+  <gis, dis'>8-.\p\< q-. q-.
+  \time 4/8
+  <fis cis'>-. q-. q-. q-.
+  \time 3/8
+  q-.\f q-._\markup{\italic "cresc. sempre"} q-.
+  <gis dis'>-. q-. q-.
+  <a e'>-. q-. q-.
+  q-. q-. q-.
+  \time 2/8 \tuplet 3/2 {<gis dis'>-. q-. q-.}
+  \mark \default
+  \time 3/8
+  <a e'>-. q-. q-.
+  q-. q-. q-.
+  <gis dis'>-. q-. q-.
+  <a e'>-. q-. q-.
+  <gis dis'>\fff[ q16 q] q q
+  R1*3/8^\fermata
+  \break
+  \mark \default
+  \time 3/4
+  \tweak X-offset #11 \tempo "Adagio"
+  \bar "||"
+  <<e'2. {s4\p s_\markup{\italic "tranquillo"} s}>>
+  a,2( ais4)
+  b2.
+  cis,2( dis4)
+  \time 2/4
+  d!( e)
+  \time 3/4
+  d2.
+  \mark \default
+  R1*3/4*2
+  r4 r a'
+  \time 2/4
+  g2
+  fis4( e)
+  <<d2 {s4 s_\markup{\italic "dim."}}>>
+  <<g2 {s4 \tempo "rit." s}>>
+  fis2
+  \mark \default
+  \tweak X-offset #3 \tempo "Tempo I"
+  \time 3/8
+  \bar "||"
+  fis'8\p[ e_\markup{\italic "poco a poco cresc."}] fis[
+  e] fis[ e]
+  fis[ e] fis[
+  e] fis[ e]
+  fis[ e] fis[
+  e] fis[ e]
+  fis e fis
+  \time 2/4
+  R1*1/2
+  \mark \default
+  \time 3/8
+  b,,4.\mf^\markup{\italic "Pizz."}
+  cis
+  \time 2/8
+  d4
+  \time 3/8
+  e4.
+  eis
+  fis
+  g
+  ais
+  \mark \default
+  b
+  cis
+  \time 2/8
+  d4
+  \time 3/8
+  e4.
+  eis
+  fis
+  g
+  \mark \default
+  fis
+  r8^\markup{\italic "arco"} fis,,-.\f fis'-.
+  cis'16-.\ff[ cis-. fis,8-.] cis'16-.[ cis-. 
+  fis,8-.] cis'16-.[ cis-. fis,8-.]
+  fis'4\>( eis8~
+  eis e4\!)
+  \mark \default
+  \time 2/4
+  R1*1/2
+  \time 3/8
+  R1*3/8*2
+  \time 2/4
+  R1*1/2
+  \time 3/8
+  R1*3/8*3
+  \mark \default
+  \time 5/8
+  R1*5/8
+  \break
+  \time 3/8
+  <<
+    \override MultiMeasureRest.staff-position = #-6
+    {
+      R1*3/8*2
+    }
+    \new CueVoice {
+      \cueClef treble
+      \stemUp b'16^"Vln.1."[ cis d cis] b cis
+      g[ a b cis] d e
+    }
+  >>
+  \cueClefUnset
+  \revert MultiMeasureRest.staff-position
+  \mark \default
+  \mark \default
+  \time 2/4
+  fis,16-.\f fis-. fis8-. fis16-. fis-. fis8-.
+  \time 3/8
+  fis8-. fis16-.[ fis-. fis8-.]
+  a8-. fis16-.[ fis-. fis8-.]
+  \time 2/4
+  a8 a,16-. b-. cis8-. cis16-. cis-.
+  \time 3/8
+  fis,8-. cis'16-.[ cis-. cis8-.]
+  fis,-.[ cis'-.] fis,16-.[ fis-.]
+  cis8-. fis,16-.[ fis-. cis'8]
+  fis8-. fis16-. b-. cis8-.
+  fis,-. \tempo "rit." cis'16 b-. fis8-.
+  \mark \default
+  \time 3/4
+  \tweak X-offset #3 \tempo "Adagio"
+  \bar "||"
+  d2.\ff
+  g2( gis4)
+  \time 2/4
+  a2
+  \time 3/4
+  b2( cis4)
+  \time 2/4
+  b2
+  a4( g)
+  fis2_\markup{\italic "non dim. e rit."}~
+  fis4 r
+  \mark \default
+  \tweak X-offset #1 \tempo "Tempo I"
+  b16-.\fff b-. cis8-. b16-. b-. cis8-.
+  b-. cis16-. cis-. d-. d-. cis-. cis-.
+  \time 3/8
+  b-. b-. cis-. cis-. fis,8-.
+  b-.-\tweak X-offset #-1 \sf b,-.\sff\downbow r
+  \bar "|." 
+}

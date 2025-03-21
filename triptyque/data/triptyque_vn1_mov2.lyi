@@ -1,0 +1,158 @@
+%{
+pocospan =
+#(make-music 'CrescendoEvent
+             'span-direction START
+             'span-type 'text
+             'span-text "poco")
+aspan =
+#(make-music 'CrescendoEvent
+             'span-direction START
+             'span-type 'text
+             'span-text "a")
+
+%}
+\relative c''{
+  \mergeDifferentlyHeadedOn
+  \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
+  \numericTimeSignature
+  \time 4/4 %%拍子
+  \set Staff.midiInstrument = "contrabass"
+  \clef treble %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
+  \override Hairpin.minimum-length = #6
+  \override Score.Footnote.annotation-line = ##f
+  \override StemTremolo.beam-thickness = #0.2
+  
+  \key ees \major  %%調
+  \tempo "Andante" 4=72  %%BPM
+  \time 5/4
+  R1*5/4*5
+  \mark #18
+  ees4--\p^\markup{\italic "con sord"}( ees--_\markup{\italic "espress. molto"} ees--) c8[( d ees c)]
+  d4( bes) bes8( c) d[( ees f d)]
+  g4-- g( f) aes8([ g f g]
+  bes4) c,( bes8 c) d4( ees8 d)
+  c4--( c4--) bes8( c) d2
+  g,4( f8 c d4) r2 
+  R1*5/4
+  \mark \default
+  bes'4\mp( des) ees,8\<( f ges4 aes)
+  bes8([ des ees bes] aes4) aes( bes)
+  c8([ des ees c] f4) ees8( f) f4
+  aes\mf\>( f) f ees( bes)
+  bes8([ c des bes] \tempo "poco rit." c4) bes8( c) c4\!
+  \mark \default
+  \tempo "a tempo"
+  r2 r4 des8\p([ ees f des]
+  bes4) f'( ees) ges ges8( f
+  ges4) f f8( ees f4) ees8([ des
+  c des] ees4) ees, << 
+    f2^\markup{\teeny \flat}~ 
+    {s16-\tweak X-offset -0.5^\trill \once \override TrillSpanner.bound-details.left.text = "" s4..-\tweak Y-offset 5.5^\startTrillSpan}
+  >>
+  \time 3/4
+  f4 c16\stopTrillSpan\upbow\<( des ees f \tuplet 6/4 { ges aes bes c des ees) }
+  \time 5/4
+  f4\mp f_\markup{\italic "cresc."}( ees) ges8[( f ees f)]
+  ges4( aes8 ges) f4( ees bes)
+  c8( des ees4) f( ees) r
+  \mark \default
+  des'4--\mf( des-- des--) bes8[( c des bes)]
+  c4( as) as8( bes) c[( des es c)]
+  f4-- f( es) ges8([ f es f]
+  as4) bes,( as8 bes) c4( des8 c)
+  bes4--( bes4--) as8( bes) c2\>
+  \mark \default
+  R1*5/4\!
+  \time 3/4
+  r4 c,\mp( bes_\markup{\italic "dim."})
+  c c8[( des ees f)]
+  c4 r r 
+  R1*3/4
+  \mark \default
+  des,4--\mp^\markup{\italic "cantabile"}( des-- c--)
+  des bes8[( c des f)]
+  des4--( des-- c--)
+  des bes8[( c ees des)]
+  c4--( c-- bes--)
+  c c8[( des ees f)]
+  c4--( c-- bes--)
+  c2.
+  \mark \default
+  f4--( f-- f--)
+  f des8( ees f4)
+  f4--( f-- f--)
+  f des( f)
+  c c8( bes c4)
+  c c( g')
+  c, c8( bes c4)
+  c--( c-- c--)
+  bes--_\pocospan( bes-- g--)
+  \time 2/4
+  c--\aspan( c--)
+  \mark \default
+  \time 3/4
+  bes--_\pocospan( bes-- g--)
+  bes8_\cresc( c des4) des
+  f8( g aes4 g)
+  f8( g \tuplet 3/2 {aes bes aes} g4)
+  \time 2/4
+  aes( f)
+  \time 3/4
+  f f8[( g\! aes g)]
+  f2.
+  \mark \default
+  des'4--\mf^\markup{\italic "cantabile"}( des-- c--)
+  des bes8[( c des f)]
+  des4--( des--) c16_\cresc( des ees f)
+  ges4--( ges-- f--)
+  ges--( ges-- f--)
+  \time 2/4
+  ees8[( des c bes)]
+  \time 3/4
+  c4 c8[( des ees f)]
+  c4 c\!( bes)
+  c~ c16 c( des ees \tuplet 5/4 {f ges aes bes c)}
+  \mark \default
+  des4--\f des--( c--)
+  des bes8[( c des f)]
+  des4-- des--( c--)
+  des bes8[( c ees des)]
+  c4-- c--( bes--)
+  c c8[( des ees f)]
+  c4-- c--( bes--)
+  c2.\>
+  \acciaccatura f8 c2.
+  \acciaccatura f8 << c2. {s2 s4\p}>>
+  R1*3/4
+  \mark \default
+  \time 5/4
+  R1*5/4*5
+  \mark \default
+  ees8\mp([ f g ees]c4) g'( f) 
+  aes aes8( g aes4) g8( f g4) 
+  f8([ ees d ees] f4) ees8( d c4)
+  bes bes8( c d4) ees8[( d c ees)]
+  \time 3/4
+  d4 d( bes)
+  \time 5/4
+  c4. r8 r4 ees,8\p[( d c g')]
+  f4--( f--) r r2
+  \mark \default
+  c4\mp( ees) f,8( g aes4 bes)
+  c8([ ees f c] bes4) bes( c)
+  d8([ ees f d] g4) f8( g) g4
+  bes( g) g f( c)
+  c8\>([ d es c] \tempo "poco rit." d4) c8( d) d4
+  \mark \default
+  \tempo "a tempo"
+  ees4--\pp( ees-- ees--) c8[( d ees c)]
+  d4( bes) bes8( c) d[( ees f d)]
+  g4-- g( f) aes8([ g f g]
+  bes4) c,( bes8 c) d4( ees8 d)
+  \time 3/4
+  c4--( c4-- bes--)
+  r4 <bes, g'>2
+  r4 q2
+  r4 <g'' ees'>2\ppp\fermata
+  \bar "|."
+}

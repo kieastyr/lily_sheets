@@ -96,7 +96,7 @@
   q-.[ q-. q-. q-.] q-. q-.
   \time 2/4
   q-.[ q-. q-. q-.]
-  \time 4/4
+  \time 4/4 \grace s8
   <g d'>8 q16 q q8 q16 q q8 q16 q q8 q16 q
   <g e'>8 q16 q q8 q16 q q8 q16 q q8 q16 q
   <a ees'>8 q16 q q8 q16 q q8 q16 q q8 q16 q
@@ -113,7 +113,6 @@
   \mark \default
   \time 4/4
   R1*10
-  \pageBreak
   \mark \default
   ees'1\p
   ees2.( f4)
@@ -160,7 +159,7 @@
   q-.[ q-. q-. q-.] q-. q-.
   \time 2/4
   q-.[ q-. q-. q-.]
-  \time 4/4
+  \time 4/4 \grace s8
   <g d'>8 q16 q q8 q16 q q8 q16 q q8 q16 q
   <g e'>8 q16 q q8 q16 q q8 q16 q q8 q16 q
   <a ees'>8 q16 q q8 q16 q q8 q16 q q8 q16 q

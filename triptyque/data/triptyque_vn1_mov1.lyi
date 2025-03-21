@@ -71,7 +71,6 @@
     }
   >>
   R1
-  \pageBreak
   r2 r4^\markup{\italic "tutti"} a'16\f[( a,)] a[( a,)]
   \mark \default
   a8-. a16( g) a8-. a16( g) a8-. a16( g) a8-. b!16-. c-.
@@ -191,7 +190,7 @@
       a-. a4 a8~ a a-. a-. a-.
     }
   >>
-  \pageBreak
+  \allowPageTurn
   r2 fis16 g gis a ais b c! cis
   \mark \default
   d8-> r \appoggiatura {g,!16 a!} b8-> r e,16 fis d e cis4

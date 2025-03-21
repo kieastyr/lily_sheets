@@ -1,0 +1,325 @@
+\relative c'{
+  \mergeDifferentlyHeadedOn
+  \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
+  \numericTimeSignature
+  \time 4/4 %%拍子
+  \set Staff.midiInstrument = "contrabass"
+  \clef treble %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
+  \override Hairpin.minimum-length = #6
+  \override StemTremolo.beam-thickness = #0.3
+
+  \key b \minor  %%調
+  \tempo "Presto" 4=152  %%BPM
+  \time 2/4
+  \newSpacingSection
+  \override Score.SpacingSpanner.spacing-increment = #3
+  fis16-.\p( fis-. fis8-.) fis16-.( fis-. fis8-.)
+  \time 3/8
+  \newSpacingSection
+  \revert Score.SpacingSpanner.spacing-increment
+  \mark \markup{\teeny {\note {8} #1 "=" \note {8} #1 }}
+  fis-. fis16-.[( fis-. fis8-.)]
+  a-. fis16-.[( fis-. fis8-.)]
+  \time 2/4
+  \mark \markup{\hspace #14 {\teeny {\note {8} #1 "=" \note {8} #1 } \small \italic "sempre simile"}}
+  a16-. fis-. a-. b-. cis8-.( cis16-. cis-.)
+  \time 3/8
+  fis8-. cis16-.[( cis-. cis8-.)]
+  fis-.[ cis-.] cis16-.[( cis-.)]
+  fis8-. cis16-.[( cis-. cis8-.)]
+  \mark #32
+  \time 5/8
+  <<
+    {fis16^\markup{\italic "détaché"}^\markup{\italic "non div."}_\markup{\italic "cresc."}[e d cis] fis[ e] fis[ e d cis]}
+    \\
+    {e\flageolet[ \tweak NoteColumn.force-hshift 1.2 e\flageolet \tweak NoteColumn.force-hshift 1.5 e\flageolet \tweak NoteColumn.force-hshift 1.5 e\flageolet] 
+       e\flageolet[  \tweak NoteColumn.force-hshift 1.2 e\flageolet] 
+         e\flageolet[  \tweak NoteColumn.force-hshift 1.2 e\flageolet  \tweak NoteColumn.force-hshift 1.5 e\flageolet  \tweak NoteColumn.force-hshift 1.5 e\flageolet]}
+  >>
+  \time 3/8
+  <d, b'>[ <d cis'> <d d'> <d cis'>] <d b'>[ <d cis'>]
+  <g, g'>[ <d' a'> <d b'> <d cis'>] d' e
+  \mark \default
+  \time 2/4
+  <cis fis>16-.\f q-. q8-. q16-. q-. q8-.
+  \time 3/8
+  q8-. q16-.[ q-. q8-.]
+  <cis a'>-. <cis fis>16-.[ q-. q8-.]
+  \time 2/4
+  a'16-. fis-. a-. b-. cis8-. cis16-. cis-.
+  \time 3/8
+  fis8-. cis16-.[ cis-. cis8-.]
+  fis-.[ cis-.] cis16-.[ cis-.]
+  fis8-. cis16-.[ cis-. cis8-.]
+  \mark \default
+  \time 2/4
+  fis16^\markup{\italic "détaché"} e d cis b a g8
+  \time 1/4
+  fis16[ e d cis]
+  \time 2/4
+  b16-. b-. b8-. b16-. b-. b8-.
+  cis16\>^\markup{\italic "détaché"} b a g fis16-. fis-. fis8-.
+  r8 fis16^\markup{\italic "détaché"} e fis e d cis
+  \mark \default
+  fis16-.\p( fis-. fis8-.) fis16-.( fis-. fis8-.)
+  \time 3/8
+  fis-. fis16-.[( fis-. fis8-.)]
+  a-. fis16-.[( fis-. fis8-.)]
+  \time 2/4
+  a16-. fis-. a-. b-. cis8-.( cis16-. cis-.)
+  \time 3/8
+  fis8-. cis16-.[( cis-. cis8-.)]
+  fis-.[ cis-.] cis16-.[( cis-.)]
+  fis8-. cis16-.[( cis-. cis8-.)]
+  \mark \default
+  \time 5/8
+  <<
+    {fis16^\markup{\italic "détaché"}^\markup{\italic "non div."}_\markup{\italic "cresc."}[e d cis] fis[ e] fis[ e d cis]}
+    \\
+    {e\flageolet[ \tweak NoteColumn.force-hshift 1.2 e\flageolet \tweak NoteColumn.force-hshift 1.5 e\flageolet \tweak NoteColumn.force-hshift 1.5 e\flageolet] 
+       e\flageolet[  \tweak NoteColumn.force-hshift 1.2 e\flageolet] 
+         e\flageolet[  \tweak NoteColumn.force-hshift 1.2 e\flageolet  \tweak NoteColumn.force-hshift 1.5 e\flageolet  \tweak NoteColumn.force-hshift 1.5 e\flageolet]}
+  >>
+  \time 3/8
+  <d, b'>[ <d cis'> <d d'> <d cis'>] <d b'>[ <d cis'>]
+  <g, g'>[ <d' a'> <d b'> <d cis'>] d' e
+  \mark \default
+  \time 2/4
+  <b fis'>-.\f <d, b'>-. <b' fis'>-. <b b'>-. q-. <b fis'>-. <d, b'>-. <b' fis'>-.
+  \time 3/8
+  <b  b'>-.[ <b fis'>-. <d, b'>-. <b' fis'>-.] <b  b'>-.[ <b fis'>-. 
+  <d, b'>-. <b' fis'>-.] <b  b'>-.[ <b fis'>-. <d, b'>-. <b' fis'>-.]
+  \time 2/4
+  <b  b'>-.[ <b fis'>-. <d, b'>-. <b' fis'>-.] <b  b'>-.[ <b fis'>-. <d, b'>-. <b' fis'>-.]
+  \time 3/8
+  <b  b'>-.[ <b fis'>-. <d, b'>-. <b' fis'>-.] <b  b'>-.[ <b fis'>-. 
+  <d, b'>-. <b' fis'>-.] <b  b'>-.[ <b fis'>-. <d, b'>-. <b' fis'>-.]
+  <b  b'>-.[ <b fis'>-. <d, b'>-. <b' fis'>-.] q-. <d, b'>-.
+  cis-.\<[ d-. e-. fis-. g-. a-.]
+  b-.[ cis-. d-. e-. fis-. g-.]
+  \mark \default
+  a8-.\ff fis,16-.[ fis-. fis8-.]
+  r r \tuplet 5/2 {ais16\>(b cis d e}
+  fis8-.\mf) f16( e ees d)
+  fis!8-.[ d-.] cis16( fis)
+  \time 2/8
+  b8-.[ fis-.]
+  \time 3/8
+  d'-. cis16( c b8-.)
+  g8-. cis-. dis,-.
+  fis-. b,-. d!-.
+  g,-. c4->
+  g16-.[ a-. b-. cis!-. d-. e-.]
+  \mark \default
+  fis8-. f16( e ees d)
+  fis!8-.[ d-.] cis16( fis)
+  \time 2/8
+  b8-.[ fis-.]
+  \time 3/8
+  d'-. cis16( c b8-.)
+  g8-. cis-. dis,-.
+  fis-. b,-. d!-.
+  g,-. c4->
+  fis,8-. cis'16( b cis b)
+  fis'8-. fis,-. fis'-.
+  \mark \default
+  fis-. f16( e ees d)
+  fis,!8-. f16( e ees d)
+  \time 2/8
+  fis'[( f e ees)]
+  \time 3/8
+  fis,!8-. f16( e ees d)
+  fis'!8-. f16( e ees d)
+  fis,!8-. f16( e ees d)
+  fis'!8-. f16( e ees d)
+  fis,!8-. f16( e ees d)
+  \mark \default
+  cis'8-.-> <fis,! cis' fis!>8-.-> r
+  r fis-.\> cis~
+  cis fis-. cis-.
+  fis'-. cis4~
+  cis8 fis-. cis-.
+  <fis,  b\harmonic>4.\p~
+  <fis  b\harmonic>
+  r8^\markup{\italic "Pizz."} cis''\sf fis\sf
+  R1*3/8*2
+  \mark \default
+  \time 2/4
+  fis,,16-.\p^\markup{\italic "arco"}( fis-. fis8-.) fis16-.( fis-. fis8-.)
+  \time 3/8
+  fis-. fis16-.[( fis-. fis8-.)]
+  a-. fis16-.[( fis-. fis8-.)]
+  \time 2/4
+  a16-. fis-. a-. b-. cis8-.( cis16-. cis-.)
+  \time 3/8
+  fis8-. cis16-.[( cis-. cis8-.)]
+  R1*3/8*2
+  \mark \default
+  fis,8-.\p^\markup{\italic "col legno"} cis16-.[( cis-. cis8-.)]
+  cis-._\markup{\italic "crescendo"} b-. cis-.
+  fis8-. cis16-.[( cis-. cis8-.)]
+  \time 2/8
+  fis-.[ cis-.]
+  \time3/8
+  fis8-. cis16-.\f[( cis-. cis8-.)]
+  R1*3/8
+  \mark \default
+  r8^\markup{\italic "Pizz."} <g fis' cis' fis>\sf r
+  q\sf r q\sf
+  \tempo \markup{\normal-text \italic \small "poco a poco accel."}
+  R1*3/8
+  cis8:16\p\< d: fis:
+  gis4.\f\>
+  cis8:\p\< d: fis:
+  cis8: d: fis:
+  gis4.\f\>
+  cis,8:\p d: fis:
+  gis4.\f\>
+  \mark \default
+  \tempo "Piu mosso"
+  cis,8:\p\< d: fis:
+  gis: fis: gis:
+  \time 4/8
+  a: b: cis4
+  \time 3/8
+  a8:\f b:-\tweak X-offset #-1.5 -\tweak Y-offset #-5 _\markup{\italic "cresc. sempre"} cis:
+  a: b: cis:
+  dis8-. cis16-.[ cis-. cis8]
+  dis-. cis-.dis-.
+  \time 2/8
+  e16^\markup{\italic "détaché"}[ dis cis b]
+  \mark \default
+  \time 3/8
+  dis8-. cis16-.[ cis-. cis8]
+  dis-. cis-.dis-.
+  e16[ dis cis b] a gis
+  dis'8-. cis16-.[ cis-. cis8]
+  e16\fff[ dis cis b] a gis
+  R1*3/8\fermata
+  \mark \default
+  \tempo "Adagio"
+  \time 3/4
+  \bar "||"
+  gis,4\p( b_\markup{\italic "tranquillo"} gis)
+  cis,( dis dis')
+  cis2.
+  b4( gis b)
+  \time 2/4
+  d!( cis)
+  \time 3/4
+  fis,2.
+  \mark \default
+  gis4( e d')
+  cis( a2)
+  g4( fis a)
+  \time 2/4
+  b2
+  fis4( a)
+  <<b2 {s4 s_\markup{\italic "dim."}}>>
+  <<cis2 {s4 \tempo "rit." s}>>
+  fis2
+  \mark \default
+  \tempo "Tempo I"
+  \time 3/8
+  \bar "||"
+  fis,8-.\p fis16-._\markup{\italic "poco a poco cresc."}[( fis-. fis8-.)]
+  fis16-.[( fis-. fis8-.)] fis-.
+  fis16-. e-. fis-. g-. fis-. e-.
+  fis16-.[( fis-. fis8-.)] fis-.
+  fis16-. e-. fis-. g-. fis-. e-.
+  fis-. g-. fis-. e-. fis-. g-.
+  fis-. e-. fis-. g-. fis-. e-.
+  \time 2/4
+  eis\< fis gis ais b cis d e!
+  \mark \default
+  \time 3/8
+  fis8-.\mf f16( e ees d)
+  fis!8-.[ d-.] cis16( fis)
+  \time 2/8
+  b8-.[ fis-.]
+  \time 3/8
+  d'-. cis16( c b8-.)
+  g8-. cis-. dis,-.
+  fis-. b,-. d!-.
+  g,-. c4->
+  g16-.[ a-. b-. cis!-. d-. e-.]
+  \mark \default
+  fis8-. <cis d>16-.[ q-. q8-.]
+  r8 q16-.[ q-. q8-.]
+  \time 2/8
+  r8 q16-. q-.
+  \time 3/8
+  r8 q16-.[ q-. q8-.]
+  r8 <cis dis>16-.[ q-. q8-.]
+  r8 <cis e>16-.[ q-. q8-.]
+  r8 <c e>16-.[ q-. q8-.]
+  \mark \default
+  fis,8-.\< cis'!16( b cis b)
+  fis'8-. fis,-. fis'-.\!
+  r8 <g,, fis' cis' fis>\sf\downbow r
+  q\sf\downbow r q\sf\downbow
+  fis'16-.\>[( fis-. fis8-.)] fis16-.[( fis-. 
+  fis8-.)] fis16-.[( fis-. fis8-.)]
+  \mark \default
+  \time 2/4
+  fis16-.\p( fis-. fis8-.) fis16-.( fis-. fis8-.)
+  \time 3/8
+  fis-. fis16-.[( fis-. fis8-.)]
+  a-. fis16-.[( fis-. fis8-.)]
+  \time 2/4
+  a16-. fis-. a-. b-. cis8-.( cis16-. cis-.)
+  \time 3/8
+  fis8-. cis16-.[( cis-. cis8-.)]
+  fis-.[ cis-.] cis16-.[( cis-.)]
+  fis8-. cis16-.[( cis-. cis8-.)]
+  \mark \default
+  \time 5/8
+  <<
+    {fis16^\markup{\italic "détaché"}^\markup{\italic "non div."}_\markup{\italic "cresc."}[e d cis] fis[ e] fis[ e d cis]}
+    \\
+    {e\flageolet[ \tweak NoteColumn.force-hshift 1.2 e\flageolet \tweak NoteColumn.force-hshift 1.5 e\flageolet \tweak NoteColumn.force-hshift 1.5 e\flageolet] 
+       e\flageolet[  \tweak NoteColumn.force-hshift 1.2 e\flageolet] 
+         e\flageolet[  \tweak NoteColumn.force-hshift 1.2 e\flageolet  \tweak NoteColumn.force-hshift 1.5 e\flageolet  \tweak NoteColumn.force-hshift 1.5 e\flageolet]}
+  >>
+  \time 3/8
+  <d, b'>[ <d cis'> <d d'> <d cis'>] <d b'>[ <d cis'>]
+  <g, g'>[ <d' a'> <d b'> <d cis'>] d' e
+  \mark \default
+  \time 2/4
+  <cis fis>16-.\f q-. q8-. q16-. q-. q8-.
+  \time 3/8
+  q8-. q16-.[ q-. q8-.]
+  <cis a'>8-. <cis fis>16-.[ q-. q8-.]
+  \time 2/4
+  a'16-. fis-. a-. b-. cis8-. cis16-. cis-.
+  \time 3/8
+  fis8-. cis16-.[ cis-. cis8-.]
+  fis-.[ cis-.] cis16-.[ cis-.]
+  fis8-. cis16-.[ cis-. cis8-.]
+  <fis, fis'>-. <fis cis'>-. <fis fis'>-.
+  <fis cis'>-. \tempo "rit." fis,16-.[ fis-. <fis cis'>8-.]
+  \mark \default
+  \tempo "Adagio"
+  \time 3/4
+  \bar "||"
+  fis'4\ff( a fis)
+  b,( cis cis')
+  \time 2/4
+  b2
+  \time 3/4
+  a4( fis a)
+  \time 2/4
+  <a, fis''>2
+  <a e''>4( b')
+  fis'2_\markup{\italic "non dim. e rit."}~
+  fis4 r
+  \mark \default
+  \tempo "Tempo I"
+  <b,, fis'>16-.\fff q-. q8-. q16-. q-. q8-.
+  q-. q16-. q-. q-. q-. q-. q-.
+  \time 3/8
+  q-. q-. q-. q-. q8-.
+  \stemUp
+  <d, b' b'>\sf b\sff-\tweak Y-offset #5.5 \downbow r
+  \bar "|." 
+}

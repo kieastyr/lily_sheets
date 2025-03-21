@@ -1,3 +1,16 @@
+%{
+pocospan =
+#(make-music 'CrescendoEvent
+             'span-direction START
+             'span-type 'text
+             'span-text "poco")
+aspan =
+#(make-music 'CrescendoEvent
+             'span-direction START
+             'span-type 'text
+             'span-text "a")
+
+%}
 \relative c'{
   \mergeDifferentlyHeadedOn
   \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
@@ -6,13 +19,152 @@
   \set Staff.midiInstrument = "contrabass"
   \clef bass %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
   \override Hairpin.minimum-length = #6
+  \override Score.Footnote.annotation-line = ##f
 
   \key ees \major  %%調
   \tempo "Andante" 4=72  %%BPM
   \time 5/4
+  \newSpacingSection
+  \override Score.SpacingSpanner.spacing-increment = #4
   R1*5/4*5
+  \newSpacingSection
+  \revert Score.SpacingSpanner.spacing-increment
   \mark #18
   R1*5/4*5
-  
+  <<
+    \override MultiMeasureRest.staff-position = #2
+    {
+      R1*5/4*2
+    }
+    \new CueVoice {
+      \cueClef treble
+      <<\tweak font-size #-2 c4.^"Vn.2" \\ \override StemTremolo.beam-thickness = #0.2 \tweak font-size #-2  c:32>> r8 r4 ees8\p([ d c g']
+      f4) f c8( d bes4) bes
+    }
+  >>
+  \cueClefUnset
+  \revert MultiMeasureRest.staff-position
+  \tweak X-offset #0 \mark \default
+  ges2\mp\<^\markup{\italic "pizz. (con sord.)"} des' ges,,4~
+  ges des'2 ges
+  f c' f,,4\!~
+  f\mf c'2\> ges'
+  \newSpacingSection
+  \override Score.SpacingSpanner.spacing-increment = #1.5
+  des' \tweak X-offset #-2 \tempo "poco rit." des,4 ges2
+  \newSpacingSection
+  \revert Score.SpacingSpanner.spacing-increment
+  \mark \default
+  \tweak X-offset #2 \tempo "a tempo"
+  r4\p aes des,2 des'4
+  ges,2 des'4 ges,, ges'~
+  ges r8 des'4 des8 r4 ges,
+  f c'2 c,4 f
+  \time 3/4
+  ees aes aes,
+  \time 5/4
+  <<des2 {s4 s_\markup{\italic "cresc."}}>> c bes aes
+  ges2~ ges8 aes bes[ c des ees]
+  f4. c8 f4 f, f'
+  \mark \default
+  bes,2\mf bes'4 bes,2
+  aes aes'4 aes,2
+  ges ges'4 ges,2 
+  f f'4 f,2
+  ees'4 des c c'\> bes8 aes
+  \mark \default
+  ges2\mp r4 r2
+  \time 3/4
+  ges,2\p r4 f2 r4
+  R1*3/4
+  f'4\p c f,
+  \tweak X-offset #-2 \mark \default
+  <<{d''4\rest^\markup{\italic "non div."} des des} \\ ges,2.\mp>>
+  <<{d'4\rest des des} \\ ges,2.>>
+  <<{d'4\rest des des} \\ ges,2.>>
+  <<{d'4\rest des des} \\ ges,2.>>
+  <<{d'4\rest c c} \\ f,2.>>
+  <<{d'4\rest c c} \\ f,2.>>
+  <<{d'4\rest des des} \\ f,2.>>
+  <<{b4\rest ges8 ges ges4} \\ c,2.>>
+  \mark \default
+  <<{b'4\rest aes aes} \\ des,2.>>
+  <<{b'4\rest aes aes} \\ des,2.>>
+  <<{b'4\rest aes aes} \\ des,2.>>
+  <<{b'4\rest aes aes} \\ des,2.>>
+  <<{b'4\rest g g} \\ c,2.>>
+  <<{b'4\rest g g} \\ c,2.>>
+  <<{b'4\rest g g} \\ c,2.>>
+  <<{b'4\rest aes aes} \\ c,2.>>
+  <<{b'4\rest_\pocospan g g} \\ c,2.>>
+  \time 2/4
+  <<{b'4\rest\!_\aspan aes} \\ c,2>>
+  \tweak X-offset #0 \mark \default
+  \time 3/4
+  <<{b'4\rest\!_\pocospan g8 g g4} \\ c,2.>>
+  <<s4\! \\ des4^\markup{\italic "arco"}>> c8_\cresc( bes aes g)
+  f2( g4)
+  aes2( g8 aes)
+  \time 2/4
+  bes4( aes8 bes)
+  \time 3/4
+  c2( f,4\!)
+  g( aes8 bes c4)
+  \mark \default
+  ges4.\mf r8 ges'^\markup{\italic \small "pizz."} ges
+  ges,4.^\markup{\italic \small "arco"} r8 ges'^\markup{\italic \small "pizz."} ges
+  bes,4.^\markup{\italic \small "arco"} r8 f'_\cresc^\markup{\italic \small "pizz."} f
+  ees4.^\markup{\italic \small "arco"} r8 ees'^\markup{\italic \small "pizz."} ees
+  ees,4.^\markup{\italic \small "arco"} r8 ees'^\markup{\italic \small "pizz."} ees
+  \time 2/4
+  ees,4^\markup{\italic \small "arco"} r8 ees'^\markup{\italic \small "pizz."}
+  \time 3/4
+  f,4.^\markup{\italic \small "arco"} r8 f^\markup{\italic \small "pizz."} f
+  f,4.\!^\markup{\italic \small "arco"} r8 f'^\markup{\italic \small "pizz."} f
+  f,4.^\markup{\italic \small "arco"} r8 f'^\markup{\italic \small "pizz."} f
+  \mark \default
+  ges4\f r ees\glissando^\markup{\tiny \rotate #25 "gliss."}
+  ges r ees\glissando^\markup{\tiny \rotate #25 "gliss."}
+  ges r ees\glissando
+  ges r bes,\glissando
+  f' r c\glissando
+  f r c\glissando
+  f r bes,\glissando
+  f' r \stemUp \xNote \footnote "*)" #'(0 . 3) "*) Knock the body" d
+  f,\>^\markup{\italic \small "pizz."} \xNote {d'8 d d4}
+  f,^\markup{\italic \small "pizz."} \xNote {d'8 d d4\!}
+  r \xNote {d\pp d4}
+  \stemNeutral
+  \mark \default
+  \time 5/4
+  R1*5/4*5
+  \mark \default
+  ees4\mp^\markup{\italic "pizz."} bes' ees ees,8 bes'4 bes8
+  aes4 ees' aes,, ees' c'
+  aes2 r8 ees'4 ees8 r4
+  g, d' r8 g,4 g8 r g,[
+  \time 3/4
+  d' g] r d4 g,8
+  \time 5/4
+  aes4.^\markup{\italic "arco"} r8 r2.
+  R1*5/4
+  \mark \default
+  aes4\mp^\markup{\italic "pizz."} ees' aes c aes
+  ees aes, ees' aes c
+  g d g, d' g
+  d' g, d aes' ees
+  aes,\> ees' \tempo "poco rit." aes g g,\pp
+  \mark \default
+  \tweak X-offset #0.7 \tempo "a tempo"
+  R1*5/4
+  r2 bes2.\pp^\markup{\italic "(pizz.)"}
+  c d2
+  ees f g4
+  \time 3/4
+  R1*3/4
+  ees2^\markup{\italic "pizz."} r4
+  ees2 r4
+  \mark \markup{\italic \normalsize "arco"}
+  ees2.\ppp\fermata
   \bar "|."
 }
