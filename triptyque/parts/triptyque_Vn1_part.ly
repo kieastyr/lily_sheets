@@ -48,9 +48,9 @@ aspan =
     
     markup-markup-spacing.basic-distance = #20
     markup-system-spacing.basic-distance = #20
-    top-system-spacing.minimum-distance = #12
+    top-system-spacing.minimum-distance = #14
     last-bottom-spacing.basic-distance = #12
-    system-system-spacing.minimum-distance = #16
+    system-system-spacing.minimum-distance = #15
     score-markup-spacing.basic-distance = #20
   
     print-page-number = ##t
@@ -89,6 +89,23 @@ aspan =
       \new Staff \with{\consists Page_turn_engraver}{
         \compressEmptyMeasures
         \include "../data/triptyque_vn1_mov2.lyi"
+      }
+    >>
+    \layout {
+      indent = 0\cm %%0にするといい
+    }
+    \midi{}
+  }
+  \score {
+    \header {
+      title = "III"
+      composer = ##f
+      instrument = ##f
+    }
+    \new ChoirStaff << 
+      \new Staff \with{\consists Page_turn_engraver}{
+        \compressEmptyMeasures
+        \include "../data/triptyque_vn1_mov3.lyi"
       }
     >>
     \layout {

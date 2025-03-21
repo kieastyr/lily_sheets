@@ -45,9 +45,10 @@ aspan =
   r2 r4 des8\p([ ees f des]
   bes4) f'( ees) ges ges8( f
   ges4) f f8( ees f4) ees8([ des
+  \break
   c des] ees4) ees, << 
     f2^\markup{\teeny \flat}~ 
-    {s16-\tweak X-offset -0.5^\trill \once \override TrillSpanner.bound-details.left.text = "" s4..-\tweak Y-offset 5.5^\startTrillSpan}
+    {s8-\tweak X-offset -0.5^\trill \once \override TrillSpanner.bound-details.left.text = "" s4.-\tweak Y-offset 5.5^\startTrillSpan}
   >>
   \time 3/4
   f4 c16\stopTrillSpan\upbow\<( des ees f \tuplet 6/4 { ges aes bes c des ees) }
