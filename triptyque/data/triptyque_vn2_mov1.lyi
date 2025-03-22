@@ -46,7 +46,7 @@
      <<{\tweak Accidental.X-offset #-1 e!8[ c]} \\ {\tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  ees[ c]}>>
   d4^\markup{\italic "unis."} d cis\mf cis
   c!\mp c b\p b
-  \mark \default
+  \tweak X-offset #-2 \mark \default
   <b' a'!>8^._>\f\downbow q^._>\downbow r4 des16( ees) des ees beses4
   <b! a'!>8^._>\downbow q^._>\downbow r4 des16( ees) des ees beses4
   <bes aes'>8-.\downbow q-.\downbow r q-.\upbow <b a'>-.\downbow q-.\downbow r q-.
@@ -67,6 +67,7 @@
   b bes
   a\mp( gis)
   a( gis)
+  \break
   a8\fsub a16 g! <<{a8\glissando( a')} s4^\markup{\rotate #30 \italic \tiny "gliss."}>> a,8-. bes4( a8)
   d4 a c8-. bes4( a8)
   \mark \default
@@ -102,7 +103,7 @@
   <a ees'>8 q16 q q8 q16 q q8 q16 q q8 q16 q
   <gis d'>8 q16 q q8 q16 q q8 q16 q q8 q16 q
   <gis e' b' e>8\sf <dis'' e>16->[ q->] q-> q-> q-> q-> q8-> e,16->[ e->] e8-> r
-  \mark \default
+  \tweak X-offset #-2 \mark \default
   <a, e' a e'>4\sf^\markup{\italic "pizz."} a8-.^\markup{\italic "arco"} c-. b-. d-. c16( b-.) a-.  g-.
   a8-. a16-. b-. a8-. e'-. d-. fis-. e4
   g16( fis-.) e-. d-. e8-. e16-. d-. e8-. g-. fis16( g-.) fis-. e-.
@@ -138,7 +139,7 @@
   d8\f d16 d d d d d ees8 ees16 ees ees ees ees ees
   e8 e16 e e e e e f8 f16 f f f f f
   \mark \default
-  ges8 des,16\fsempre ees f8-. des16 ees f8-. des-. ees-. f-.
+  ges8 des,16 ees f8-. des16 ees f8-. des-. ees-. f-.
   ees-. bes-. ees4~ ees8 bes-. ees4
   e!8-. ees16 d ees8-. d16 des d8-. des16 c des8-. c16 b
   c8-. b16 a c4~ c8 b16 a c8-. c16 d

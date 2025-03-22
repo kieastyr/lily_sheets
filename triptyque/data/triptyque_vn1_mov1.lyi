@@ -26,7 +26,8 @@
   <b fis'>4--^\markup{\italic "div."} <aes ees'>8-. <f! c'>4.-- r4
   <b fis'>4-- <aes ees'>8-. <f! c'>-. <d' c'>16( <cis b'> <c bes'> <b a'> <bes aes'> <a! g'> <gis fis'! > <g f'>)
   <a! e'!>8( <aes ees'>4) q8-. <f c'>8( <aes ees'>4) <a e'>8-.
-  <g f'>4 q <gis fis'>\mf q <a g'>\mp q <ais gis'>\p q
+  <g f'>4 q <gis fis'>\mf q 
+  <a g'>\mp q <ais gis'>\p q
   \mark \default
   <b a'!>8^._>\f\downbow^\markup{\italic "unis."} q^._>\downbow r4 des16( ees) des ees beses4
   <b! a'!>8^._>\downbow q^._>\downbow r4 des16( ees) des ees beses4

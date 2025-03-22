@@ -1,0 +1,168 @@
+%{
+pocospan =
+#(make-music 'CrescendoEvent
+             'span-direction START
+             'span-type 'text
+             'span-text "poco")
+aspan =
+#(make-music 'CrescendoEvent
+             'span-direction START
+             'span-type 'text
+             'span-text "a")
+twoStacc = \markup {
+  \center-align{
+    \musicglyph "scripts.staccato"
+    \musicglyph "scripts.staccato"
+  }
+}
+%}
+\relative c'{
+  \mergeDifferentlyHeadedOn
+  \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
+  \numericTimeSignature
+  \time 4/4 %%拍子
+  \set Staff.midiInstrument = "contrabass"
+  \clef alto %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
+  \override Hairpin.minimum-length = #6
+  \override Score.Footnote.annotation-line = ##f
+  \override StemTremolo.beam-thickness = #0.2
+  
+  \key ees \major  %%調
+  \tempo "Andante" 4=72  %%BPM
+  \time 5/4
+  ees4--\p^\markup{\italic "con sord"}( ees--_\markup{\italic "espress. molto"} ees--) c8[( d ees c)]
+  d4( bes) bes8( c) d[( ees f d)]
+  g4-- g( f) aes8([ g f g]
+  bes4) c,( bes8 c) d4( ees8 d)
+  c4--( c4--) bes8( c) d2
+  \mark #18
+  <<c'4\pp^\markup{\italic "div."}( \\ \override StemTremolo.beam-thickness = #0.2 c:32 >> <<bes \\ bes: >> <<aes \\ aes: >> <<g \\ g: >> <<f) \\ f: >>
+  <<ees( \\ ees: >> <<d) \\ d: >> <<d( \\ d: >> <<c \\ c: >> <<bes) \\ bes: >>
+  <<c'( \\ c: >> <<bes \\ bes: >> <<aes \\ aes: >> <<g \\ g: >> <<f) \\ f: >>
+  <<ees( \\ ees: >> <<d) \\ d: >> <<d( \\ d: >> <<c \\ c: >> <<bes) \\ bes: >>
+  \clef treble
+  <<f'( \\ f: >> <<ees \\ ees: >> <<d \\ d: >> <<c \\ c: >> <<bes) \\ bes: >>
+  <<aes4. \\ aes: >> r8 r4 r2
+  R1*5/4
+  \allowPageTurn
+  \clef alto
+  \mark \default
+  ges8\mp^\markup{\italic "pizz."}[ des' bes' des,] ges,\<[ des' bes' des,] ges,[ des' 
+  bes' des,] ges,[ des' bes' des,] ges,[ des' bes' des,] 
+  f,[ c' f c] f,[ c' f c] f,[ c' 
+  f\mf\> c] f,[ c' f c] ges[ des' ges des] 
+  ges,[ des' ges des] \tempo "poco rit." ges,[ des'] ges,[ des' ges des]
+  \mark \default
+  \tempo "a tempo"
+  des,\p[ aes' f' aes,] des[ aes] des,[ aes' f' aes,]
+  ges[ des' bes' des,] ges,[ des' bes' des,] ges,[ des' 
+  bes' des,] ges,[ des' bes' des,] ges,[ des' bes' des,]
+  f,[ c' aes' c, ] f[ c] f,[ c' aes' c, ]
+  \time 3/4
+  aes[ ees' ges ees] c ees
+  \time 5/4
+  des,[ aes' f'_\markup{\italic "cresc."} aes,] des[ aes] des,[ aes' f' aes,]
+  ges[ des' bes' des,] ges[ des] ges,[ des' bes' des,]
+  f,[ c' f c] f,[ c' f c] f,[ c']
+  \mark \default
+  des4--\mf^\markup{\italic "arco"}( des-- des--) bes8[( c des bes)]
+  c4( as) as8( bes) c[( des es c)]
+  f4-- f( es) ges8([ f es f]
+  as4) bes,( as8 bes) c4( des8 c)
+  bes4--( bes4--) as8( bes) c2\>
+  \mark \default
+  bes2\mp des8_\markup{\italic "dim."}( c bes2~
+  \time 3/4
+  bes2.)
+  ees(
+  c4) c\p( bes)
+  c2 r4
+  \mark \default
+  <ges des' ges>\mp^\markup{\italic "pizz."} \stemUp \xNote {\footnote "*)" #'(0 . 3) "*) Knock the body" c8 c c4 }
+  \stemNeutral <ges des' ges> \stemUp \xNote{ c8 c c4 }
+  \stemNeutral <ges des' ges> \stemUp \xNote{ c8 c c4 }
+  \stemNeutral <ges des' ges> \stemUp \xNote{ c8 c c4 }
+  <f, c' f> \xNote{ c'8 c c4 }
+  <f, c' f> \xNote{ c'8 c c4 }
+  <f, c' f> \xNote{ c'8 c c4 }
+  <f, c' f> \xNote{ c'8 c c4 }
+  \mark \default
+  \stemNeutral
+  aes'4--\mf^\markup{\italic "arco"}( aes--_\markup{\italic "cantabile"} g--)
+  aes f8[( g aes c)]
+  aes4--( aes-- g--)
+  aes f8[( g bes aes)]
+  g4--( g-- f--)
+  g4 bes,\mp( c8 bes)
+  bes4--( bes--) bes8( c)
+  f,4--( f-- f--)
+  g--_\pocospan( g-- c,--)
+  \time 2/4
+  c8_\aspan[( des ees f)]
+  \time 3/4
+  g4--_\pocospan( g-- c,--)
+  f8_\cresc( g aes4) aes8( bes)
+  des8( ees f des f4)
+  des8[( ees f des)] des( ees)
+  \time 2/4
+  f4( c)
+  \time 3/4
+  aes4 des2\!
+  c2.
+  \mark \default
+  \stemUp \xNote \footnote "*)" #'(0.5 . 3) "" c4\mf <ges des'>8^\markup{\italic "pizz."} q q4
+  \xNote c q q
+  \xNote c \stemNeutral <bes f'>8_\cresc q q4
+  \stemUp \xNote c <ees, bes'> q
+  \xNote c' q8 q q4
+  \time 2/4
+  \xNote c q8 q
+  \time 3/4
+  \xNote c4 <f, c'>4 q
+  \xNote c' q8 q\! q4
+  \xNote c \stemNeutral c8^\markup{\italic "arco"}( des16 ees) f4\startTrillSpan^\markup{\teeny \flat}
+  \mark \default
+  des\f\stopTrillSpan \acciaccatura {ees,16 e f} ges8-. ges-. ges4
+  ges \acciaccatura {ees!16 e f} ges8-. ges-. ges4
+  ges \acciaccatura {ees!16 e f} ges8-. ges-. ges4
+  ges \acciaccatura {ees!16 e f} ges8-. ges-. ges4
+  f \acciaccatura {d16 ees! e} f8-. f-. f4
+  f \acciaccatura {d16 ees! e} f8-. f-. f4
+  f \acciaccatura {ees!16 e f} ges8-. ges-. ges4
+  f \acciaccatura {d16\> ees! e} f8-. f-. f4
+  \acciaccatura f'8 ees2.
+  \acciaccatura f'8 <<ees2. {s2 s4\p} >>
+  R1*3/4
+  \mark \default
+  \time 5/4
+  ees,4--\p( ees--_\markup{\italic "espress. molto"} ees--) c8[( d ees c)]
+  d4( bes) bes8( c) d[( ees f d)]
+  g4-- g( f) aes8([ g f g]
+  bes4) c,( bes8 c) d4( ees8 d)
+  c4--( c4--) bes8( c) d2
+  ees8\mp([ f g ees] c4) g'( f) 
+  aes aes8( g aes4) g8( f g4) 
+  f8([ ees d ees] f4) ees8( d c4)
+  bes bes8( c d4) ees8( d c d)
+  \time 3/4
+  d4 d( bes)
+  \time 5/4
+  <c aes'>4. r8 r2.
+  r4 r c'8\p( d) bes4--( bes--)
+  \mark \default
+  aes,8:16\mp^\twoStacc[ ees':^\twoStacc c':^\twoStacc ees,:^\twoStacc] aes,:^\twoStacc[ ees':^\twoStacc c':^\twoStacc ees,:^\twoStacc] aes,:^\twoStacc[ ees':^\twoStacc 
+  c':^\twoStacc ees,:^\twoStacc] aes,:^\twoStacc[ ees':^\twoStacc c':^\twoStacc ees,:^\twoStacc] aes,:^\twoStacc[ ees':^\twoStacc c':^\twoStacc ees,:^\twoStacc]
+  g,:^\twoStacc[ d':^\twoStacc g:^\twoStacc d:^\twoStacc] g,:^\twoStacc[ d':^\twoStacc g:^\twoStacc d:^\twoStacc] g,:^\twoStacc[ d':^\twoStacc 
+  g:^\twoStacc d:^\twoStacc] g,:^\twoStacc[ d':^\twoStacc g:^\twoStacc d:^\twoStacc] aes^\twoStacc[ ees':^\twoStacc aes:^\twoStacc ees:^\twoStacc]
+  aes,:\>^\twoStacc[ ees':^\twoStacc aes:^\twoStacc ees:^\twoStacc] \tempo "poco rit." aes,:^\twoStacc[ ees':^\twoStacc] g,:^\twoStacc[ d':^\twoStacc g:^\twoStacc d:^\twoStacc\!]
+  <<c'4\pp^\markup{\italic "div."}( \\ \override StemTremolo.beam-thickness = #0.2  c:32 >> <<bes \\ bes: >> <<aes \\ aes: >> <<g \\ g: >> <<f) \\ f: >>
+  <<ees( \\ ees: >> <<d) \\ d: >> <<d( \\ d: >> <<c \\ c: >> <<bes) \\ bes: >>
+  <<c'( \\ c: >> <<bes \\ bes: >> <<aes \\ aes: >> <<g \\ g: >> <<f) \\ f: >>
+  <<ees( \\ ees: >> <<d) \\ d: >> <<d( \\ d: >> <<c \\ c: >> <<bes) \\ bes: >>
+  \time 3/4
+  <<f'( \\ f:>> <<ees \\ ees:>> <<d) \\ d:>>
+  r <bes ees>2^\markup{\italic "unis."}
+  r4 q2
+  r4 <g d'>2\ppp\fermata
+  \bar "|."
+}

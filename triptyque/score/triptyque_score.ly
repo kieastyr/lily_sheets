@@ -81,6 +81,13 @@ twoStacc = \markup {
       }
       
       \new Staff \with{
+        instrumentName = "Viola "
+      }{
+        \compressEmptyMeasures
+        \include "../data/triptyque_va_mov1.lyi"
+      }
+      
+      \new Staff \with{
         instrumentName = "Violoncello "
       }{
         \compressEmptyMeasures
@@ -121,14 +128,18 @@ twoStacc = \markup {
         \compressEmptyMeasures
         \include "../data/triptyque_vn2_mov2.lyi"
       }
-      
+      \new Staff \with{
+        instrumentName = "Viola "
+      }{
+        \compressEmptyMeasures
+        \include "../data/triptyque_va_mov2.lyi"
+      }
       \new Staff \with{
         instrumentName = "Violoncello "
       }{
         \compressEmptyMeasures
         \include "../data/triptyque_vc_mov2.lyi"
       }
-      
       \new Staff \with{
         instrumentName = "Contrabass "
       }{
