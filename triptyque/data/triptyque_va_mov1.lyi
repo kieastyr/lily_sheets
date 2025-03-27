@@ -13,7 +13,7 @@ twoStacc = \markup {
   \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
   \numericTimeSignature
   \time 4/4 %%拍子
-  \set Staff.midiInstrument = "cello"
+  \set Staff.midiInstrument = "viola"
   \clef alto %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
   \override Hairpin.minimum-length = #6
   \override StemTremolo.beam-thickness = #0.3
@@ -21,15 +21,15 @@ twoStacc = \markup {
   \key a \minor  
   \tempo "Allegro" 4=138 
   a8\f a16-. b-. a8-. c-. b-. d-. c16( b-.) a-.  g-.
-  a8-. a16-. b-. a8-. e'-. d-. fis-. e4
+  a8-.-. a16-. b-. a8-. e'-. d-. fis-. e4
   g16( fis-.) e-. d-. e8-. e16-. d-. e8-. g-. fis16( g-.) fis-. e-.
   d-. e-. c-. d-. b-. c-. a-. b-. c16( b-.) a-. g-. a8-. a16-. g-.
   a( b-.) c-. b-. a8-. a16-. g-. a8-. a16-. b-. a4
   \set glissandoMap = #'((0 . 0) (1 . 1))
-  \acciaccatura <g d'>8\glissando <a e'>4\sf 
-    \acciaccatura <g d'>8\glissando <a e'>4\sf
-      \acciaccatura <g d'>8\glissando <a e'>4\sf
-        \acciaccatura <g d'>8\glissando <a e'>4\sf
+  \acciaccatura <g d'>8\glissando \tweak NoteColumn.X-offset #2 <a e'>4\sf 
+    \acciaccatura <g d'>8\glissando \tweak NoteColumn.X-offset #2 <a e'>4\sf
+      \acciaccatura <g d'>8\glissando \tweak NoteColumn.X-offset #2 <a e'>4\sf
+        \acciaccatura <g d'>8\glissando \tweak NoteColumn.X-offset #2 <a e'>4\sf
   \mark \default
   a16\f( b a b) c8-. b-. \appoggiatura {b16 c} d8-. c-. b-. a-.	
   <aes ees'>4--^\markup{\italic "div."} <f c'>2-- r4
@@ -56,7 +56,7 @@ twoStacc = \markup {
   r a r4 r8 a r4
   r8 fis r fis r a r4
   \mark \default
-  r8 cis,:16_\twoStacc\mp[ d:_\twoStacc ees:_\twoStacc d:_\twoStacc cis:_\twoStacc] r cis:_\twoStacc[
+  r8-\tweak X-offset #-2 \mp^\markup{\italic "arco"} cis,:16-\twoStacc[ d:_\twoStacc ees:_\twoStacc d:_\twoStacc cis:_\twoStacc] r cis:_\twoStacc[
   d:_\twoStacc ees:_\twoStacc d:_\twoStacc cis:_\twoStacc] r cis:_\twoStacc[ d:_\twoStacc cis:_\twoStacc]
   r c!:_\twoStacc[ cis:_\twoStacc d:_\twoStacc cis:_\twoStacc c:_\twoStacc] r c:_\twoStacc[
   cis:_\twoStacc d:_\twoStacc cis:_\twoStacc c:_\twoStacc] r c:_\twoStacc[ cis:_\twoStacc d:_\twoStacc 
@@ -76,7 +76,7 @@ twoStacc = \markup {
   fis-. a,16 b cis8-. a16 b cis8-. a-. b-. cis-.
   b8. a16 ais b c! cis d dis e f! fis g gis a
   ais b c! cis d dis e f! fis r8. r4
-  \mark \default
+  \tweak X-offset #-1.5 \mark \default
   e,8-.^\markup{\italic "Saltato"}( e16-. e-.) e8-.( e-.) e-.( e16-. e-.) e8-.( e-.)
   ees-.( ees16-. ees-.) ees8-.( ees-.) ees-.( ees16-. ees-.) ees8-.( ees-.)
   ees-.( ees16-. ees-.) ees8-.( ees-.) ees-.( ees16-. ees-.) ees8-.( ees-.)
@@ -96,7 +96,7 @@ twoStacc = \markup {
   b8 b16 b b8 b16 b b8 b16 b b8 b16 b
   <gis e' b'>8\sf r r4 r8 dis'16-> dis-> dis-> e,-> e-> r
   \mark \default
-  a8 a16-. g-. a8-. c-. b-. d-. c16( b-.) a-.  g-.
+  a8-. a16-. g-. a8-. c-. b-. d-. c16( b-.) a-.  g-.
   a8-. a16-. b-. a8-. e'-. d-. fis-. e4
   g16( fis-.) e-. d-. e8-. e16-. d-. e8-. g-. fis16( g-.) fis-. e-.
   d-. e-. c-. d-. b-. c-. a-. b-. c16( b-.) a-. g-. a8-. a16-. g-.
@@ -129,7 +129,7 @@ twoStacc = \markup {
   <e! b'!>8-. q16( <g d> <e b'>8-.) q-. q-. q16( <g d> <e b'>8-.) q-.
   q-.\mf q16( <g d> <e b'>8-.) q-. q-. q16( <g d> <e b'>8-.) q-.
   <ees bes'>8-. q16( <ges des'> <ees bes'>8-.) q-._\markup{\italic "dim."} q-. q16( <ges des'> <ees bes'>8-.) q-.
-  q-. q16( <ges des'> <ees bes'>8-.) q-. q-.[ <ges des'>16( q] q8-.)[ <ees bes'>]
+  q-. q16( <ges des'> <ees bes'>8-.) q-. q-.[ <ges des'>16-. q-.] q8-.[ <ees bes'>-.]
   \mark \default
   \stemNeutral
   ees8-.->\ffsub^\markup{\italic "unis."} ees16->( ges ees8-.) e'!-.-> c-.->[ ees->]~ ees[ d-.->]

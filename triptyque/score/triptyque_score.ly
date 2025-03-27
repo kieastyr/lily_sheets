@@ -4,6 +4,7 @@
 ffz = #(make-dynamic-script "ffz")
 fpp = #(make-dynamic-script "fpp")
 fsempre = _\markup { \dynamic f \italic sempre}
+psub = _\markup { \dynamic p \italic sub.}
 fsub = _\markup { \dynamic f \italic sub.}
 ffsub = _\markup { \dynamic ff \italic sub.}
 pocospan = #(make-music	'CrescendoEvent
@@ -22,6 +23,10 @@ twoStacc = \markup {
 }
 %%ここまで、定義
   
+%% global size  
+#(set-global-staff-size 14)
+#(set-default-paper-size "a4" )
+
 \book{
   \header {
     title = \markup {
@@ -32,10 +37,6 @@ twoStacc = \markup {
             "芥川 也寸志"
     }
   }
-  
-  
-  #(set-global-staff-size 14)
-  #(set-default-paper-size "a4" )
   
   \paper {
     print-all-headers = ##t
@@ -72,28 +73,24 @@ twoStacc = \markup {
         \compressEmptyMeasures
         \include "../data/triptyque_vn1_mov1.lyi"
       }
-      
       \new Staff \with{
         instrumentName = "Violin II "
       }{
         \compressEmptyMeasures
         \include "../data/triptyque_vn2_mov1.lyi"
-      }
-      
+      }      
       \new Staff \with{
         instrumentName = "Viola "
       }{
         \compressEmptyMeasures
         \include "../data/triptyque_va_mov1.lyi"
-      }
-      
+      }      
       \new Staff \with{
         instrumentName = "Violoncello "
       }{
         \compressEmptyMeasures
         \include "../data/triptyque_vc_mov1.lyi"
-      }
-      
+      }      
       \new Staff \with{
         instrumentName = "Contrabass "
       }{
@@ -170,14 +167,18 @@ twoStacc = \markup {
         \compressEmptyMeasures
         \include "../data/triptyque_vn2_mov3.lyi"
       }
-      
+      \new Staff \with{
+        instrumentName = "Viola "
+      }{
+        \compressEmptyMeasures
+        \include "../data/triptyque_va_mov3.lyi"
+      }      
       \new Staff \with{
         instrumentName = "Violoncello "
       }{
         \compressEmptyMeasures
         \include "../data/triptyque_vc_mov3.lyi"
       }
-      
       \new Staff \with{
         instrumentName = "Contrabass "
       }{

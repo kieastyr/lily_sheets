@@ -54,8 +54,8 @@ aspan =
   des' \tweak X-offset #-2 \tempo "poco rit." des,4 ges2
   \newSpacingSection
   \revert Score.SpacingSpanner.spacing-increment
-  \mark \default
-  \tweak X-offset #2 \tempo "a tempo"
+  \tweak X-offset #1 \mark \default
+  \tweak X-offset #4 \tempo "a tempo"
   r4\p aes des,2 des'4
   ges,2 des'4 ges,, ges'~
   ges r8 des'4 des8 r4 ges,

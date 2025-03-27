@@ -21,6 +21,10 @@ twoStacc = \markup {
 }
 %%ここまで、定義
 
+%% global size
+#(set-global-staff-size 20)
+#(set-default-paper-size "a4" )
+
 \book{
   \header {
     title = \markup {
@@ -33,18 +37,13 @@ twoStacc = \markup {
     instrument = \markup{\bold "Violoncello"}
   }
   
-  
-  #(set-global-staff-size 20)
-  #(set-default-paper-size "a4" )
-  
-  
   \paper {
     print-all-headers = ##t
     page-breaking = #ly:page-turn-breaking
     
     #(set-paper-size "a4")
     top-margin = 2\cm
-    bottom-margin = 1\cm
+    bottom-margin = 2\cm
     left-margin = 1\cm
     right-margin = 1\cm
     
@@ -52,7 +51,8 @@ twoStacc = \markup {
     markup-system-spacing.basic-distance = #20
     top-system-spacing.minimum-distance = #12
     last-bottom-spacing.basic-distance = #12
-    system-system-spacing.minimum-distance = #14 
+    system-system-spacing.basic-distance = #15
+    system-system-spacing.minimum-distance = #10
     score-markup-spacing.basic-distance = #20
   
     print-page-number = ##t
@@ -60,6 +60,17 @@ twoStacc = \markup {
     print-first-page-number = ##t
     first-page-number = 2
   
+    oddFooterMarkup = \markup {
+      \fill-line{
+        \line{}
+        \right-column{
+          \line{"[確]v1.0"}
+          \line{"A-01-vc-"\fromproperty #'page:page-number-string }
+        }
+      }
+    }
+    evenFooterMarkup = \oddFooterMarkup
+    
   }
   
   \score {

@@ -19,6 +19,10 @@ aspan =
              'span-text "a")
 %%ここまで、定義
 
+%% global size
+#(set-global-staff-size 20)
+#(set-default-paper-size "a4" )
+
 \book{
   \header {
     title = \markup {
@@ -32,8 +36,6 @@ aspan =
   }
   
   
-  #(set-global-staff-size 26)
-  #(set-default-paper-size "a4" )
   
   
   \paper {
@@ -42,7 +44,7 @@ aspan =
     
     #(set-paper-size "a4")
     top-margin = 2\cm
-    bottom-margin = 1\cm
+    bottom-margin = 2\cm
     left-margin = 1\cm
     right-margin = 1\cm
     
@@ -50,7 +52,8 @@ aspan =
     markup-system-spacing.basic-distance = #20
     top-system-spacing.minimum-distance = #14
     last-bottom-spacing.basic-distance = #12
-    system-system-spacing.minimum-distance = #15
+    system-system-spacing.basic-distance = #20
+    system-system-spacing.minimum-distance = #12
     score-markup-spacing.basic-distance = #20
   
     print-page-number = ##t
@@ -58,6 +61,17 @@ aspan =
     print-first-page-number = ##f
     first-page-number = 1
   
+    oddFooterMarkup = \markup {
+      \fill-line{
+        \line{}
+        \right-column{
+          \line{"[確]v1.0"}
+          \line{"A-01-vn1-"\fromproperty #'page:page-number-string }
+        }
+      }
+    }
+    evenFooterMarkup = \oddFooterMarkup
+    
   }
   
   \score {
@@ -74,6 +88,7 @@ aspan =
     >>
     \layout {
       indent = 0\cm %%0にするといい
+      #(layout-set-staff-size 18)
     }
     \midi{}
   }

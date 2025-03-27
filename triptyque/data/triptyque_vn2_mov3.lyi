@@ -3,7 +3,7 @@
   \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
   \numericTimeSignature
   \time 4/4 %%拍子
-  \set Staff.midiInstrument = "contrabass"
+  \set Staff.midiInstrument = "violin"
   \clef treble %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
   \override Hairpin.minimum-length = #6
   \override StemTremolo.beam-thickness = #0.3
@@ -12,7 +12,7 @@
   \tempo "Presto" 4=152  %%BPM
   \time 2/4
   \newSpacingSection
-  \override Score.SpacingSpanner.spacing-increment = #3
+  \override Score.SpacingSpanner.spacing-increment = #2
   d16-.\p( d-. d8-.) d16-.( d-. d8-.)
   \time 3/8
   \newSpacingSection
@@ -33,7 +33,7 @@
   \time 3/8
   <b g'>[ q <d a'> <b g'>] q[ q] 
   <g e'>[ <g fis'> <g g'> <g a'>] <d' b'> <d cis'>
-  \mark \default
+  \tweak X-offset #0.3 \mark \default
   \time 2/4
   <b' d>-.\f q-. q8-. q16-. q-. q8-.
   \time 3/8
@@ -71,7 +71,7 @@
   \time 3/8
   <b g'>[ q <d a'> <b g'>] q[ q] 
   <g e'>[ <g fis'> <g g'> <g a'>] <d' b'> <d cis'>
-  \mark \default
+  \tweak X-offset #0.5 \mark \default
   \time 2/4
   <fis cis'>-.\f <cis fis>-. <fis cis'>-. <cis' e>-. q-. <fis, cis'>-. <cis fis>-. <fis cis'>-.
   \time 3/8
@@ -132,7 +132,7 @@
   cis4.
   cis\p\<\startTrillSpan
   cis\f\>\startTrillSpan
-  \mark \default
+  \tweak X-offset #0.7 \mark \default
   \time 2/4
   cis2\p\startTrillSpan~
   \time 3/8
@@ -145,7 +145,7 @@
   fis8-. cis16-.([ cis-. cis8-.])
   R1*3/8
   \mark \default
-  fis8-.\p^\markup{\italic "col legno"} cis16-.([ cis-. cis8-.])
+  fis8-.\p-\tweak X-offset #1.5 ^\markup{\italic "col legno"} cis16-.([ cis-. cis8-.])
   cis-._\markup{\italic "crescendo"} b-. cis-.
   fis-. cis16-.([ cis-. cis8-.])
   \time 2/8
@@ -154,7 +154,7 @@
   fis-. cis16-.\f([ cis-. cis8-.])
   R1*3/8
   \mark \default
-  r8^\markup{\italic "Pizz."} <g ais' e' e>\sf r 
+  r8-\tweak X-offset #1.7 ^\markup{\italic "Pizz."} <g ais' e' e>\sf r 
   q\sf r q\sf
   \tempo \markup{\normal-text \italic \small "poco a poco accel."}
   R1*3/8*2
@@ -166,7 +166,7 @@
   cis'!8:\p d: fis:
   <dis fis>4.->\f\>
   \mark \default
-  \tempo "Piu mosso"
+  \tweak X-offset #1.0 \tempo "Piu mosso"
   \bar "||"
   cis8:\p\< d!: fis:
   <gis, dis'>-. q-. q-.
@@ -179,7 +179,7 @@
   q-. q-. q-.
   \time 2/8
   <gis dis'>16^\markup{\italic "détaché"}[ q q q]
-  \mark \default
+  \tweak X-offset #0.3 \mark \default
   \time 3/8
   <a e'>8-. q16-. q-. q8-.
   q-. q-. q-.
@@ -189,7 +189,7 @@
   R1*3/8^\fermata
   \mark \default
   \time 3/4
-  \tempo "Adagio"
+  \tweak X-offset #3.0 \tempo "Adagio"
   \bar "||"
   bis,4\p( cis_\markup{\italic "tranquillo"} dis)
   a2( <e' fis>4)^\markup{\italic "div."}
@@ -211,7 +211,7 @@
   <cis e>2
   \mark \default
   \time 3/8
-  \tempo "Tempo I"
+  \tweak X-offset #3.0 \tempo "Tempo I"
   \bar "||"
   e,8-.\p e16-._\markup{\italic "poco a poco cresc."}[( e-. e8-.)]
   e16-.[( e-. e8-.)] e-.
@@ -269,7 +269,7 @@
   \time 3/8
   <b g'>[ q <d a'> <b g'>] q[ q] 
   <g e'>[ <g fis'> <g g'> <d' a'>] <d b'> <d cis'>
-  \mark \default
+  \tweak X-offset #0.5 \mark \default
   \time 2/4
   <b' d>-.\f q-. q8-. q16-. q-. q8-.
   \time 3/8
@@ -285,7 +285,7 @@
   q-. \tempo "rit." <cis, e>16-.[ q-. q8-.]
   \mark \default
   \time 3/4
-  \tempo "Adagio"
+  \tweak X-offset #3.0 \tempo "Adagio"
   \bar "||"
   ais'4\ff( b cis)
   g2( <d' e>4)
@@ -299,11 +299,11 @@
   <e fis>2~_\markup{\italic "non dim. e rit."}
   q4 r
   \mark \default
-  \tempo "Tempo I"
+  \tweak X-offset #1.0 \tempo "Tempo I"
   <d e>16-.\fff q-. q8-. q16-. q-. q8-.
   q-. q16-. q-. q-. q-. q-. q-.
   \time 3/8
   q-. q-. q-. q-. q8-.
-  <cis e>-.\sf b,-.\sff r
+  <cis e>-.\sf b,-.\sff-\tweak Y-offset #3 \downbow r
   \bar "|." 
 }

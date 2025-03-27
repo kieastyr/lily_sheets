@@ -11,7 +11,7 @@
   
   \key a \minor  
   \tempo "Allegro" 4=138 
-  a8\f a16-. b-. a8-. c-. b-. d-. c16( b-.) a-.  g-.
+  a8-.\f a16-. b-. a8-. c-. b-. d-. c16( b-.) a-.  g-.
   a8-. a16-. b-. a8-. e'-. d-. fis-. e4
   g16( fis-.) e-. d-. e8-. e16-. d-. e8-. g-. fis16( g-.) fis-. e-.
   d-. e-. c-. d-. b-. c-. a-. b-. c16( b-.) a-. g-. a8-. a16-. g-.
@@ -21,7 +21,7 @@
     \acciaccatura g8\glissando \tweak NoteColumn.X-offset #2.5 <a a\flageolet>4\sf 
       \acciaccatura g8\glissando \tweak NoteColumn.X-offset #2.5 <a a\flageolet>4\sf
         \acciaccatura g8\glissando \tweak NoteColumn.X-offset #2.5 <a a\flageolet>4\sf
-  \mark \default
+  \tweak X-offset #3 \mark \default
   <<{f8-.\f^\markup{\italic "div."}[ \tweak Accidental.X-offset #-1 a-.]} \\ {f-.[ \tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  aes-.]}>>
    <<{f8-.[ \tweak Accidental.X-offset #-1 a!-.]} \\ {f-.[ \tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  aes-.]}>>
     <<{f8-.[ \tweak Accidental.X-offset #-1 a!-.]} \\ {f-.[ \tweak NoteColumn.force-hshift #2.5 \tweak Accidental.X-offset #2.3  aes-.]}>>
@@ -85,7 +85,7 @@
   <d a'>-.[ <d b'!>-.] <d a'>-.[ <d b'>-.] <d a'>-.[ <d b'>-.] <d a'>-.[ <d b'>-.]
   <d a'>-.[ <d b'>-.] <d a'>-.[ <d b'>-.] <d a'>-.[ <d b'>-.] <d a'>-.[ <d b'>-.]
   R1
-  \mark \default
+  \tweak X-offset #2 \mark \default
   cis''8-.^\markup{\italic "Saltato"}( cis16-. cis-.) cis8-.( cis-.) cis-.( cis16-. cis-.) cis8-.( cis-.)
   c!-.( c16-. c-.) c8-.( c-.) c-.( c16-. c-.) c8-.( c-.)
   c-.( c16-. c-.) c8-.( c-.) c-.( c16-. c-.) c8-.( c-.)
@@ -105,7 +105,7 @@
   f!8 f16 f f8 f16 f f8 f16 f f8 f16 f
   <e b'>8\sf r r4 r8 dis'16-> dis-> dis-> e,-> e-> e,-\tweak Y-offset #-1 ->
   \mark \default
-  a8 a16-. g-. a8-. c-. b-. d-. c16( b-.) a-.  g-.
+  a8-. a16-. g-. a8-. c-. b-. d-. c16( b-.) a-.  g-.
   a8-. a16-. b-. a8-. e'-. d-. fis-. e4
   g16( fis-.) e-. d-. e8-. e16-. d-. e8-. g-. fis16( g-.) fis-. e-.
   d-. e-. c-. d-. b-. c-. a-. b-. c16( b-.) a-. g-. a8-. a16-. g-.
@@ -138,7 +138,7 @@
   <e! b'!>8-. q16( <g d> <e b'>8-.) q-. q-. q16( <g d> <e b'>8-.) q-.
   q-.\mf q16( <g d> <e b'>8-.) q-. q-. q16( <g d> <e b'>8-.) q-.
   <ees bes'>8-. q16( <ges des'> <ees bes'>8-.) q-._\markup{\italic "dim."} q-. q16( <ges des'> <ees bes'>8-.) q-.
-  q-. q16( <ges des'> <ees bes'>8-.) q-. q-.[ <ges des'>16( q] q8-.)[ <ees bes'>]
+  q-. q16( <ges des'> <ees bes'>8-.) q-. q-.[ <ges des'>16-. q-.] q8-.[ <ees bes'>-.]
   \mark \default
   \stemNeutral
   ees8-.->\ffsub^\markup{\italic "unis."} ees16->( ges ees8-.) e'!-.-> c-.->[ ees->]~ ees[ d-.->]

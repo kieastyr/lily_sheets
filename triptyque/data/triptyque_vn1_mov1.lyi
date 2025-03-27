@@ -12,13 +12,16 @@
   
   \key a \minor  
   \tempo "Allegro" 4=138 
-  a8\f a16-. b-. a8-. c-. b-. d-. c16( b-.) a-.  g-.
+  a8-.\f a16-. b-. a8-. c-. b-. d-. c16( b-.) a-.  g-.
   a8-. a16-. b-. a8-. e'-. d-. fis-. e4
   g16( fis-.) e-. d-. e8-. e16-. d-. e8-. g-. fis16( g-.) fis-. e-.
   d-. e-. c-. d-. b-. c-. a-. b-. c16( b-.) a-. g-. a8-. a16-. g-.
   a( b-.) c-. b-. a8-. a16-. g-. a8-. a16-. b-. a4
   \set glissandoMap = #'((0 . 0) (1 . 2))
-  \acciaccatura <g' d'>8\glissando <a e' e\flageolet>4\sf \acciaccatura <g d'>8\glissando <a e' e\flageolet>4\sf \acciaccatura <g d'>8\glissando <a e' e\flageolet>4\sf \acciaccatura <g d'>8\glissando <a e' e\flageolet>4\sf
+  \acciaccatura <g' d'>8\glissando \tweak NoteColumn.X-offset #3 <a e' e\flageolet>4\sf 
+    \acciaccatura <g d'>8\glissando \tweak NoteColumn.X-offset #3 <a e' e\flageolet>4\sf 
+      \acciaccatura <g d'>8\glissando \tweak NoteColumn.X-offset #3 <a e' e\flageolet>4\sf 
+        \acciaccatura <g d'>8\glissando \tweak NoteColumn.X-offset #3 <a e' e\flageolet>4\sf
   \mark \default
   a16\f( b a b) c8-. b-. \appoggiatura {b16 c} d8-. c-. b-. a-.	
   <aes ees'>4--^\markup{\italic "div."} <f c'>2-- r4
@@ -28,7 +31,7 @@
   <a! e'!>8( <aes ees'>4) q8-. <f c'>8( <aes ees'>4) <a e'>8-.
   <g f'>4 q <gis fis'>\mf q 
   <a g'>\mp q <ais gis'>\p q
-  \mark \default
+  \tweak X-offset #-1.5 \mark \default
   <b a'!>8^._>\f\downbow^\markup{\italic "unis."} q^._>\downbow r4 des16( ees) des ees beses4
   <b! a'!>8^._>\downbow q^._>\downbow r4 des16( ees) des ees beses4
   <bes aes'>8-.\downbow q-.\downbow r q-.\upbow <b a'>-.\downbow q-.\downbow r q-.
@@ -37,7 +40,7 @@
   <bes aes'>-. q-. r q-. d16( e) d e gis,8( a)
   bes8\p\< bes16 bes b8 b16 b c8 c16 c cis8 cis16 cis 
   d8 d16 d dis8 dis16 dis e8 e16 e f f f f\ff
-  \mark \default
+  \tweak X-offset #-1.5 \mark \default
   <<
     {
       fis8^\mf^\markup{\italic "solo arco"} fis16-. e-. fis8-. a-.gis-. b-. a16( gis-.) fis-. e-.
@@ -49,7 +52,7 @@
     }
     \\
     {
-      r4_\markup{\italic "altri pizz."} r8 ees,\f r4 r8 ees
+      r4-\tweak X-offset #-2 _\markup{\italic "altri pizz."} r8 ees,\f r4 r8 ees
       r4 r r8 ees r ees
       r4 r8 ees r4 r
       r8 ees r4 r r
@@ -77,7 +80,7 @@
   a8-. a16( g) a8-. a16( g) a8-. a16( g) a8-. b!16-. c-.
   d-. e-. c-. d-. b-. c-. a-. b-. c( b-.) a-. g-. a8-. a16-. g-.
   a( b-.) c-. b-. a8-. a16-. g-. a8-. a16-. b-. a4
-  \mark \default
+  \tweak X-offset #2 \mark \default
   <<
     {
       \override NoteColumn.force-hshift = #-1.3
@@ -120,10 +123,10 @@
   \time 4/4
   \appoggiatura {g''16 a} b8-> r \appoggiatura {e,16 fis} g8-> r d16 e cis d b cis a b
   g a bes8~ bes16 e! bes a g a bes8~ bes16 a aes g
-  fis4^\markup{\italic "grand détaché"} <a e'>\flageolet <bes f'> <b fis'> %% "grand détaché"の位置確認
+  fis4 <a e'>\flageolet^\markup{\italic "grand détaché"} <bes f'> <b fis'> %% "grand détaché"の位置確認
   <c g'> <cis gis'> <d a'> <dis ais'>
   <e b'>8\sf <dis e>16->[ q->] q-> q-> q-> q-> q8-> e,16->[ e->] e8-> r
-  \mark \default
+  \tweak X-offset #-2 \mark \default
   <a, e' a e'>4\sf^\markup{\italic "pizz."} a8-.^\markup{\italic "arco"} c-. b-. d-. c16( b-.) a-.  g-.
   a8-. a16-. b-. a8-. e'-. d-. fis-. e4
   g16( fis-.) e-. d-. e8-. e16-. d-. e8-. g-. fis16( g-.) fis-. e-.
@@ -167,7 +170,7 @@
   d8 d16 d dis8 dis16 dis e8 e16 e f f f f
   fis8\f fis16 fis fis fis fis fis g8 g16 g g g g g
   gis8 gis16 gis gis gis gis gis a8 a16 a a a a a
-  \mark \default
+  \tweak X-offset #0 \mark \default
   <<
     {
       \override NoteColumn.force-hshift = #-1.3
@@ -191,9 +194,8 @@
       a-. a4 a8~ a a-. a-. a-.
     }
   >>
-  \allowPageTurn
   r2 fis16 g gis a ais b c! cis
-  \mark \default
+  \tweak X-offset #0 \mark \default
   d8-> r \appoggiatura {g,!16 a!} b8-> r e,16 fis d e cis4
   c!8-. g'4 c,8 \appoggiatura {c16 b bes} a4-> \appoggiatura {c16 b bes} a4-> 
   c8-. g'4 c,8 \appoggiatura {c16 b bes} a2->

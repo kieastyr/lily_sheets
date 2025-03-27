@@ -16,7 +16,7 @@ aspan =
   \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
   \numericTimeSignature
   \time 4/4 %%拍子
-  \set Staff.midiInstrument = "contrabass"
+  \set Staff.midiInstrument = "violin"
   \clef treble %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
   \override Hairpin.minimum-length = #6
   \override Score.Footnote.annotation-line = ##f
@@ -25,9 +25,13 @@ aspan =
   \key ees \major  %%調
   \tempo "Andante" 4=72  %%BPM
   \time 5/4
+  \newSpacingSection
+  \override Score.SpacingSpanner.spacing-increment = #4.5
   R1*5/4*5
-  \mark #18
-  ees4--\p^\markup{\italic "con sord"}( ees--_\markup{\italic "espress. molto"} ees--) c8[( d ees c)]
+  \newSpacingSection
+  \revert Score.SpacingSpanner.spacing-increment
+  \tweak X-offset #-2 \mark #18
+  ees4--\p-\tweak X-offset #1 ^\markup{\italic "con sord"}( ees--_\markup{\italic "espress. molto"} ees--) c8[( d ees c)]
   d4( bes) bes8( c) d[( ees f d)]
   g4-- g( f) aes8([ g f g]
   bes4) c,( bes8 c) d4( ees8 d)
@@ -39,9 +43,9 @@ aspan =
   bes8([ des ees bes] aes4) aes( bes)
   c8([ des ees c] f4) ees8( f) f4
   aes\mf\>( f) f ees( bes)
-  bes8([ c des bes] \tempo "poco rit." c4) bes8( c) c4\!
+  bes8([ c des bes] \tweak X-offset #-0.5 \tempo "poco rit." c4) bes8( c) c4\!
   \mark \default
-  \tempo "a tempo"
+  \tweak X-offset #2 \tempo "a tempo"
   r2 r4 des8\p([ ees f des]
   bes4) f'( ees) ges ges8( f
   ges4) f f8( ees f4) ees8([ des
@@ -69,7 +73,7 @@ aspan =
   c c8[( des ees f)]
   c4 r r 
   R1*3/4
-  \mark \default
+  \tweak X-offset #3 \mark \default
   des,4--\mp^\markup{\italic "cantabile"}( des-- c--)
   des bes8[( c des f)]
   des4--( des-- c--)
@@ -102,7 +106,7 @@ aspan =
   f f8[( g\! aes g)]
   f2.
   \mark \default
-  des'4--\mf^\markup{\italic "cantabile"}( des-- c--)
+  des'4--\mf-\tweak X-offset #0.7 ^\markup{\italic "cantabile"}( des-- c--)
   des bes8[( c des f)]
   des4--( des--) c16_\cresc( des ees f)
   ges4--( ges-- f--)
@@ -143,9 +147,9 @@ aspan =
   c8([ ees f c] bes4) bes( c)
   d8([ ees f d] g4) f8( g) g4
   bes( g) g f( c)
-  c8\>([ d es c] \tempo "poco rit." d4) c8( d) d4
+  c8\>([ d es c] \tweak X-offset #-0.5 \tempo "poco rit." d4) c8( d) d4
   \mark \default
-  \tempo "a tempo"
+  \tweak X-offset #1.5 \tempo "a tempo"
   ees4--\pp( ees-- ees--) c8[( d ees c)]
   d4( bes) bes8( c) d[( ees f d)]
   g4-- g( f) aes8([ g f g]

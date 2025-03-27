@@ -1,3 +1,12 @@
+%{
+twoStacc = \markup {
+  \center-align{
+    \musicglyph "scripts.staccato"
+    \musicglyph "scripts.staccato"
+  }
+}
+psub = _\markup { \dynamic p \italic sub.}
+%}
 \relative c'{
   \mergeDifferentlyHeadedOn
   \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
@@ -12,7 +21,7 @@
   \tempo "Presto" 4=152  %%BPM
   \time 2/4
   \newSpacingSection
-  \override Score.SpacingSpanner.spacing-increment = #3
+  \override Score.SpacingSpanner.spacing-increment = #2
   cis16-.\p( cis-. cis8-.) cis16-.( cis-. cis8-.)
   \time 3/8
   \newSpacingSection
@@ -51,11 +60,11 @@
   <d fis'>8-. <d cis'>16-.[ q-. q8-.]
   <d fis'>-.[ <d cis'>-.] q16-. q-.
   <d fis'>8-. <d cis'>16-.[ q-. q8-.]
-  \mark \default
+  \tweak X-offset #0.0 \mark \default
   \time 2/4
   cis'16^\markup{\italic "détaché"} b a g fis e d8
   \time 1/4
-  cis' b a g
+  cis'16 b a g
   \time 2/4
   <a, e'>16-. q-. q8-. q16-. q-. q8-.
   q16-.\> q-. q8-. q16-. q-. q8-.
@@ -97,7 +106,236 @@
   \tuplet 3/2 { e8([ d cis] } b~
   b\<) cis16-.[ d-. e-. fis-.]
   g-. a-. b-. cis-. d-. e-.
+  \tweak X-offset #4.0 \mark \default
+  fis8-.\ff <d, a'>16-.[ q-. q8-.]
+  <cis e>-. <ais e'>16-.[ q-. q8-.]
+  r <cis d>-.\mf q-.
+  r q-. q-.
+  \time 2/8
+  r q-.
+  \time 3/8
+  r q-. q-.
+  r <cis dis>-. q-.
+  r <fis, cis'>-. q-.
+  r <g e'>-. q-.
+  r <cis? e>-. q-.
   \mark \default
-  fis8-.\ff 
+  r <cis d>16-.( q-.) q8-.
+  r q16-.( q-.) q8-.
+  \time 2/8
+  r q16-.( q-.)
+  \time 3/8
+  r8 q16-.( q-.) q8-.
+  r q16-.( q-.) q8-.
+  r <fis, cis'>16-.( q-.) q8-.
+  r <g e'>16-.( q-.) q8-.
+  r cis16[( b cis b)]
+  fis'8 fis'16-.[ fis-. fis,8-.]
+  \mark \default
+  \override TextScript.outside-staff-priority = ##f
+  b,:16-\tweak Y-offset #-1.5 _\twoStacc[ cis:-\tweak Y-offset #-1.5 _\twoStacc fis,:-\tweak Y-offset #-3.0 _\twoStacc
+  g:_\twoStacc] b:-\tweak Y-offset #-1.5 _\twoStacc[ fis:-\tweak Y-offset #-3.0 _\twoStacc
+  \time 2/8
+  g:_\twoStacc b:-\tweak Y-offset #-1.5 _\twoStacc]
+  \time 3/8
+  fis:-\tweak Y-offset #-3.0 _\twoStacc[ g:_\twoStacc b:-\tweak Y-offset #-1.5 _\twoStacc
+  cis:-\tweak Y-offset #-1.5 _\twoStacc] b:-\tweak Y-offset #-1.5 _\twoStacc[ cis:-\tweak Y-offset #-1.5 _\twoStacc 
+  fis,:-\tweak Y-offset #-3.0 _\twoStacc g:_\twoStacc] b:-\tweak Y-offset #0.5 ^\twoStacc[
+  c:-\tweak Y-offset #1.5 ^\twoStacc e:-\tweak Y-offset #2.5 ^\twoStacc g:-\tweak Y-offset #3.0 ^\twoStacc]
+  fis:-\tweak Y-offset #0.5 _\twoStacc cis:-\tweak Y-offset #-1.5 _\twoStacc fis,:-\tweak Y-offset #-3.0 _\twoStacc
+  \revert TextScript.outside-staff-priority
+  \mark \default
+  fis'8-. cis4~
+  cis8\> fis-. cis~
+  cis fis-. cis-.
+  <b fis'>4 q8~
+  q q-. q-.
+  <cis e>4.\p
+  q~
+  q
+  R1*3/8
+  cis4.\f\>\startTrillSpan
+  \tweak X-offset #1.0 \mark \default
+  \time 2/4
+  <cis d>16-.\p\stopTrillSpan( q-. q8-.) q16-.( q-. q8-.)
+  \time 3/8
+  q-. q16-.[( q-. q8-.)]
+  q-. q16-.[( q-. q8-.)]
+  \time 2/4
+  q-.( q16-. q-.) q8-.( q16-. q-.)
+  \time 3/8
+  q8-. q16-.[( q-. q8-.)]
+  q8-. q16-.[( q-. q8-.)]
+  R1*3/8
+  \tweak X-offset #-3.5 \mark \default
+  <fis, cis'>8-.\p^\markup{\italic "col legno"} q16-.[( q-. q8-.)]
+  q-._\markup{\italic "crescendo"} q-. q-.
+  q-. q16-.[( q-. q8-.)]
+  \time 2/8
+  q8-.[( q16-. q-.)]
+  \time 3/8
+  q8-. q16-.\f[( q-. q8-.)]
+  R1*3/8
+  \mark \default
+  \override TupletNumber.text = #(tuplet-number::non-default-tuplet-denominator-text 2)
+  \tuplet 4/3 { fis4\p\<( g) }
+  \tuplet 4/3 { ais( <<b) {s8 s\f} >> }
+  \revert TupletNumber.text
+  \tempo \markup{\normal-text \italic \small "poco a poco accel."}
+  cis8:16_\psub d:\< fis:
+  cis: d: fis:
+  c4.->\f\>
+  cis8:\p\< d: fis:
+  cis: d: fis:
+  <c d>4.->\f\>
+  cis!8:\p d: fis:
+  <dis fis>4.->\f\>
+  \mark \default
+  \tweak X-offset #1.5 \tempo "Piu mosso"
+  \bar "||"
+  cis8:\p\< d!: fis:
+  gis: fis: gis:
+  \time 4/8
+  a: b: cis4
+  \time 3/8
+  a8:\f b:-\tweak X-offset #-1.5 -\tweak Y-offset #-5 _\markup{\italic "cresc. sempre"} cis:
+  a: b: cis:
+  dis8-. cis16-.[ cis-. cis8]
+  dis-. cis-.dis-.
+  \time 2/8
+  e16^\markup{\italic "détaché"}[ dis cis b]
+  \mark \default
+  \time 3/8
+  dis8-. cis16-.[ cis-. cis8]
+  dis-. cis-.dis-.
+  e16[ dis cis b] a gis
+  dis'8-. cis16-.[ cis-. cis8]
+  e16\fff[ dis cis b] a gis
+  R1*3/8\fermata
+  \mark \default
+  \time 3/4
+  \tweak X-offset #3.0 \tempo "Adagio"
+  \bar "||"
+  <<gis,2.\p {s4 s_\markup{\italic "tranquillo"} s} >>
+  eis4( fis2)
+  fis4\<( fisis2\>)
+  gis4\!( a2)
+  \time 2/4
+  a4( b)
+  \time 3/4
+  a2.
+  \mark \default
+  a2( e'4)
+  eis8( e d4 cis)
+  b( ais cis)
+  \time 2/4
+  b2
+  cis4( b)
+  <<fis2 {s4 s_\markup{\italic "dim."}}>>
+  g( \tempo "rit." g')
+  <cis, e>2
+  \mark \default
+  \time 3/8
+  \tweak X-offset #2.8 \tempo "Tempo I"
+  \bar "||"
+  cis8-.\p cis16-._\markup{\italic "poco a poco cresc."}[( cis-. cis8-.)]
+  cis16-.[( cis-. cis8-.)] cis-.
+  cis-. cis16-.[( cis-. cis8-.)]
+  cis16-.[( cis-. cis8-.)] cis-.
+  cis-. cis16-.[( cis-. cis8-.)]  
+  cis16-.[( cis-. cis8-.)] cis-.
+  cis-. cis16-.[( cis-. cis8-.)]
+  \time 2/4
+  eis,16\< fis gis ais b cis d e!\!
+  \mark \default
+  \time 3/8
+  r8 <cis d>-.\mf q-.
+  r q-. q-.
+  \time 2/8
+  r q-.
+  \time 3/8
+  r q-. q-.
+  r <cis dis>-. q-.
+  r <fis, cis'>-. q-.
+  r <g e'>-. q-.
+  r <cis e>-. q-.
+  \mark \default
+  r \clef treble g''16-. g-. fis8-.
+  r g16-. g-. fis8-.
+  \time 2/8
+  r fis16-. fis-.
+  \time 3/8
+  r8 g16-. g-. fis8-.
+  r g-. g16-. fis-. %%%%%%%%%%%%%%% TODO: 比較
+  r8 g16-. g-. fis8-.
+  r a16-. a-. g8-. 
+  \mark \default
+  \clef alto
+  r cis,,16\<( b cis b)
+  fis'8-. fis'8-. fis,8-.\! 
+  r <ais, fis' cis'>\sf\downbow r 
+  q\sf\downbow r q\sf\downbow
+  fis'16-.\>[( fis-. fis8-.)] fis16-.[( fis-. 
+  fis8-.)] fis16-.[( fis-. fis8-.)] 
+  \mark \default
+  \time 2/4
+  cis16-.\p( cis-. cis8-.) cis16-.( cis-. cis8-.)
+  \time 3/8
+  cis-. cis16-.[( cis-. cis8-.)]
+  cis-. cis16-.[( cis-. cis8-.)]
+  \time 2/4
+  <cis d>-.( q16-. q-.) q8-.( q16-. q-.)
+  \time 3/8
+  q8-. q16-.[( q-. q8-.)]
+  q8-.[ q-.] q16-.( q-. )
+  q8-. q16-.[( q-. q8-.)]
+  \mark \default
+  \time 5/8
+  <<
+    {fis16^\markup{\italic "détaché"}^\markup{\italic "non div."}[e d_\markup{\italic "cresc."} cis] fis[ e] fis[ e d cis]}
+    \\
+    {d\flageolet[ \tweak NoteColumn.force-hshift 0.4 d\flageolet \tweak NoteColumn.force-hshift 1.1 d\flageolet \tweak NoteColumn.force-hshift 1.5 d\flageolet] 
+       d\flageolet[  \tweak NoteColumn.force-hshift 0.4 d\flageolet] 
+         d\flageolet[  \tweak NoteColumn.force-hshift 0.4 d\flageolet  \tweak NoteColumn.force-hshift 1.1 d\flageolet  \tweak NoteColumn.force-hshift 1.5 d\flageolet]}
+  >>
+  \time 3/8
+  b[ cis d cis] b cis
+  g[ a b cis] d e
+  \mark \default
+  \time 2/4
+  <b fis'>16-.\f q-. q8-. q16-. q-. q8-.
+  \time 3/8
+  q-. q16-.[ q-. q8-.]
+  <b a'>-. <b fis'>16-.[ q-. q8-.]
+  \time 2/4
+  <b a'>16-. <b fis'>-. <d a'>-. <d b'>-. <d cis'>8-. q16-. q-.
+  \time 3/8
+  <d fis'>8-. <d cis'>16-.[ q-. q8-.]
+  <d fis'>-.[ <d cis'>-.] q16-. q-.
+  <d fis'>8-. <d cis'>16-.[ q-. q8-.]
+  <d fis'>-. <d cis'>-. <d fis'>-.
+  <d cis'>-. \tempo "rit." fis16-.[ fis-. <fis cis'>8-.]
+  \tweak X-offset #-0.3 \mark \default
+  \time 3/4
+  \tweak X-offset #4 \tempo "Adagio"
+  \bar "||"
+  fis2.\ff
+  dis4( e2)
+  \time 2/4
+  e4( eis)
+  \time 3/4
+  \acciaccatura fis8 <d a'>4( <g, g'>2)
+  \time 2/4
+  <d' a'>2
+  <cis a'>4( <d fis>)
+  <cis e>2_\markup{\italic "non dim. e rit."}~
+  q4 r
+  \mark \default
+  \tweak X-offset #1.0 \tempo "Tempo I"
+  <cis d>16-.\fff q-. q8-. q16-. q-. q8-.
+  q8-. q16-. q-. q-. q-. q-. q-.
+  \time 3/8
+  q-. q-. q-. q-. q8-.
+  \stemUp q-.\sf b-.\sff-\tweak Y-offset #3.0 \downbow r
   \bar "|." 
 }

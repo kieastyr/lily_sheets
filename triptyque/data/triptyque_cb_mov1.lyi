@@ -24,7 +24,7 @@ ffsub = _\markup { \dynamic ff \italic sub.}
         \acciaccatura \tweak NoteColumn.X-offset #-2.5 d8\glissando e4\sf
   \mark \default
   R1
-  r2 r8 gis->-. e->-. a,->-.
+  r2 r8 gis->-.\f e->-. a,->-.
   R1
   r2 r8 gis'->-. e->-. a,->-.
   R1
@@ -111,7 +111,7 @@ ffsub = _\markup { \dynamic ff \italic sub.}
   \mark \default
   \time 4/4
   \stemUp
-  <fis, cis'>8-.\p q16( <a e'> <fis cis'>8-.) q-. q-. q16( <a e'> <fis cis'>8-.) q-.
+  <fis, cis'>8-.\p^\markup{\italic "div."} q16( <a e'> <fis cis'>8-.) q-. q-. q16( <a e'> <fis cis'>8-.) q-.
   q-. q16( <a e'> <fis cis'>8-.) q-. q-. q16( <a e'> <fis cis'>8-.) q-.
   <g d'>8-. q16( <bes f'> <g d'>8-.) q-. q-. q16( <bes f'> <g d'>8-.) q-.
   q8-. q16( <bes f'> <g d'>8-.) q-. q-. q16( <bes f'> <g d'>8-.) q-.
@@ -134,7 +134,7 @@ ffsub = _\markup { \dynamic ff \italic sub.}
   <b! e!>8-. q16( <d g> <b e>8-.) q-. q-. q16( <d g> <b e>8-.) q-.
   q-.\mf q16( <d g> <b e>8-.) q-. q-. q16( <d g> <b e>8-.) q-.
   <bes ees>8-. q16( <des ges> <bes ees>8-.) q-._\markup{\italic "dim."} q-. q16( <des ges> <bes ees>8-.) q-.
-  q-. q16( <des ges> <bes ees>8-.) q-. q-.[ <des ges>-.] q-.[ <bes ees>]
+  q-. q16( <des ges> <bes ees>8-.) q-. q-.[ <des ges>-.] q-.[ <bes ees>-.]
   \mark \default
   \stemNeutral
   <<{ees8^>\ffsub} \\ {ees_>}>> r r4 r2
@@ -145,13 +145,13 @@ ffsub = _\markup { \dynamic ff \italic sub.}
   d4\f^\markup{\italic "pizz."}^\markup{\italic "unis."} a'8 a d d d d
   des,4 aes'8 aes des des des des
   \mark \default
-  des ees des ees des ees des ees
-  des ees des ees des ees des ees
-  c d! c d c d c d 
-  b c b c b c b c 
-  bes c bes c bes c bes c
-  a b! a b a b a b
-  a b a b a b a b 
+  des[ ees] des[ ees] des[ ees] des[ ees]
+  des[ ees] des[ ees] des[ ees] des[ ees]
+  c[ d!] c[ d] c[ d] c[ d] 
+  b[ c] b[ c] b[ c] b[ c] 
+  bes[ c] bes[ c] bes[ c] bes[ c]
+  a[ b!] a[ b] a[ b] a[ b]
+  a[ b] a[ b] a[ b] a[ b] 
   R1
   \mark \default
   R1*2
