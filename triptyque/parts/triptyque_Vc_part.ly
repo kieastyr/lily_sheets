@@ -28,11 +28,13 @@ twoStacc = \markup {
 \book{
   \header {
     title = \markup {
-            "弦楽のための三楽章"
+      \override #'(font-name . "UD デジタル 教科書体 NK")
+      "弦楽のための三楽章"
     }
     tagline = c
     composer = \markup {
-            "芥川 也寸志"
+      \override #'(font-name . "UD デジタル 教科書体 NK")
+      "芥川 也寸志"
     }
     instrument = \markup{\bold "Violoncello"}
   }
@@ -51,8 +53,8 @@ twoStacc = \markup {
     markup-system-spacing.basic-distance = #20
     top-system-spacing.minimum-distance = #12
     last-bottom-spacing.basic-distance = #12
-    system-system-spacing.basic-distance = #15
-    system-system-spacing.minimum-distance = #10
+    system-system-spacing.basic-distance = #14
+    system-system-spacing.minimum-distance = #12
     score-markup-spacing.basic-distance = #20
   
     print-page-number = ##t
@@ -64,7 +66,7 @@ twoStacc = \markup {
       \fill-line{
         \line{}
         \right-column{
-          \line{"[確]v1.0"}
+          \line{"v1.1"}
           \line{"A-01-vc-"\fromproperty #'page:page-number-string }
         }
       }

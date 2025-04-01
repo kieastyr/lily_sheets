@@ -126,7 +126,7 @@ psub = _\markup { \dynamic p \italic sub.}
   r q16-.( q-.)
   \time 3/8
   r8 q16-.( q-.) q8-.
-  r q16-.( q-.) q8-.
+  r <cis dis>16-.( q-.) q8-.
   r <fis, cis'>16-.( q-.) q8-.
   r <g e'>16-.( q-.) q8-.
   r cis16[( b cis b)]
@@ -266,7 +266,7 @@ psub = _\markup { \dynamic p \italic sub.}
   r fis16-. fis-.
   \time 3/8
   r8 g16-. g-. fis8-.
-  r g-. g16-. fis-. %%%%%%%%%%%%%%% TODO: 比較
+  r g16-. g-. fis8-. %%%%%%%%%%%%%%% TODO: 比較
   r8 g16-. g-. fis8-.
   r a16-. a-. g8-. 
   \mark \default

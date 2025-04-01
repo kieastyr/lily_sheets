@@ -126,8 +126,8 @@ twoStacc = \markup {
   \mark \default
   <ees bes'>8-. q16( <ges des'> <ees bes'>8-.)_\markup{\italic "cresc."} q-. q-. q16( <ges des'> <ees bes'>8-.) q-.
   q-. q16( <ges des'> <ees bes'>8-.) q-. q-. q16( <ges des'> <ees bes'>8-.) q-.
-  <e! b'!>8-. q16( <g d> <e b'>8-.) q-. q-. q16( <g d> <e b'>8-.) q-.
-  q-.\mf q16( <g d> <e b'>8-.) q-. q-. q16( <g d> <e b'>8-.) q-.
+  <e! b'!>8-.\mf q16( <g d'> <e b'>8-.) q-. q-. q16( <g d'> <e b'>8-.) q-.
+  q-. q16( <g d'> <e b'>8-.) q-. q-. q16( <g d'> <e b'>8-.) q-.
   <ees bes'>8-. q16( <ges des'> <ees bes'>8-.) q-._\markup{\italic "dim."} q-. q16( <ges des'> <ees bes'>8-.) q-.
   q-. q16( <ges des'> <ees bes'>8-.) q-. q-.[ <ges des'>16-. q-.] q8-.[ <ees bes'>-.]
   \mark \default
@@ -140,7 +140,7 @@ twoStacc = \markup {
   f\< f16 f e8 e16 e dis8 dis16 dis d8 d16 d
   cis8 cis16 cis c8 c16 c b8 b16 b bes16 bes bes bes
   a8-.\f[ ais-.] f'-.[ fis] a,!-.[ ais-.] f'!-.[ fis]
-  a,!-.[ ais-.] f'!-.[ fis] a,!-.[ ais-.] f'!-.[ fis]
+  aes,-.[ a-.] fes'-.[ f] aes,-.[ a-.] fes'-.[ f]
   \mark \default
   r8 des16 ees f8-. des16 ees f8-. des-. ees-. f-.
   ees-. bes-. ees4~ ees8 bes-. ees4

@@ -99,6 +99,7 @@ twoStacc = \markup {
   g--_\pocospan( g-- c,--)
   \time 2/4
   c8_\aspan[( des ees f)]
+  \mark \default
   \time 3/4
   g4--_\pocospan( g-- c,--)
   f8_\cresc( g aes4) aes8( bes)
@@ -140,10 +141,11 @@ twoStacc = \markup {
   g4-- g( f) aes8([ g f g]
   bes4) c,( bes8 c) d4( ees8 d)
   c4--( c4--) bes8( c) d2
+  \mark \default
   ees8\mp([ f g ees] c4) g'( f) 
   aes aes8( g aes4) g8( f g4) 
   f8([ ees d ees] f4) ees8( d c4)
-  bes bes8( c d4) ees8( d c d)
+  bes bes8( c d4) ees8([ d c ees])
   \time 3/4
   d4 d( bes)
   \time 5/4
@@ -166,6 +168,7 @@ twoStacc = \markup {
   aes,:\>-\tweak Y-offset #0 ^\twoStacc[ ees':^\twoStacc aes:-\tweak Y-offset #4.0 ^\twoStacc ees:^\twoStacc] 
     \tempo "poco rit." aes,:-\tweak Y-offset #0 ^\twoStacc[ ees':^\twoStacc] 
       g,:-\tweak Y-offset #-0.5 ^\twoStacc[ d':-\tweak Y-offset #1.5 ^\twoStacc g:-\tweak Y-offset #3.5 ^\twoStacc d:-\tweak Y-offset #1.5 ^\twoStacc\!]
+  \mark \default
   <<c'4\pp^\markup{\italic "div."}( \\ \override StemTremolo.beam-thickness = #0.2  c:32 >> <<bes \\ bes: >> <<aes \\ aes: >> <<g \\ g: >> <<f) \\ f: >>
   <<ees( \\ ees: >> <<d) \\ d: >> <<d( \\ d: >> <<c \\ c: >> <<bes) \\ bes: >>
   <<c'( \\ c: >> <<bes \\ bes: >> <<aes \\ aes: >> <<g \\ g: >> <<f) \\ f: >>

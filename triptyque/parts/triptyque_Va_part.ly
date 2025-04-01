@@ -32,11 +32,13 @@ twoStacc = \markup {
 \book{
   \header {
     title = \markup {
-            "弦楽のための三楽章"
+      \override #'(font-name . "UD デジタル 教科書体 NK")
+      "弦楽のための三楽章"
     }
     tagline = c
     composer = \markup {
-            "芥川 也寸志"
+      \override #'(font-name . "UD デジタル 教科書体 NK")
+      "芥川 也寸志"
     }
     instrument = \markup{\bold "Viola"}
   }
@@ -68,7 +70,7 @@ twoStacc = \markup {
       \fill-line{
         \line{}
         \right-column{
-          \line{"[確]v1.0"}
+          \line{"v1.1"}
           \line{"A-01-va-"\fromproperty #'page:page-number-string }
         }
       }

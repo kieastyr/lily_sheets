@@ -135,8 +135,8 @@
   \mark \default
   <ees bes'>8-. q16( <ges des'> <ees bes'>8-.)_\markup{\italic "cresc."} q-. q-. q16( <ges des'> <ees bes'>8-.) q-.
   q-. q16( <ges des'> <ees bes'>8-.) q-. q-. q16( <ges des'> <ees bes'>8-.) q-.
-  <e! b'!>8-. q16( <g d> <e b'>8-.) q-. q-. q16( <g d> <e b'>8-.) q-.
-  q-.\mf q16( <g d> <e b'>8-.) q-. q-. q16( <g d> <e b'>8-.) q-.
+  <e! b'!>8-.\mf q16( <g d'> <e b'>8-.) q-. q-. q16( <g d'> <e b'>8-.) q-.
+  q-. q16( <g d'> <e b'>8-.) q-. q-. q16( <g d'> <e b'>8-.) q-.
   <ees bes'>8-. q16( <ges des'> <ees bes'>8-.) q-._\markup{\italic "dim."} q-. q16( <ges des'> <ees bes'>8-.) q-.
   q-. q16( <ges des'> <ees bes'>8-.) q-. q-.[ <ges des'>16-. q-.] q8-.[ <ees bes'>-.]
   \mark \default

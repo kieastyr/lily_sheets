@@ -309,6 +309,7 @@ twoStacc = \markup {
   cis4 r
   \newSpacingSection
   \revert Score.SpacingSpanner.spacing-increment
+  \mark \default
   \tempo "Tempo I"
   b16-.\fff b-. cis8-. b16-. b-. cis8-.
   b-. cis16-. cis-. d-. d-. cis-. cis-.

@@ -1,6 +1,8 @@
-%%fsempre = _\markup { \dynamic f \italic sempre}
-%%fsub = _\markup { \dynamic f \italic sub.}
-%%ffsub = _\markup { \dynamic ff \italic sub.}
+%{
+fsempre = _\markup { \dynamic f \italic sempre}
+fsub = _\markup { \dynamic f \italic sub.}
+ffsub = _\markup { \dynamic ff \italic sub.}
+%}
 \relative c'{
   \mergeDifferentlyHeadedOn
   \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
@@ -86,23 +88,23 @@
       \override NoteColumn.force-hshift = #-1.3
       <des' bes'>8-.\fsempre^\markup{\italic "div."} q4 q8~ q q-. q-. q-.
       q-. q4 q8~ q q-. q-. q-.
-      q-. q4 q8~ q q-. q-. q-.
+      q4. q8~ q q-. q-. q-.
       <d! b'!>-. q4 q8~ q q-. q-. q-.
-      <e c'>-. q4 q8~ q q-. q-. q-.
+      <e c'>4 q8-. q8~ q q-. q-. q-.
       <f des'>-. q4 q8~ q q-. q-. q-.
-      <fis d'!>-. q4 q8~ q q-. q-. q-.
+      <fis d'!>4. q8~ q q-. q-. q-.
       q-. q4 q8~ q q-. q-. q-.
-      \override NoteColumn.force-hshift = #0
+      \revert NoteColumn.force-hshift
     }
     \\
     {
       f8-. f4 f8~ f f-. f-. f-.
       f-. f4 f8~ f f-. f-. f-.
-      f-. f4 f8~ f f-. f-. f-.
+      f4. f8~ f f-. f-. f-.
       fis-. fis4 fis8~ fis fis-. fis-. fis-.
-      g-. g4 g8~ g g-. g-. g-.
+      g4 g8-. g8~ g g-. g-. g-.
       aes-. aes4 aes8~ aes aes-. aes-. aes-.
-      a!-. a4 a8~ a a-. a-. a-.
+      a!4. a8~ a a-. a-. a-.
       a-. a4 a8~ a a-. a-. a-.
     }
   >>
@@ -174,23 +176,23 @@
   <<
     {
       \override NoteColumn.force-hshift = #-1.3
-      <des, bes'>8-.^\markup{\italic "div."} q4 q8~ q q-. q-. q-.
-      q-. q4 q8~ q q-. q-. q-.
+      <des, bes'>8-.^\markup{\italic "div."}-. q4 q8~ q q-. q-. q-.
+      q4. q8~ q q-. q-. q-.
       <d! b'!>-. q4 q8~ q q-. q-. q-.
-      <e c'>-. q4 q8~ q q-. q-. q-.
+      <e c'>4 q8-. q8~ q q-. q-. q-.
       <f des'>-. q4 q8~ q q-. q-. q-.
-      <fis d'!>-. q4 q8~ q q-. q-. q-.
+      <fis d'!>4. q8~ q q-. q-. q-.
       q-. q4 q8~ q q-. q-. q-.
-      \override NoteColumn.force-hshift = #0
+      \revert NoteColumn.force-hshift
     }
     \\
     {
       f8-. f4 f8~ f f-. f-. f-.
-      f-. f4 f8~ f f-. f-. f-.
+      f4. f8~ f f-. f-. f-.
       fis-. fis4 fis8~ fis fis-. fis-. fis-.
-      g-. g4 g8~ g g-. g-. g-.
+      g4 g8-. g8~ g g-. g-. g-.
       aes-. aes4 aes8~ aes aes-. aes-. aes-.
-      a!-. a4 a8~ a a-. a-. a-.
+      a!4. a8~ a a-. a-. a-.
       a-. a4 a8~ a a-. a-. a-.
     }
   >>
