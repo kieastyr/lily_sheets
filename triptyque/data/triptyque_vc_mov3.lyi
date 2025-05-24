@@ -39,10 +39,10 @@ twoStacc = \markup {
   b[ cis]  \once \override Stem.details.beamed-lengths = #'(3) b[ 
   \mark #32
   \time 5/8
-  cis] b[ cis] b[ cis]
+  cis] fis,[ cis'] fis,[ cis']
   \time 3/8
-  b[ cis] b[ 
-  cis] b[ cis]
+  g[ d'] g,[ 
+  d'] g,[ d']
   \mark \default
   \time 2/4
   b16-.\f^\markup{\italic "arco"} b-. cis->( b) b-. b-. cis->( b)
@@ -76,10 +76,10 @@ twoStacc = \markup {
   b[ cis] b[ 
   \mark \default
   \time 5/8
-  cis] b[ cis] b[ cis]
+  cis] fis,[ cis'] fis,[ cis']
   \time 3/8
-  b[ cis] b[ 
-  cis] b[ cis]
+  g[ d'] g,[ 
+  d'] g,[ d']
   \mark \default
   \time 2/4
   fis,16-.\f fis-. fis8-. fis16-. fis-. fis8-.
@@ -208,7 +208,7 @@ twoStacc = \markup {
   fis2.
   \mark \default
   e4( fis) gis8( d')
-  cis4( b s)
+  cis4( b a)
   g( fis e)
   \time 2/4
   d2
@@ -272,10 +272,10 @@ twoStacc = \markup {
   b[ cis] b[ 
   \mark \default
   \time 5/8
-  cis] b[ cis] b[ cis]
+  cis] fis,[ cis'] fis,[ cis']
   \time 3/8
-  b[ cis] b[ 
-  cis] b[ cis]
+  g[ d'] g,[ 
+  d'] g,[ d']
   \mark \default
   \time 2/4
   b16-.\f^\markup{\italic "arco"} b-. cis->( b) b-. b-. cis->( b)

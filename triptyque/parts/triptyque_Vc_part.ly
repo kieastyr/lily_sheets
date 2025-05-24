@@ -66,7 +66,7 @@ twoStacc = \markup {
       \fill-line{
         \line{}
         \right-column{
-          \line{"v1.1"}
+          \line{"v1.2"}
           \line{"A-01-vc-"\fromproperty #'page:page-number-string }
         }
       }

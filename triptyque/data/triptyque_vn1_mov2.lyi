@@ -127,7 +127,7 @@ aspan =
   c4-- c--( bes--)
   c2.\>
   \acciaccatura f8 c2.
-  \acciaccatura f8 << c2. {s2 s4\p}>>
+  \acciaccatura ees8 << c2. {s2 s4\p}>>
   R1*3/4
   \mark \default
   \time 5/4
