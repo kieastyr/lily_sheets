@@ -54,8 +54,8 @@ aspan =
   des' \tweak X-offset #-2 \tempo "poco rit." des,4 ges2
   \newSpacingSection
   \revert Score.SpacingSpanner.spacing-increment
-  \mark \default
-  \tweak X-offset #2 \tempo "a tempo"
+  \tweak X-offset #1 \mark \default
+  \tweak X-offset #4 \tempo "a tempo"
   r4\p aes des,2 des'4
   ges,2 des'4 ges,, ges'~
   ges r8 des'4 des8 r4 ges,
@@ -123,7 +123,7 @@ aspan =
   f,4.\!^\markup{\italic \small "arco"} r8 f'^\markup{\italic \small "pizz."} f
   f,4.^\markup{\italic \small "arco"} r8 f'^\markup{\italic \small "pizz."} f
   \mark \default
-  ges4\f r ees\glissando^\markup{\tiny \rotate #25 "gliss."}
+  ges4\f^\markup{\italic \small "arco"} r ees\glissando^\markup{\tiny \rotate #25 "gliss."}
   ges r ees\glissando^\markup{\tiny \rotate #25 "gliss."}
   ges r ees\glissando
   ges r bes,\glissando

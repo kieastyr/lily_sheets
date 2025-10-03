@@ -199,7 +199,7 @@ twoStacc = \markup {
   <<dis4.-> {s8\f\> s s\p}>>
   R1*3/8
   <<dis4.-> {s8\f\> s s\p}>>
-  \mark \default
+  \tweak X-offset #-1.5 \mark \default
   \tempo "Piu mosso"
   \bar "||"
   R1*3/8

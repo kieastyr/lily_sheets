@@ -1,0 +1,98 @@
+\relative c''{
+  \numericTimeSignature
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+  \time 4/4 %%拍子
+  \set Staff.midiInstrument = "violin"
+  \clef treble %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
+  \override Hairpin.minimum-length = #6
+
+  \key b \minor  %%調
+  \tempo "Moderato"  %%BPM
+  R1
+  \mark \default
+  \bar "||"
+  fis2 b,8( cis d e)
+  fis4.( d8) fis4.( d8) 
+  fis4.( b,8) d( b g d')
+  b2~ b8 e( d cis)
+  fis2 b,8( cis d e)
+  fis4.( d8) fis4.( d8) 
+  fis4.( b,8) d( b g d')
+  b2. b4
+  \mark \default
+  \bar "||"
+  cis\<( d e) fis8( g\!)
+  a4.( g8 fis4) g8( a)
+  b4.( a8 g4) a8( b)
+  cis4.\>( b8) fis( d cis b)
+  cis4\<( d e) fis8( g\!)
+  a4.( g8 fis4) g8( a)
+  b4.( a8 g4) a8( b)
+  c4.( g8 e4) g8( c)
+  cis!4.\f gis8 cis4. gis8
+  \mark \default
+  \bar "||"
+  <d b'>1\pp
+  q~ 
+  q4 fis4 g ais
+  q1~
+  q~
+  q~
+  q4 fis,4 g ais
+  \tuplet 3/2 { b8\mf( d fis d fis b } d4) b,\f
+  \mark \default
+  \bar "||"
+  cis d e fis8( g
+  a4. g8 fis4) g8( a
+  b4. a8 g4) a8( b
+  cis4. b8) fis( d cis b)
+  cis4( d e) fis8( g
+  a4. g8 fis4) g8( a
+  b4. a8 g4) a8( b)
+  \pageBreak
+  \mark \default
+  \bar "||"
+  \tuplet 3/2 { c4 g c } \tuplet 3/2 { b2 b4 }
+  \tuplet 3/2 { ais fis ais } \tuplet 3/2 { b2 b4 }
+  \tuplet 3/2 { c4 g c } \tuplet 3/2 { b2 b4 }
+  \tuplet 3/2 { ais fis ais } \tuplet 3/2 { b2 b4 }
+  \tuplet 3/2 { c4 g c } \tuplet 3/2 { c4 g c } 
+  g2 \tuplet 3/2 { fis2 fis4 }
+  \tuplet 3/2 { c'4 g c } \tuplet 3/2 { c4 g c } 
+  g2 \tuplet 3/2 { fis2 fis4 }
+  \tuplet 3/2 { c'4 g c } \tuplet 3/2 { c4 g c } 
+  cis2~ \tuplet 3/2 { cis2 cis4 }
+  \tuplet 3/2 { d4 bes d } \tuplet 3/2 { d4 bes d }
+  d2~ \tuplet 3/2 { d2 cis4 }
+  \tuplet 3/2 { d2 cis4 } \tuplet 3/2 { d2 cis4 }
+  \tuplet 3/2 { d2 cis4 } \tuplet 3/2 { d2 cis4 }
+  \tempo "Piu mosso"
+  fis4 e cis ais
+  fis e cis ais
+  fis e' cis ais
+  fis e d cis
+  \mark \default
+  \bar "||"
+  fis'1\fff
+  b,4 cis d e
+  fis2. d4
+  fis2. d4
+  fis2 d
+  b fis
+  d' b 
+  fis d
+  \mark \default
+  \bar "||"
+  fis1\f
+  b,4( cis d e)
+  fis2.( d4)
+  fis2.( d4)
+  <d fis>1\p~
+  q
+  q~
+  q
+  b4 r r2
+  <d b'>4^"pizz." r q r 
+  q\p r r2\fermata
+  \bar "|."
+}

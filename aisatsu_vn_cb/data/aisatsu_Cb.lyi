@@ -1,0 +1,117 @@
+\relative c,{
+  \numericTimeSignature
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+  \time 2/4 %%拍子
+  \set Staff.midiInstrument = "violin"
+  \clef bass %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
+  \override Hairpin.minimum-length = #6
+
+  \key d \major  %%調
+  \tempo 4 = 84  %%BPM
+  d8\mf a'4--( a8-.)
+  d,8\> a'4--( a8-.)
+  \mark \default
+  \repeat volta 2{
+    d,8\p <a' d>4--( q8-.)
+    fis <d' a>4--( q8-.)
+    e, <e' b>4--( q8-.)
+    a,_\markup{\italic "simile"} <e' a,>4--( q8-.)
+    d4( cis)
+    b2
+    e,8 <d' b>4 q8
+    a a'4 g8
+    d,8 <a' d>4--( q8-.)
+    fis <d' a>4--( q8-.)
+    g4\<( fis)
+    e2\>
+    a,8\p a'( g b)
+    g4( fis8 e)
+  }
+  \alternative {
+    {
+      fis4\<( g)
+      gis\>( a)
+    }
+    {a,8\< d4 d'8}
+  }
+  bes4\> a
+  \mark \default
+  \bar "||"
+  \key d \minor
+  \tempo \markup{\italic "a tempo"}
+  \acciaccatura d8 f!4\mp( e8 d)
+  bes!4( c8 d)
+  e4( d8 c)
+  a4( bes8 c)
+  d4\<( e8 f)
+  g d bes c
+  c\mf c,4 c8~
+  c\> c4 g'8
+  a4\!( g8 f)
+  d4( e8 f)
+  \acciaccatura f a-- g-- f-- e--
+  cis4( d8 e)
+  f4( g8 a)
+  bes4 f'8.\fermata e16
+  \mark \default
+  \bar "||"
+  \key d \major
+  d4 a~
+  a8 a4 a8
+  a,8 a4 a8
+  a2
+  e'8 g4 g8
+  a,8 cis4 cis8
+  e8 g4 g8
+  a,8\> g'4^\markup{\italic "rit."} g8
+  \mark \default
+  \bar "||"
+  \tempo \markup{\italic "a tempo"}
+  d8\! <fis a>4 q8
+  a,8 <d a'>4 q8
+  g4( bes,8 g')
+  fis( e) dis e(
+  fis) d cis4
+  b2
+  e,4 gis'
+  a g,!
+  d8 d'4 d8
+  fis,8 d'4 d8
+  g4( fis)
+  e r
+  r8 <bes e>8--( q-- q--
+  q-- q--) a'( g)
+  fis2
+  fis,
+  r8 <bes e>8--( q-- q--
+  q-- q--) a( g)
+  fis2
+  b!4 fis8 d'
+  g, d' fis, dis'
+  e, <b' g> q q
+  <b d>4 <a d>
+  gis2
+  g!4 fis
+  e\< dis\sf\fermata\>
+  e2\!
+  <a g'>
+  \mark \default
+  \bar "||"
+  \acciaccatura d8 fis4\p( a,8 fis'8)
+  e( d cis d)
+  g4-- g--
+  g4( fis8 e)
+  fis'4( a,8 fis'8)
+  e( d cis d)
+  g4-- g--
+  g4( fis8 e)
+  d,,8 d'4 d8
+  fis fis4 a8
+  d4 r
+  <d,, a' d fis>^"pizz." r
+  d'^"arco"_\markup{\italic "rall. e dim."}( a')
+  d,( a')
+  <d, a'>2~
+  q4 r\fermata
+  \bar "|."
+}

@@ -5,6 +5,7 @@
 ffz = #(make-dynamic-script "ffz")
 fpp = #(make-dynamic-script "fpp")
 fsempre = _\markup { \dynamic f \italic sempre}
+psub = _\markup { \dynamic p \italic sub.}
 fsub = _\markup { \dynamic f \italic sub.}
 ffsub = _\markup { \dynamic ff \italic sub.}
 pocospan =
@@ -25,22 +26,22 @@ twoStacc = \markup {
 }
 %%ここまで、定義
 
+#(set-global-staff-size 20)
+#(set-default-paper-size "a4" )
+
 \book{
   \header {
     title = \markup {
-            "弦楽のための三楽章"
+      \override #'(font-name . "UD デジタル 教科書体 NK")
+      "弦楽のための三楽章"
     }
     tagline = c
     composer = \markup {
-            "芥川 也寸志"
+      \override #'(font-name . "UD デジタル 教科書体 NK")
+      "芥川 也寸志"
     }
     instrument = \markup{\bold "Viola"}
   }
-  
-  
-  #(set-global-staff-size 26)
-  #(set-default-paper-size "a4" )
-  
   
   \paper {
     print-all-headers = ##t
@@ -49,7 +50,7 @@ twoStacc = \markup {
     
     #(set-paper-size "a4")
     top-margin = 2\cm
-    bottom-margin = 1\cm
+    bottom-margin = 2\cm
     left-margin = 1\cm
     right-margin = 1\cm
   
@@ -57,7 +58,7 @@ twoStacc = \markup {
     markup-system-spacing.basic-distance = #20
     top-system-spacing.minimum-distance = #12
     last-bottom-spacing.basic-distance = #12
-    system-system-spacing.minimum-distance = #14
+    system-system-spacing.minimum-distance = #12
     score-markup-spacing.basic-distance = #20
   
     print-page-number = ##t
@@ -65,6 +66,17 @@ twoStacc = \markup {
     print-first-page-number = ##f
     first-page-number = 1
   
+    oddFooterMarkup = \markup {
+      \fill-line{
+        \line{}
+        \right-column{
+          \line{"v1.1"}
+          \line{"A-01-va-"\fromproperty #'page:page-number-string }
+        }
+      }
+    }
+    evenFooterMarkup = \oddFooterMarkup
+    
   }
   
   \score {
@@ -103,7 +115,6 @@ twoStacc = \markup {
     }
     \midi{}
   }
-  %{
   \score {
     \header {
       title = "III"
@@ -121,6 +132,5 @@ twoStacc = \markup {
     }
     \midi{}
   }
-  %}
   
 }

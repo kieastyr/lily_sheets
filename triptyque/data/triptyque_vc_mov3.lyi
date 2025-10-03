@@ -11,7 +11,7 @@ twoStacc = \markup {
   \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
   \numericTimeSignature
   \time 4/4 %%拍子
-  \set Staff.midiInstrument = "contrabass"
+  \set Staff.midiInstrument = "cello"
   \clef bass %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
   \override Hairpin.minimum-length = #6
   \override StemTremolo.beam-thickness = #0.3
@@ -39,10 +39,10 @@ twoStacc = \markup {
   b[ cis]  \once \override Stem.details.beamed-lengths = #'(3) b[ 
   \mark #32
   \time 5/8
-  cis] b[ cis] b[ cis]
+  cis] fis,[ cis'] fis,[ cis']
   \time 3/8
-  b[ cis] b[ 
-  cis] b[ cis]
+  g[ d'] g,[ 
+  d'] g,[ d']
   \mark \default
   \time 2/4
   b16-.\f^\markup{\italic "arco"} b-. cis->( b) b-. b-. cis->( b)
@@ -65,7 +65,7 @@ twoStacc = \markup {
   a16-.\> a-. a8-. a16-. a-. a8-.
   <g, d'>2->\downbow
   \mark \default
-  b'8\p^\markup{\italic "Pizz."} cis b8 cis
+  b'8\p-\tweak X-offset #1.5 ^\markup{\italic "Pizz."} cis b8 cis
   \time 3/8
   b[ cis] b[ 
   cis] b[ cis]
@@ -76,10 +76,10 @@ twoStacc = \markup {
   b[ cis] b[ 
   \mark \default
   \time 5/8
-  cis] b[ cis] b[ cis]
+  cis] fis,[ cis'] fis,[ cis']
   \time 3/8
-  b[ cis] b[ 
-  cis] b[ cis]
+  g[ d'] g,[ 
+  d'] g,[ d']
   \mark \default
   \time 2/4
   fis,16-.\f fis-. fis8-. fis16-. fis-. fis8-.
@@ -120,16 +120,18 @@ twoStacc = \markup {
   fis-. fis16( e fis e)
   fis8-. fis,-. fis'-.
   \mark \default
-  b,:16_\twoStacc[ cis:_\twoStacc fis,:_\twoStacc
-  g:_\twoStacc] b:_\twoStacc[ fis:_\twoStacc
+  \override TextScript.outside-staff-priority = ##f
+  b,:16_\twoStacc[ cis:-\tweak Y-offset #-1.5 _\twoStacc fis,:-\tweak Y-offset #-3.5 _\twoStacc
+  g:-\tweak Y-offset #-3 _\twoStacc] b:_\twoStacc[ fis:-\tweak Y-offset #-3.5 _\twoStacc
   \time 2/8
-  g:_\twoStacc b:_\twoStacc]
+  g:-\tweak Y-offset #-3 _\twoStacc b:_\twoStacc]
   \time 3/8
-  fis:_\twoStacc[ g:_\twoStacc b:_\twoStacc
-  cis:_\twoStacc] b:_\twoStacc[ cis:_\twoStacc 
-  fis,:_\twoStacc g:_\twoStacc] b:^\twoStacc[
-  c:^\twoStacc e:^\twoStacc g:^\twoStacc]
-  fis:_\twoStacc cis:_\twoStacc fis,:_\twoStacc
+  fis:-\tweak Y-offset #-3.5 _\twoStacc[ g:-\tweak Y-offset #-3 _\twoStacc b:_\twoStacc
+  cis:-\tweak Y-offset #-1.5 _\twoStacc] b:_\twoStacc[ cis:-\tweak Y-offset #-1.5 _\twoStacc 
+  fis,:-\tweak Y-offset #-3.5 _\twoStacc g:-\tweak Y-offset #-3 _\twoStacc] b:-\tweak Y-offset #0.5 ^\twoStacc[
+  c:-\tweak Y-offset #0.5 ^\twoStacc e:-\tweak Y-offset #1.5 ^\twoStacc g:^\twoStacc]
+  fis:-\tweak Y-offset #-0.5 _\twoStacc cis:-\tweak Y-offset #-1.5 _\twoStacc fis,:-\tweak Y-offset #-3.5 _\twoStacc
+  \revert TextScript.outside-staff-priority
   \mark \default
   d''8-. cis16( c b bes)
   a8-.\> gis16( g fis f)
@@ -171,7 +173,7 @@ twoStacc = \markup {
   R1*3/8
   <<<gis dis'>4.-> {s8\f\> s s\p}>>
   \mark \default
-  \tempo "Piu mosso"
+  \tweak X-offset #0.5 \tempo "Piu mosso"
   \bar "||"
   R1*3/8
   <gis' dis'>8-.\p\< q-. q-.
@@ -184,7 +186,7 @@ twoStacc = \markup {
   q-. q-. q-.
   \time 2/8 
   <gis dis'>16^\markup{\italic "détaché"}[ q q q]
-  \mark \default
+  \tweak X-offset #1 \mark \default
   \time 3/8
   <a e'>8-. q-. q-.
   q-. q-. q-.
@@ -196,7 +198,7 @@ twoStacc = \markup {
   \time 3/4
   \tweak X-offset #3 \tempo "Adagio"
   \bar "||"
-  <<b2.\p {s4 s_\markup{\italic "tranquillo"} s} >>
+  <<b2.-\tweak X-offset #-0.5 \p {s4 s_\markup{\italic "tranquillo"} s} >>
   e,2.
   fis
   cis2( dis4)
@@ -206,7 +208,7 @@ twoStacc = \markup {
   fis2.
   \mark \default
   e4( fis) gis8( d')
-  cis4( b s)
+  cis4( b a)
   g( fis e)
   \time 2/4
   d2
@@ -249,14 +251,14 @@ twoStacc = \markup {
   b( cis b cis b cis)
   d( cis d cis d cis)
   d( e d e d e)
-  \mark \default
+  \tweak X-offset #3 \mark \default
   fis8-.\< fis,16( e fis e)
   fis8-. fis,-. fis'-.
   fis16-.\ff[ fis-. cis'8-.] fis,16-.[ fis-. 
   cis'8-.] fis,16-.[ fis-. cis'8-.]
   fis4\>( eis8~
   eis e4)
-  \mark \default
+  \tweak X-offset #0 \mark \default
   \time 2/4
   b8\p^\markup{\italic "Pizz."} cis b8 cis
   \time 3/8
@@ -270,10 +272,10 @@ twoStacc = \markup {
   b[ cis] b[ 
   \mark \default
   \time 5/8
-  cis] b[ cis] b[ cis]
+  cis] fis,[ cis'] fis,[ cis']
   \time 3/8
-  b[ cis] b[ 
-  cis] b[ cis]
+  g[ d'] g,[ 
+  d'] g,[ d']
   \mark \default
   \time 2/4
   b16-.\f^\markup{\italic "arco"} b-. cis->( b) b-. b-. cis->( b)
@@ -288,9 +290,9 @@ twoStacc = \markup {
   b-.[ b-. cis->( b)] b-. b-.
   cis8-. fis,16 b-. cis8-.
   fis,-. \tempo "rit." cis'16-. b-. fis8-.
-  \mark \default
+  \tweak X-offset #-0.5 \mark \default
   \time 3/4
-  \tempo "Adagio"
+  \tweak X-offset #3.5 \tempo "Adagio"
   \bar "||"
   <d a'>2.\ff
   d
@@ -301,8 +303,13 @@ twoStacc = \markup {
   \time 2/4
   fis2
   e4( d)
+  \newSpacingSection
+  \override Score.SpacingSpanner.spacing-increment = #3
   cis2~-\tweak X-offset #-1.5 _\markup{\italic "non dim. e rit."}
   cis4 r
+  \newSpacingSection
+  \revert Score.SpacingSpanner.spacing-increment
+  \mark \default
   \tempo "Tempo I"
   b16-.\fff b-. cis8-. b16-. b-. cis8-.
   b-. cis16-. cis-. d-. d-. cis-. cis-.

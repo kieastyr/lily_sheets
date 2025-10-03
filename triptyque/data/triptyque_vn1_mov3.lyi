@@ -3,7 +3,7 @@
   \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
   \numericTimeSignature
   \time 4/4 %%拍子
-  \set Staff.midiInstrument = "contrabass"
+  \set Staff.midiInstrument = "violin"
   \clef treble %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
   \override Hairpin.minimum-length = #6
   \override StemTremolo.beam-thickness = #0.3
@@ -165,7 +165,7 @@
   fis8-. cis16-.\f[( cis-. cis8-.)]
   R1*3/8
   \mark \default
-  r8^\markup{\italic "Pizz."} <g fis' cis' fis>\sf r
+  r8-\tweak X-offset #1.5 ^\markup{\italic "Pizz."} <g fis' cis' fis>\sf r
   q\sf r q\sf
   \tempo \markup{\normal-text \italic \small "poco a poco accel."}
   R1*3/8
@@ -176,7 +176,7 @@
   gis4.\f\>
   cis,8:\p d: fis:
   gis4.\f\>
-  \mark \default
+  \tweak X-offset #-3 \mark \default
   \tempo "Piu mosso"
   cis,8:\p\< d: fis:
   gis: fis: gis:
@@ -198,7 +198,7 @@
   e16\fff[ dis cis b] a gis
   R1*3/8\fermata
   \mark \default
-  \tempo "Adagio"
+  \tweak X-offset #3 \tempo "Adagio"
   \time 3/4
   \bar "||"
   gis,4\p( b_\markup{\italic "tranquillo"} gis)
@@ -220,7 +220,7 @@
   <<cis2 {s4 \tempo "rit." s}>>
   fis2
   \mark \default
-  \tempo "Tempo I"
+  \tweak X-offset #3 \tempo "Tempo I"
   \time 3/8
   \bar "||"
   fis,8-.\p fis16-._\markup{\italic "poco a poco cresc."}[( fis-. fis8-.)]
@@ -300,7 +300,7 @@
   <fis, fis'>-. <fis cis'>-. <fis fis'>-.
   <fis cis'>-. \tempo "rit." fis,16-.[ fis-. <fis cis'>8-.]
   \mark \default
-  \tempo "Adagio"
+  \tweak X-offset #3 \tempo "Adagio"
   \time 3/4
   \bar "||"
   fis'4\ff( a fis)
@@ -315,7 +315,7 @@
   fis'2_\markup{\italic "non dim. e rit."}~
   fis4 r
   \mark \default
-  \tempo "Tempo I"
+  \tweak X-offset #1.5 \tempo "Tempo I"
   <b,, fis'>16-.\fff q-. q8-. q16-. q-. q8-.
   q-. q16-. q-. q-. q-. q-. q-.
   \time 3/8

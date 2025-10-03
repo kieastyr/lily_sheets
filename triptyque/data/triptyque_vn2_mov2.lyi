@@ -16,7 +16,7 @@ aspan =
   \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
   \numericTimeSignature
   \time 4/4 %%拍子
-  \set Staff.midiInstrument = "contrabass"
+  \set Staff.midiInstrument = "violin"
   \clef treble %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
   \override Hairpin.minimum-length = #6
   \override Score.Footnote.annotation-line = ##f
@@ -26,30 +26,34 @@ aspan =
   \tempo "Andante" 4=72  %%BPM
   \time 5/4
   \newSpacingSection
-  \override Score.SpacingSpanner.spacing-increment = #3.5
+  \override Score.SpacingSpanner.spacing-increment = #5
   R1*5/4*5
   \newSpacingSection
   \revert Score.SpacingSpanner.spacing-increment
-  \mark #18
-  <<ees4\pp-\tweak X-offset #1.5 ^\markup{\italic "div. con sord."}( \\ \override StemTremolo.beam-thickness = #0.2 ees:32>> <<d \\ d: >> <<c \\ c: >> <<bes \\ bes: >> <<aes) \\ aes: >>
+  \tweak X-offset #-3 \mark #18
+  <<ees4\pp-\tweak X-offset #0 ^\markup{\italic "div. con sord."}( \\ \override StemTremolo.beam-thickness = #0.2 ees:32>> <<d \\ d: >> <<c \\ c: >> <<bes \\ bes: >> <<aes) \\ aes: >>
   <<g( \\ g: >> <<f) \\ f: >> <<f( \\ f: >> <<ees \\ ees: >> <<d) \\ d: >>
   <<ees'4( \\ ees:>> <<d \\ d: >> <<c \\ c: >> <<bes \\ bes: >> <<aes) \\ aes: >>
   <<g( \\ g: >> <<f) \\ f: >> <<f( \\ f: >> <<ees \\ ees: >> <<d) \\ d: >>
   <<aes'( \\ aes: >> <<g \\ g: >> <<f \\ f: >> <<ees \\ ees: >> <<d) \\ d: >>
   <<c4. \\ c:>> r8 r4 ees8\p([ d c g']
   f4) f c8( d bes4) bes
-  \mark \default 
-  r4\mp\<^\markup{\italic "div."} 
+  \tweak X-offset #-3.0 \mark \default 
+  \override DynamicLineSpanner.outside-staff-priority = 100000
+  r4\mp-\tweak Y-offset #-1 \<^\markup{\italic "div."} 
   << \tweak Accidental.X-offset #-1 <des bes'> \\ \tweak NoteColumn.force-hshift #2 \tweak Accidental.X-offset #1.8  ges-\tweak Y-offset #0.5 ^\trill>>
     r << <des bes'> \\ \tweak NoteColumn.force-hshift #1.3 ges-\tweak Y-offset #0.5 -\tweak X-offset #1.5 ^\trill>> r
   << \tweak Accidental.X-offset #-1 <des bes'> \\ \tweak NoteColumn.force-hshift #2 \tweak Accidental.X-offset #1.8  ges-\tweak Y-offset #0.5 ^\trill>>
     r << <des bes'> \\ \tweak NoteColumn.force-hshift #1.3 ges-\tweak Y-offset #0.5 -\tweak X-offset #1.5 ^\trill>>
       r << <des bes'> \\ \tweak NoteColumn.force-hshift #1.3 ges-\tweak Y-offset #0.5 -\tweak X-offset #1.5 ^\trill>>
-  r << \once \override Script.script-priority = #-100 c^\markup{\teeny \flat}^\trill \\ f,_\markup{\teeny \flat}_\trill >>
-    r << \once \override Script.script-priority = #-100 c'^\markup{\teeny \flat}^\trill \\ f,_\markup{\teeny \flat}_\trill >> r
-  c'\mf c8\>( des ees4) bes8( aes ges4)
-  ges( bes \tempo "poco rit." ges) ges8( f) f4
-  \mark \default
+  \override Script.outside-staff-priority = ##f
+  r << \once \override Script.script-priority = #-100 c^\markup{\teeny \flat}^\trill \\ f,-\tweak X-offset #0.7 _\markup{\teeny \flat}_\trill >>
+    r << \once \override Script.script-priority = #-100 c'^\markup{\teeny \flat}^\trill \\ f,-\tweak X-offset #0.7 _\markup{\teeny \flat}_\trill >> r
+  c'\mf c8-\tweak Y-offset #-1.5 \>( des ees4) bes8( aes ges4)  
+  \revert DynamicLineSpanner.outside-staff-priority
+  \revert Script.outside-staff-priority
+  ges( bes \tweak X-offset #-2 \tempo "poco rit." ges) ges8( f) f4
+  \tweak X-offset #-2 \mark \default
   \tempo "a tempo"
   des8\mp^\markup{\italic "cantabile"}([ ees f des] bes4) f'4( ees)
   ges4 ges8( f ges4) f8( ees f4)
@@ -61,7 +65,7 @@ aspan =
   des8([ c des f_\markup{\italic "cresc."}] aes4) bes8[( aes ges aes)]
   bes[( des f ees)] des([ c bes aes] ges4)
   f8([ aes c bes] aes4) \tuplet 3/2 {c8( des ees} aes,4)
-  \mark \default
+  \tweak X-offset #-2.0 \mark \default
   <<\override StemTremolo.beam-thickness = #0.2 {des8:32\mf^\markup{\italic "div."} bes:} 
     \\  \override StemTremolo.beam-thickness = #0.2 {bes: \tweak Accidental.X-offset #0.3 \tweak NoteColumn.force-hshift #1.4 des!:}>>
       <<{c: aes:} \\ {aes: \tweak NoteColumn.force-hshift #1.4 c:}>> <<{bes: ges!:} \\ {ges: \tweak NoteColumn.force-hshift #1.4 bes:}>>
@@ -85,7 +89,8 @@ aspan =
   c~
   c4 r r
   R1*3/4
-  \mark \default
+  \pageTurn
+  \tweak X-offset #5.5 \mark \default
   <ges des' ges>4\mp^\markup{\italic "pizz."} des8 des des4
   q des8 des des4
   q des8 des des4
@@ -94,7 +99,7 @@ aspan =
   q c8 c c4
   q des8 des des4
   q ges8 ges ges4
-  \mark \default
+  \tweak X-offset #5 \mark \default
   des4--^\markup{\italic "arco."}( des-- des--)
   bes8( c) des4.( c8)
   des4--( des-- des--)
@@ -102,7 +107,7 @@ aspan =
   bes4--( bes--) bes8( c)
   bes4 g'8\mf[( aes bes c)]
   g4--( g--) f8( ees
-  des4) g8[( f ees d)]
+  des4) g8[( f ees des)]
   c4--_\pocospan( c-- bes--)
   \time 2/4
   c8_\aspan[( des ees f)]
@@ -117,8 +122,8 @@ aspan =
   \time 3/4
   c4 c\!( bes)
   c2.
-  \mark \default
-  \stemUp \xNote \footnote "*)" #'(0.1 . 3) "*) Knock the body" bes4\mf <des, ges>8^\markup{\italic "pizz."} q q4
+  \tweak X-offset #-2.0 \mark \default
+  \stemUp \xNote \footnote "*)" #'(0.03 . 3) "*) Knock the body" bes4\mf <des, ges>8^\markup{\italic "pizz."} q q4
   \xNote bes' q q
   \xNote bes <bes, f'>8_\cresc q q4
   \xNote bes' <bes, ees bes'>4 q
@@ -158,19 +163,19 @@ aspan =
   \time 5/4
   g4\>( f8 c d4\!) r r
   R1*5/4
-  \mark \default
+  \tweak X-offset #-3.0 \mark \default
   r4\mp^\markup{\italic "div."} 
-  << \tweak Accidental.X-offset #-1 <ees, c'> \\ \tweak NoteColumn.force-hshift #2 \tweak Accidental.X-offset #1.8  aes-\tweak Y-offset #0.5 ^\trill>>
+  << \tweak Accidental.X-offset #-1 <ees, c'> \\ \tweak NoteColumn.force-hshift #1.3 \tweak Accidental.X-offset #1.8  aes-\tweak Y-offset #0.5 ^\trill>>
     r << <ees c'> \\ \tweak NoteColumn.force-hshift #1.3 aes-\tweak Y-offset #0.5 -\tweak X-offset #1.5 ^\trill>> r
-  << \tweak Accidental.X-offset #-1 <ees c'> \\ \tweak NoteColumn.force-hshift #2 \tweak Accidental.X-offset #1.8  aes-\tweak Y-offset #0.5 ^\trill>>
+  << \tweak Accidental.X-offset #-1 <ees c'> \\ \tweak NoteColumn.force-hshift #1.3 \tweak Accidental.X-offset #1.8  aes-\tweak Y-offset #0.5 ^\trill>>
     r << <ees c'> \\ \tweak NoteColumn.force-hshift #1.3 aes-\tweak Y-offset #0.5 -\tweak X-offset #1.5 ^\trill>>
       r << <ees c'> \\ \tweak NoteColumn.force-hshift #1.3 aes-\tweak Y-offset #0.5 -\tweak X-offset #1.5 ^\trill>>
   r << d^\trill \\ g,_\trill >> r << d'^\trill \\ g,_\trill >> r
   d'4^\markup{\italic "unis."}( ees8[ f]) f4 c8( bes aes4)
   aes\>( c \tempo "poco rit." aes) aes8( g) g4\!
   \mark \default
-  \tempo "a tempo"
-  <<ees'4^\markup{\italic "div."}( \\ \override StemTremolo.beam-thickness = #0.2 ees\pp:>> <<d \\ d: >> <<c \\ c: >> <<bes \\ bes: >> <<aes) \\ aes: >>
+  \tweak X-offset #0.5 \tempo "a tempo"
+  <<ees'4-\tweak X-offset #1.5 ^\markup{\italic "div."}( \\ \override StemTremolo.beam-thickness = #0.2 ees\pp:>> <<d \\ d: >> <<c \\ c: >> <<bes \\ bes: >> <<aes) \\ aes: >>
   <<g( \\ g: >> <<f) \\ f: >> <<f( \\ f: >> <<ees \\ ees: >> <<d) \\ d: >>
   <<ees'4( \\ ees:>> <<d \\ d: >> <<c \\ c: >> <<bes \\ bes: >> <<aes) \\ aes: >>
   <<g( \\ g: >> <<f) \\ f: >> <<f( \\ f: >> <<ees \\ ees: >> <<d) \\ d: >>
