@@ -1,0 +1,78 @@
+%{
+fsempre = _\markup { \dynamic f \italic sempre}
+ffsub = _\markup { \dynamic ff \italic sub.}
+%}
+\relative c'{
+  \mergeDifferentlyHeadedOn
+  \set Score.rehearsalMarkFormatter = #format-mark-circle-numbers
+  \numericTimeSignature
+  \time 4/4 %%拍子
+  \set Staff.midiInstrument = "contrabass"
+  \clef bass %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
+  \override Hairpin.minimum-length = #6
+
+  \key c \major  %%調
+  \tempo "Andante"
+  R1*10
+  fes2:32\f fes:
+  ees: des::
+  \tempo "Poco Stringendo"
+  b!: bes:
+  a:_\markup{\italic "cresc."} aes:
+  g1:\ff
+  g,:
+  g:
+  g8 r g' r r2\fermata
+  \bar "||"
+  \time 2/4
+  \tempo "Allegro guisto"
+  R1*1/2*4
+  R1*1/2*7
+  d8\f r d r
+  d r d r
+  d r d r
+  d r d r
+  c\ff r c\p r
+  f r f r
+  c r c r 
+  f r f r
+  c r c r 
+  d_\markup{\italic "cresc."} r d r
+  e r e r 
+  d r d r
+  c\ff r c\p r
+  f r f r
+  c r c r 
+  f r f r
+  c r c r 
+  d_\markup{\italic "cresc."} r d r
+  e r e r 
+  e r e r
+  \bar "||"
+  \key a \major
+  \time 6/8
+  \tempo "L'istesso Tempo"
+  a, a r a a r
+  a a r a a r
+  a a r a a r
+  a a r a a r
+  a a r a a r
+  a a r a a r
+  a a r a a r
+  a a r a a r
+  a a r fis\ff fis r
+  gis gis r ais ais r
+  b b r d d r
+  e e r e e r
+  a a r fis, fis r
+  gis gis r ais ais r
+  b b r d d r
+  e e r e e r
+  a, a r e' e r
+  a, a r e' e r
+  a, a r e' e r
+  a, a r e' e r
+  a,4 a'8 a a a
+  a a a a r r\fermata
+  \bar "|."
+}
