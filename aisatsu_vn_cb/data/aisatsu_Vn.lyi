@@ -1,0 +1,119 @@
+\relative c'{
+  \numericTimeSignature
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+  \time 2/4 %%拍子
+  \set Staff.midiInstrument = "violin"
+  \clef treble %%音部記号　ト音…treble　ヘ音…bass　ハ音…alto
+  \override Hairpin.minimum-length = #6
+
+  \key d \major  %%調
+  \tempo 4 = 84  %%BPM
+  r8\mf <d fis>4 q8
+  r\> q4 q8
+  \mark \default
+  \repeat volta 2{
+    fis'4\p( a,8 fis')
+    e8( d cis d
+    g4) g-- 
+    g( a,8) r
+    fis'4( ais,8 fis')
+    e8( d cis d
+    e4) e
+    e4.( eis8)
+    fis4( a,8 fis')
+    e8\<( d cis d
+    b'4\!) b
+    b4\>( a8-- g--)
+    fis4\p( e8 d)
+    b4( cis)
+  }
+  \alternative {
+    {
+      d2~ 
+      d4 a
+    }
+    {d2~}
+  }
+  d4 r
+  \mark \default
+  \bar "||"
+  \key d \minor
+  \tempo \markup{\italic "a tempo"}
+  \acciaccatura s8 c,8\p <a f'!>4 q8
+  g8 <g f'>4 q8
+  e'8 <e bes'>4 q8
+  c8 <f a>4 q8
+  g,8\< <bes d>4 q8
+  g4 a8 bes
+  c4\mf e8 d
+  c4.\>( bes8)
+  <c f>8\! q4 <cis f>8
+  <d a'> q4 q8
+  <d g> q4 q8
+  <g a> q4 q8
+  <d a'> q4 q8
+  <f bes> q4\fermata <g a>8\fermata
+  \mark \default
+  \bar "||"
+  \key d \major
+  d'4( cis!8 b!)
+  a4( gis8 a)
+  b4( g8 fis)
+  e4( dis8 e)
+  g2~
+  g4
+  dis8 e
+  g4. b8
+  b'4(\> a8^\markup{\italic "rit."} g)
+  \mark \default
+  \bar "||"
+  \tempo \markup{\italic "a tempo"}
+  fis4\!( a,8 fis')
+  e8( d cis d
+  g4) g-- 
+  g( a,8) r
+  fis'4( ais,8 fis')
+  e8( d cis d
+  e4) e
+  e4.( eis8)
+  fis4( a,8 fis')
+  e8\<( d cis d
+  b'4\!) b
+  b8 b,( cis d)
+  g4( e8 d)
+  c( bes) e,8.( b'16)
+  b4( a8 fis)
+  e( d) a'8.( ais16
+  g'8) e4 d8
+  c( bes) e,8.( b'16)
+  b4( a8 fis)
+  e( d) a'8.( ais16)
+  b8( g) a8.( ais16)
+  b8( g') fis( e)
+  d( ais) b( cis)
+  d( d') cis( b)
+  a( cis,) e( d)
+  cis\<( a') a8.\sf\fermata\>( fis16)
+  fis4\!( e)
+  b( cis)
+  \mark \default
+  \bar "||"
+  \acciaccatura s8 d2\pp~
+  d4 fis,8( a)
+  ais4( b)
+  bis( cis)
+  d2~
+  d4 fis8( a)
+  ais4( b)
+  bis( cis)
+  d2~
+  d2~
+  d2~
+  d2~
+  d2_\markup{\italic "rall. e dim."}~
+  d2~
+  d2~
+  d4 r\fermata
+  
+  \bar "|."
+}
