@@ -44,7 +44,8 @@ ffsub = _\markup { \dynamic ff \italic sub.}
   c\cresc r r r4 r8 b r r r bes r
   aes\ff r r r4 r8 g8 r r r4 r8
   R1*12/8*2
-  r8 r \acciaccatura{g16\f a bes!} b4.
+  r8 r16 g\f( a bes! b4.) c8.( b16 d c) ees4\<( c8\>)
+  g8 r\! r r4. r2.
   
   \bar "|."
 }
