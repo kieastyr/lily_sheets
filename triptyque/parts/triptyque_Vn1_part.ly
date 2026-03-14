@@ -37,9 +37,6 @@ aspan =
     instrument = \markup{\bold "Violin I"}
   }
   
-  
-  
-  
   \paper {
     print-all-headers = ##t
     page-breaking = #ly:page-turn-breaking

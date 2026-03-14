@@ -1,0 +1,147 @@
+% sfpp = #(make-dynamic-script "sfpp")
+\relative c'' {
+    R1*5
+    r2 g\p
+    aes f
+    e2.( f4)
+    f1
+    ees?1~
+    ees~
+    ees4~\> ees8\! r d'2_\markup{\italic "dim."}
+    ees2 c
+    % 1
+    b1\sfpp~
+    b~
+    b~
+    b2\< c4->-. g->-.
+    ees1->\mp~
+    ees~
+    ees2 e4.( f8)
+    d1~
+    d2 d4.( ees!8)
+    c1~
+    c2 d\mf
+    ees\<_\markup{\italic "espr."} c
+    b2.\f_\markup{\italic "dim."}( c4)
+    \break
+    c1^"solo"(
+    g4\pp) r r2
+    % 2
+    r4 ees''\pp( d des)
+    c( b bes a)
+    aes2. ( g4)
+    r aes( a bes)
+    b( c aes! c)
+    fes2.( ees4)
+    r2 aes,4\upbow( ces
+    ees2. d4)
+    c!( bes aes g)
+    fis( g des fes)
+    aes2.( g4)
+    r bes( aes g)
+    r bes( aes g)
+    fis( g bes, des)
+    f!2.( fes4)
+    ees2.( c4)
+    r c( ees c)
+    des2.( c4)
+    % 3
+    b1\<
+    c 
+    d!2\p\>( ees4 d)
+    f( ees d c)
+    c2\pp( g4-- g--)
+    a2( g~
+    g~ g8) r r4
+    \break
+    R1*2
+    % 4
+    e''1\pp^"tutti"
+    d2( c)
+    bes1~
+    bes2 aes(
+    g1~
+    g2.) aes4(
+    g1~
+    g)
+    e'1
+    d2( c)
+    bes1
+    aes2( bes)
+    b4( c des ees!)
+    d1\<
+    c
+    b\>
+    % 5
+    e\pp
+    d2( c)
+    bes1~
+    bes2 aes(
+    g1~
+    g2.) aes4(
+    g1~
+    g2) f4( ees)
+    % 6
+    d!1\upbow_\markup{\italic "espr. e cresc."}
+    ees
+    c
+    b1\mf\>~(
+    b2. c4)
+    c1\p\>
+    c2 c
+    % 7
+    c2\pp c4--( c--)
+    e1~
+    e~
+    e4 d\<( e f)
+    e1~\>
+    e2\! fis
+    g a4_\markup{\italic "cresc."}( b
+    cis d) cis2~(
+    cis4_\markup{\italic "dim."} d dis e) \breathe
+    % 8
+    <g e'>2\pp^"div."( <a f'>)
+    <<
+        {e'2( d~ d)}
+        \\
+        {g,1~ g2}
+    >>
+    <f c'>~
+    q <e b'~>
+    <d b'> <c c'>
+    <<
+        {
+            cis'1
+            b2( a)
+        }\\{
+            cis,1~
+            cis
+        }
+    >>
+    r4 d,4\<^"unis."( e fis~
+    fis\>) f( fis g~
+    % 9
+    g\!) d d'2\pp
+    ees c 
+    b1\sfp~
+    b~
+    b~
+    b2\< c4->-. g->-.
+    ees1\mp~
+    ees~
+    ees2 e4.( f8-.)
+    d1~
+    d2 cis4.( d8-.)
+    b1~
+    % 10
+    b2_\markup{\italic "dim."} c4.( d8-.)
+    b1~
+    b1\pp
+    bes2\< a
+    aes1\mf_\markup{\italic "dim."}
+    g1~
+    g\p~\>
+    g~
+    g8\! r r4 r2
+    R1*2
+}

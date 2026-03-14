@@ -1,0 +1,67 @@
+\relative c' {
+  \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
+  \tempo "Allegro molto" 1=120
+  \key gis \minor
+  \time 2/2
+  \clef treble
+  \mark #11
+  s1*16
+  \mark \default
+  s1*9
+  \mark \default
+  s1*8
+  \mark \default
+  s1*11
+  \mark \default
+  s1*13
+  \mark \default
+  s1*11
+  \mark \default
+  s1*7
+  \mark \default
+  s1*19
+  \mark \default
+  s1*13
+  \mark \default
+  s1*18
+  \bar "||"
+  \key c \minor
+  \mark \default
+  s1*30
+  \mark \default
+  s1*19
+  \mark \default
+  s1*15
+  \mark \default
+  s1*11
+  \mark \default
+  s1*12
+  \mark \default
+  s1*20
+  \bar "||"
+  \key gis \minor
+  \mark \default
+  s1*7
+  \mark \default
+  s1*36
+  \mark #30
+  s1*13
+  \bar "||"
+  \key c \minor
+  \mark \default
+  s1*16
+  \mark \default
+  s1*19
+  \mark \default
+  s1*10
+  \mark \default
+  s1*15
+  \break
+  <<
+    s1^\markup{\bold "G.P."}
+    {s2. s8 s8_"attacca"}
+  >>
+  \bar "||"
+  \key g \minor
+  s8
+}

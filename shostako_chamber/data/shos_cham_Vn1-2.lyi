@@ -1,0 +1,111 @@
+\relative c''{
+    \key gis \minor
+    b2\ff^\markup{"sulG al" \coda} gis4 gis
+    a2 gis4 gis
+    b2 gis4 gis
+    a2 gis4 gis
+    fisis gis a ais
+    fis fisis gis a
+    eis fis fisis gis
+    a ais b c
+    b2 gis4 gis
+    a2 gis4 gis
+    b2 gis4 gis
+    a2 gis4 gis
+    \mark \markup{\coda} 
+    a a c c 
+    e f fis g
+    e f fis g
+    fis f e c
+    % 12
+    e b ais! b
+    e e dis dis 
+    e dis d cis 
+    e dis! d cis 
+    c c a a 
+    des des c a 
+    c c a a 
+    des des c a 
+    ais! ais b c 
+    % 13
+    b2 gis4 gis
+    a2 gis4 gis
+    b2 gis4 gis
+    a2 gis4 gis
+    fisis gis a ais
+    a ais b c 
+    ais b c cis 
+    c cis d? dis 
+    % 14
+    e r e,\downbow r
+    <<
+        {
+            <<
+                {f'\downbow r e,\downbow r}
+                {
+                    \once \hide MultiMeasureRest 
+                    R1^\markup{\tiny \number "1-6"}
+                }
+            >>
+            \repeat unfold 5 {f'4\downbow r e,\downbow r}
+        }
+        {
+            \set countPercentRepeats = ##t
+            \hide PercentRepeat
+            \override PercentRepeatCounter.staff-padding = #2
+            \repeat percent 6 { s1 }
+        }
+    >>
+    <e' g>4-> q r2
+    <e fis?>4-> q r2
+    <e g>4-> q r2
+    <e fis>4-> q r2
+    % 15
+    r2 fis,4\downbow r 
+    g'\downbow r fis,\downbow r
+    g'\downbow r fis,\downbow r
+    aes'\downbow r g,\downbow r
+    aes'\downbow r g,\downbow r
+    aes'\downbow r g,\downbow r
+    <<
+        {
+            <<
+                {aes'-> g, r2}
+                {
+                    \once \hide MultiMeasureRest 
+                    R1^\markup{\tiny \number "1-6"}
+                }
+            >>
+            \repeat unfold 6 {aes'4-> g, r2}
+        }
+        {
+            \set countPercentRepeats = ##t
+            \hide PercentRepeat
+            \override PercentRepeatCounter.staff-padding = #1
+            \repeat percent 7 { s1 }
+        }
+    >>
+    % 16
+    gis!4 gis a a 
+    b b e e 
+    gis, gis a a 
+    b b e e 
+    f-> r r2
+    f4-> r r2
+    f4-> r r2
+    r4 d' ees c 
+    b r r2
+    r4 d,, ees c 
+    b r r2
+    % 17
+    r2 d''2\ff
+    ees c 
+    b d
+    ees c 
+    b d
+    ees c 
+    b d
+    ees1~\<
+    ees4\! r4 r2
+    R1*17
+}

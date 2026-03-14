@@ -1,0 +1,40 @@
+\relative c' {
+  \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
+  \tempo "Largo" 2=63
+  \key c \minor
+  \time 4/4
+  \clef treble
+  s1*13
+  \mark \default
+  s1*15
+  \mark \default
+  s1*18
+  \mark \default
+  s1*2
+  \tempo "poco rit."
+  s1*2
+  \tempo "a tempo"
+  s1*5
+  \mark \default
+  s1*16
+  \mark \default
+  s1*8
+  \mark \default
+  s1*7
+  \mark \default
+  s1*8
+  \tempo "poco rit."
+  s1
+  \mark \default
+  \tempo "a tempo"
+  s1*9
+  \mark \default
+  s1*12
+  \mark \default
+  s1*10
+  s2. s8 s_"attacca"
+  \key b \major
+  \bar "||"
+  \time 2/2
+  s8
+}
