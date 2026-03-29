@@ -1,0 +1,37 @@
+\relative c'{
+  s1*323
+  <<
+    {
+      <c g' e' c'>4\ff^"pizz."^\markup{\halign #2 "div."} r q^\markup{\tiny \number "1-10"} r
+      \repeat unfold 9 {q4 r q r}
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \override PercentRepeatCounter.staff-padding = #-5
+      \repeat percent 10 { s1 }
+    }
+  >>
+  
+  <<
+    {
+      <<
+        {<cis g' bes e>4\ff r q r}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1-15"}
+        }
+      >>
+      \repeat unfold 12 {q4 r q r}
+      q4\< r q r
+      q4 r q r\!
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \override PercentRepeatCounter.staff-padding = #-5
+      \repeat percent 15 { s1 }
+    }
+  >>
+  R1\fermata
+}

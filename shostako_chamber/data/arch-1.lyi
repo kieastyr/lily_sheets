@@ -4,7 +4,9 @@
   \key c \minor
   \time 4/4
   \clef treble
-  s1*13
+  \partial 4*2
+  s2
+  s1*12
   \mark \default
   s1*15
   \mark \default
@@ -25,7 +27,7 @@
   s1*8
   \tempo "poco rit."
   s1
-  \mark \default
+  \tweak X-offset #-1 \mark \default
   \tempo "a tempo"
   s1*9
   \mark \default

@@ -1,6 +1,8 @@
 % sfpp = #(make-dynamic-script "sfpp")
 \relative c'' {
-    R1*5
+    \partial 4*2
+    r2
+    R1*4
     r2 g\p
     aes f
     e2.( f4)
@@ -47,14 +49,14 @@
     des2.( c4)
     % 3
     b1\<
-    c 
+    c^"(solo)"
     d!2\p\>( ees4 d)
     f( ees d c)
     c2\pp( g4-- g--)
-    a2( g~
+    aes2( g~
     g~ g8) r r4
-    \break
     R1*2
+    \pageBreak
     % 4
     e''1\pp^"tutti"
     d2( c)
@@ -68,7 +70,7 @@
     d2( c)
     bes1
     aes2( bes)
-    b4( c des ees!)
+    b4( c d ees!)
     d1\<
     c
     b\>
@@ -137,8 +139,8 @@
     b2_\markup{\italic "dim."} c4.( d8-.)
     b1~
     b1\pp
-    bes2\< a
-    aes1\mf_\markup{\italic "dim."}
+    bes!2\< a
+    aes!1\mf_\markup{\italic "dim."}
     g1~
     g\p~\>
     g~

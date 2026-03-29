@@ -1,111 +1,435 @@
+% sfff = #(make-dynamic-script "sfff")
 \relative c''{
-    \key gis \minor
-    b2\ff^\markup{"sulG al" \coda} gis4 gis
-    a2 gis4 gis
-    b2 gis4 gis
-    a2 gis4 gis
-    fisis gis a ais
-    fis fisis gis a
-    eis fis fisis gis
-    a ais b c
-    b2 gis4 gis
-    a2 gis4 gis
-    b2 gis4 gis
-    a2 gis4 gis
-    \mark \markup{\coda} 
-    a a c c 
-    e f fis g
-    e f fis g
-    fis f e c
-    % 12
-    e b ais! b
-    e e dis dis 
-    e dis d cis 
-    e dis! d cis 
-    c c a a 
-    des des c a 
-    c c a a 
-    des des c a 
-    ais! ais b c 
-    % 13
-    b2 gis4 gis
-    a2 gis4 gis
-    b2 gis4 gis
-    a2 gis4 gis
-    fisis gis a ais
-    a ais b c 
-    ais b c cis 
-    c cis d? dis 
-    % 14
-    e r e,\downbow r
-    <<
+  \key gis \minor
+  b2\ff^\markup{"sul G al" \coda} gis4 gis
+  a2 gis4 gis
+  b2 gis4 gis
+  a2 gis4 gis
+  fisis gis a ais
+  fis fisis gis a
+  eis fis fisis gis
+  a ais b c
+  b2 gis4 gis
+  a2 gis4 gis
+  b2 gis4 gis
+  a2 gis4 gis
+  \mark \markup{\coda}
+  a a c c
+  e f fis g
+  e f fis g
+  fis f e c
+  % 12
+  e b ais! b
+  e e dis dis
+  e dis d cis
+  e dis! d cis
+  c c a a
+  des des c a
+  c c a a
+  des des c a
+  ais! ais b c
+  % 13
+  b2 gis4 gis
+  a2 gis4 gis
+  b2 gis4 gis
+  a2 gis4 gis
+  fisis gis a ais
+  a ais b c
+  ais b c cis
+  c cis d? dis
+  % 14
+  e r e,\downbow r
+  <<
+    {
+      <<
+        {f'\downbow r e,\downbow r}
         {
-            <<
-                {f'\downbow r e,\downbow r}
-                {
-                    \once \hide MultiMeasureRest 
-                    R1^\markup{\tiny \number "1-6"}
-                }
-            >>
-            \repeat unfold 5 {f'4\downbow r e,\downbow r}
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1-6"}
+        }
+      >>
+      \repeat unfold 5 {f'4\downbow r e,\downbow r}
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \override PercentRepeatCounter.staff-padding = #2
+      \repeat percent 6 { s1 }
+    }
+  >>
+  <e' g>4-> q r2
+  <e fis?>4-> q r2
+  <e g>4-> q r2
+  <e fis>4-> q r2
+  % 15
+  r2 fis,4\downbow r
+  g'\downbow r fis,\downbow r
+  g'\downbow r fis,\downbow r
+  aes'\downbow r g,\downbow r
+  aes'\downbow r g,\downbow r
+  aes'\downbow r g,\downbow r
+  <<
+    {
+      <<
+        {aes'-> g, r2}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1-7"}
+        }
+      >>
+      \repeat unfold 6 {aes'4-> g, r2}
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \override PercentRepeatCounter.staff-padding = #1
+      \repeat percent 7 { s1 }
+    }
+  >>
+  % 16
+  gis!4 gis a a
+  b b e e
+  gis, gis a a
+  b b e e
+  f-> r r2
+  f4-> r r2
+  f4-> r r2
+  r4 d' ees c
+  b r r2
+  r4 d,, ees c
+  b r r2
+  % 17
+  r2 d''2\ff
+  ees c
+  b d
+  ees c
+  b d
+  ees c
+  b d
+  ees1~\<
+  ees4\! r4 r2
+  R1*17
+  % 19
+  d,2\ff b4 b
+  c2 b4 b
+  d2 b4 b
+  c2 b4 b
+  r d ees c
+  b c d ees
+  d2 b4 b
+  c2 b4 b
+  d2 b4 b
+  c2 b4 b
+  r d ees c
+  b c d ees
+  c d ees f
+  % 20
+  fis! g fis g
+  b, c d ees
+  c d ees f
+  fis g fis g
+  fis d g fis
+  fis g fis g
+  fis d g fis
+  fis g fis g
+  a fis g a
+  bes g a bes
+  <<
+    {
+      <<
+        {b d ees c }
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1-6"}
+        }
+      >>
+      \repeat unfold 5 {b4 d ees c }
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \override PercentRepeatCounter.staff-padding = #5
+      \repeat percent 6 { s1 }
+    }
+  >>
+  b4 c d ees
+  c d ees f
+  \key c \minor
+  % 21
+  \ottava #1
+  \set Staff.ottavation = "8va"
+  <<
+    fis1~\fff
+    {s2 s_\markup{\italic "molto espr."}}
+  >>
+  fis2 g
+  c, c
+  c1
+  fis~
+  fis2 g
+  c, c
+  c1
+  c
+  g'
+  \break
+  <<
+    {
+      <<
+        {
+          a4 g g fis
+          a1
         }
         {
-            \set countPercentRepeats = ##t
-            \hide PercentRepeat
-            \override PercentRepeatCounter.staff-padding = #2
-            \repeat percent 6 { s1 }
+          \once \hide MultiMeasureRest
+          << {R1}
+             {s2. s4^\markup{\tiny \number "1-5"}}
+          >>
+          \once \hide MultiMeasureRest
+          R1
         }
-    >>
-    <e' g>4-> q r2
-    <e fis?>4-> q r2
-    <e g>4-> q r2
-    <e fis>4-> q r2
-    % 15
-    r2 fis,4\downbow r 
-    g'\downbow r fis,\downbow r
-    g'\downbow r fis,\downbow r
-    aes'\downbow r g,\downbow r
-    aes'\downbow r g,\downbow r
-    aes'\downbow r g,\downbow r
-    <<
+      >>
+      \repeat unfold 4 {
+        a4 g g fis
+        a1
+      }
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide DoublePercentRepeat
+      \override PercentRepeatCounter.Y-offset = #8
+      \repeat percent 5 { s1 s}
+    }
+  >>
+  a4 g g fis
+  a g g fis
+  a g g fis
+  a g g fis
+  des ees des ees 
+  c1
+  fis~ 
+  fis2 g 
+  c, c 
+  c c4\ff ees 
+  \ottava #0
+  % 22
+  des c bes a 
+  bes a bes c
+  des c bes a 
+  bes a bes c
+  des c a c 
+  des c a c 
+  b bes a gis 
+  g! fis g gis
+  a gis g fis 
+  g fis g gis 
+  a gis g fis 
+  g fis f e 
+  ees c! des ees 
+  fes ees des c 
+  des c des ees
+  fes ees des c 
+  des d-> ees-> c->
+  b-> r r2
+  r4  d,-> ees-> c->
+  % 23
+  b-> r r2
+  R1*2
+  \ottava #1
+  d''1\ff
+  ees 
+  c 
+  b2( aes'-.)
+  aes-. aes-.
+  \tuplet 3/2 {aes4( beses aes)} g2-.
+  \tuplet 3/2 {g4( aes g)} fis2-.
+  b,( g'-.)
+  g-. g-.
+  \tuplet 3/2 {g4( aes g)} fis2-.
+  \tuplet 3/2 {fis4( g fis)} f2-.
+  \ottava #0
+  R1
+  % 24
+  d1
+  ees 
+  c 
+  bes2( f-.)
+  f-. f-.
+  \tuplet 3/2 {fis4( f fis)} g2-.
+  \tuplet 3/2 {g4( fis g)} aes2-.
+  aes( f-.)
+  d-. d-.
+  \tuplet 3/2 {ees4( d ees)} e2-.
+  \tuplet 3/2 {e4( dis e)} f2-.
+  % 25
+  r cis,_\markup{\italic "espr."}
+  e gis 
+  g! bes! 
+  d cis 
+  e gis 
+  g! bes! 
+  d1\<~
+  d2\! cis 
+  cis( ais'-.)
+  ais-. ais-.
+  \tuplet 3/2 {ais4( b ais)} a2-.
+  \tuplet 3/2 {a4( bes a)} aes2-.
+  % 26
+  r4 b,, c cis 
+  d cis d dis 
+  r d! dis e 
+  dis e f fis 
+  g fis fis fis 
+  a fis fis fis
+  r a, ais b 
+  c b b b 
+  d b b b 
+  r c d ees 
+  f d d d 
+  fis d d d 
+  g e e e 
+  g e e e 
+  g gis a ais 
+  b ais b c 
+  b ais b c 
+  b ais b c 
+  b r r2 
+  <g b>4 r r2
+  % 27
+  \key gis \minor
+  <gis! b!>4\sfff r r2 
+  R1
+  <b,, gis'>4\sfff r r2
+  R1
+  R1*3
+  % 28
+  q4\sfff r r2 
+  R1
+  q4\sfff r r2
+  R1
+  R1*2
+  q4\sfff r r2 
+  R1
+  q4\sfff r r2
+  R1
+  R1*3
+  \pageBreak
+  q4\sfff r r2 
+  R1
+  q4\sfff r r2
+  R1
+  R1*2
+  % 29
+  e4\ff g e g 
+  aes g e g 
+  aes g e g 
+  e4 g e g 
+  aes g e g 
+  aes aes f f 
+  a a gis! eis 
+  a a gis eis 
+  e! eis fisis gis 
+  eis fis! fisis gis
+  fis! fisis gis a
+  gis gis eis eis 
+  a a gis eis 
+  gis gis eis eis 
+  a a gis eis
+  fis fisis gis gisis 
+  fisis gis! gisis ais 
+  % 30
+  b b gis! b 
+  c c b gis
+  b b gis b 
+  c c b gis
+  b bis cis cisis 
+  bis cis cisis dis 
+  cisis dis e eis 
+  fis fis dis fis 
+  g g fis dis 
+  fis fis dis fis 
+  g g fis dis 
+  fis g gis a 
+  ais! b c cis 
+  % 31
+  \key c \minor
+  \ottava #1
+  \set Staff.ottavation = "8va"
+  d2 b4 d 
+  ees2 d4 b
+  d2 b4 d 
+  ees2 d4 b
+  d2 b4 d 
+  ees2 d4 b
+  d2 b4 d 
+  ees2 d4 b
+  d1
+  ees
+  c 
+  b2( aes'-.)
+  aes-. aes-.
+  \tuplet 3/2 {aes4( beses aes)} g2-.
+  \tuplet 3/2 {g4( aes g)} fis2-.
+  R1
+  % 32
+  d1_\markup{\dynamic "p" \italic "sub."}
+  ees 
+  c 
+  b2( aes'-.)
+  aes-. aes-.
+  \tuplet 3/2 {aes4( beses aes)} g2-.
+  \tuplet 3/2 {g4( aes g)} fis2-.
+  b,2_\markup{\italic "cresc."}( aes'-.)
+  aes-. aes-.
+  \tuplet 3/2 {aes4( beses aes)} g2-.
+  \tuplet 3/2 {g4( aes g)} fis2-.
+  b,2( aes'-.)
+  aes-. aes-.
+  \tuplet 3/2 {aes4( beses aes)} g2-.
+  \tuplet 3/2 {g4( aes g)} fis2-.
+  b,2( aes'-.)
+  aes-. aes-.
+  \tuplet 3/2 {aes4( beses aes)} g2-.
+  \tuplet 3/2 {g4( aes g)} fis2-.
+  % 33
+  \break
+  \ottava #0
+  <<
+    {
+      <<
+        {\tuplet 3/2 {c,,4_( g' ees')} \tuplet 3/2 {c'4( ees, g,)}}
         {
-            <<
-                {aes'-> g, r2}
-                {
-                    \once \hide MultiMeasureRest 
-                    R1^\markup{\tiny \number "1-6"}
-                }
-            >>
-            \repeat unfold 6 {aes'4-> g, r2}
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1-10"}
         }
+      >>
+      \repeat unfold 9 {\tuplet 3/2 {c,4_( g' ees')} \tuplet 3/2 {c'4( ees, g,)}}
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \override PercentRepeatCounter.Y-offset = #5
+      \repeat percent 10 { s1 }
+    }
+  >>
+  <<
+    {
+      <<
+        {\tuplet 3/2 {cis,4_( e bes')} \tuplet 3/2 {e4( bes e,)}}
         {
-            \set countPercentRepeats = ##t
-            \hide PercentRepeat
-            \override PercentRepeatCounter.staff-padding = #1
-            \repeat percent 7 { s1 }
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1-15"}
         }
-    >>
-    % 16
-    gis!4 gis a a 
-    b b e e 
-    gis, gis a a 
-    b b e e 
-    f-> r r2
-    f4-> r r2
-    f4-> r r2
-    r4 d' ees c 
-    b r r2
-    r4 d,, ees c 
-    b r r2
-    % 17
-    r2 d''2\ff
-    ees c 
-    b d
-    ees c 
-    b d
-    ees c 
-    b d
-    ees1~\<
-    ees4\! r4 r2
-    R1*17
+      >>
+      \repeat unfold 12 {\tuplet 3/2 {cis4_( e bes')} \tuplet 3/2 {e4( bes e,)}}
+      \tuplet 3/2 {cis4\<_( e bes')} \tuplet 3/2 {e4( bes e,)}
+      \tuplet 3/2 {cis4_( e bes')} \tuplet 3/2 {e4( bes e,\!)}
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \override PercentRepeatCounter.Y-offset = #4
+      \repeat percent 15 { s1 }
+    }
+  >>
+  R1\fermata
 }

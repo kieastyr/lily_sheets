@@ -1,0 +1,133 @@
+\relative c' {
+    \key c \minor
+    \partial 4*2
+    r2
+    R1*2
+    r2 d2\p 
+    ees c 
+    b2.( c4)
+    c1~
+    c2 des 
+    d!1
+    c~
+    c~
+    c4\>~ c8\! r d2_\markup{\italic "dim."}
+    ees c 
+    % 1
+    b1\pp\<
+    e2\>( ees~
+    ees\!) d2^"soli"_\markup{\italic "poco espr."}
+    ees c~\<
+    c4.\mp d8( b4.) c8(
+    a4.) ais8( b4.) c8(
+    cis) r r4 r2
+    R1*3
+    r2 b\mf 
+    c_\markup{\italic "espr."}\< aes!~
+    aes\f g_\markup{\italic "dim."}
+    g1~
+    g2 g 
+    % 2
+    <<
+        {
+            <<
+                {g1\pp~} 
+                {
+                    \once \hide MultiMeasureRest 
+                    R1^\markup{\tiny \number "1 - 17"}
+                }
+            >>
+            \repeat unfold 15 g1~
+            g\>~
+        }
+        {
+            \set countPercentRepeats = ##t
+            \hide PercentRepeat
+            \repeat percent 17 { s1 }
+        }
+    >>
+    g8\! r r4 r2
+    % 3
+    R1*4
+    g1\pp~
+    g 
+    c2_\markup{\italic "poco espr."}( g4-- g--)
+    aes2( g)
+    aes2\>( g)
+    % 4
+    c2\pp( g4-- g--)
+    aes2( g)
+    des'2( aes4-- aes--)
+    bes2.( c4)
+    des2( c4 d)
+    ees2( c)
+    ees2( des4 ees)
+    e2( c~
+    c) g4--( g--)
+    aes2( g)
+    des'2( aes4-- aes--)
+    bes2( aes)
+    g( a4-- a--)
+    c2\<( b)
+    ees\!( d!)
+    aes'\>( g~
+    % 5
+    g\pp) g,4--( g--)
+    aes2( g)
+    f'2( c4-- c--)
+    des2( c)
+    ees2( des4 ees)
+    fes2( des~
+    des) c4( des
+    ees2 c)
+    % 6
+    b1\upbow_\markup{\italic "espr. e cresc."}
+    bes! 
+    a 
+    aes!\mf\>( 
+    g)
+    g\p\>
+    g2 g 
+    % 7
+    a\pp g4--( g--)
+    c1~
+    c~
+    c4 b\<( c d)
+    c1\>~
+    c2\! cis 
+    << {fis1~(} {s2 s_\markup{\italic "cresc."}}>>
+    fis1~
+    fis2._\markup{\italic "dim."} g4) \breathe
+    % 8
+    <g e'>2\pp^"div."( <a f'>)
+    <<{e'2( d~ d)} \\ {g,1~ g2} >>
+    <f c'>2~
+    q <e b'>2~
+    <d b'> <c c'>
+    << {cis'1 b2( a)} \\ {cis,1~ cis}>>
+    r4 b\<^"unis."( cis d~)
+    d1\>
+    % 9 
+    cis4\>( d2.)
+    ees!2\pp c 
+    b1\<
+    e2\>( ees~
+    ees)\! d^"soli"_\markup{\italic "poco espr."}
+    ees\< c~
+    c4.\mf d8( b4.) c8(
+    a4.) ais8( b4.) c8(
+    cis) r r4 r2
+    R1*3
+    % 10
+    R1*2
+    \break
+    r2 d\pp^"solo"
+    ees\< c 
+    << {b1\mf~(} {s2 s_\markup{\italic "dim."}}>>
+    b2. c4)
+    c2\p\>( g4-- g--)
+    aes2( g)
+    c2\pp( g4-- g--)
+    gis1~_\markup{\italic "cresc."}
+    gis
+}

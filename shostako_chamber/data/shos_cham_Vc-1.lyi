@@ -1,0 +1,144 @@
+\relative c {
+  \clef bass
+  \key c \minor
+  \partial 4*2
+  d2\p
+  ees c
+  b2.( c4)
+  c1
+  bes!2( aes)
+  g1
+  des
+  c
+  f
+  g~
+  g2 a~
+  a4\>~ a8 r\! d2_\markup{\italic "dim."}
+  ees c4( ees)
+  % 1
+  e1\pp~
+  e2 ees~
+  ees d(
+  ees1~
+  ees~
+  ees2\> ees8) r\! r4
+  R1*4
+  r2 g,\mf s1*0_\markup{\italic "espr."}
+  ees2\< f
+  g1\!_\markup{\dynamic "f" \italic "dim."}
+  c,
+  c2 c
+  % 2
+  <<
+    {
+      <<
+        {c1\pp~}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1 - 17"}
+        }
+      >>
+      \repeat unfold 15 c1~
+      c\>~
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \repeat percent 17 { s1 }
+    }
+  >>
+  c8 r\! r4 r2
+  % 3
+  r2 d'\pp\<
+  ees c
+  b1\p\>~(
+  b2. c4)
+  <<
+    {
+      <<
+        {c,1\pp~}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1 - 17"}
+        }
+      >>
+      \repeat unfold 15 c1~
+      c
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \repeat percent 17 { s1 }
+    }
+  >>
+  g'1~
+  g~_\markup{\dynamic "pp" \italic "sempre"}
+  g~
+  g
+  % 5
+  <<
+    {
+      <<
+        {c,1~}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1 - 8"}
+        }
+      >>
+      \repeat unfold 6 c1~
+      c
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \repeat percent 8 { s1 }
+    }
+  >>
+  % 6
+  g'1\upbow_\markup{\italic "espr. e cresc."}
+  ees
+  f
+  g\mf\>~
+  g
+  c,\p\>~
+  c4\< g'\>( c bes)
+  a2\pp~ a8 r r4
+  r c_\markup{\dynamic "p" \italic "espr."}( b bes)
+  a( gis g fis)
+  f2.( e4)
+  r f( fis g)
+  gis( a fis a)
+  <<{d2.(} {s2 s4_\markup{\italic "cresc."}}>> cis4~
+  cis) r fis,( a)
+  cis2._\markup{\italic "dim."}( c4) \breathe
+  c2\pp( f,4 g)
+  a( b c d)
+  ees2.( d4)
+  f2.( d4)
+  f2( ees4 d~
+  d) cis( c b)
+  bes!( a gis g)
+  fis2\<( f4 e~
+  e2\>) ees
+  d\pp d'
+  ees2 c4( d)
+  e1~
+  e2 ees!~
+  ees d_\markup{\dynamic "pp" \italic "sempre"}(
+  ees1~
+  ees~
+  ees2\>~ ees8) r8\! r4
+  R1*4
+  % 10
+  ees,1_\markup{\dynamic "p" \italic "dim."}~
+  ees~
+  ees\pp~
+  ees2.\< f4(
+  g1\!_\markup{\dynamic "mf" \italic "dim."})~
+  g
+  c,\p\>~
+  c~
+  c8 r\! r4 r2
+  gis''1_\markup{\dynamic "pp" \italic "cresc."}~
+  gis
+}

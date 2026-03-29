@@ -1,5 +1,7 @@
 \relative c'{
-    s1*26
+    \partial 4*2
+    s2
+    s1*25
     c1^"altri"
     g2 g
     <<

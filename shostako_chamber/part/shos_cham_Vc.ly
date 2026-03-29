@@ -5,7 +5,7 @@ sfpp = #(make-dynamic-script "sfpp")
 sfff = #(make-dynamic-script "sfff")
 %%ここまで、定義
 
-#(set-global-staff-size 20)
+#(set-global-staff-size 21)
 #(set-default-paper-size "a4" )
 
 \book{
@@ -31,7 +31,7 @@ sfff = #(make-dynamic-script "sfff")
       % \override #'(font-name . "HGSSoeiKakupoptai")
       "Bearbeitung: Rudolf Barschai"
     }
-    instrument = \markup{\bold "Violin I"}
+    instrument = \markup{\bold "Violoncello"}
   }
 
   \paper {
@@ -51,12 +51,12 @@ sfff = #(make-dynamic-script "sfff")
     score-markup-spacing.basic-distance = #20
 
     print-page-number = ##t
-    print-first-page-number = ##f
-    first-page-number = 1
+    print-first-page-number = ##t
+    first-page-number = 2
   }
 
   \score {
-    \header {
+    \header { 
       title = "I"
       subtitle = \markup{\null}
       subsubtitle = \markup{\null}
@@ -64,7 +64,7 @@ sfff = #(make-dynamic-script "sfff")
       poet = \markup{\null}
       instrument = \markup{\null}
     }
-    \new ChoirStaff \with{\RemoveAllEmptyStaves} \with{midiInstrument = #"violin"}<<
+    \new ChoirStaff \with{\RemoveAllEmptyStaves} \with{midiInstrument = #"cello"}<<
       \new Staff \with{\consists Page_turn_engraver}{
         <<
           {
@@ -72,21 +72,11 @@ sfff = #(make-dynamic-script "sfff")
           }
           {
             \compressEmptyMeasures
-            \include "../data/shos_cham_Vn1-1.lyi"
+            \include "../data/shos_cham_Vc-1.lyi"
           }
         >>
       }
-      \new Staff {
-        <<
-          {
-            \include "../data/arch-1.lyi"
-          }
-          {
-            \include "../data/shos_cham_Vn1-1_altri.lyi"
-          }
-        >>
-      }
-    >>
+    >> 
     \layout {
       indent = 0\cm %%0にするといい 
     }
@@ -110,7 +100,7 @@ sfff = #(make-dynamic-script "sfff")
           }
           {
             \compressEmptyMeasures
-            \include "../data/shos_cham_Vn1-2.lyi"
+            \include "../data/shos_cham_Vn2-2.lyi"
           }
         >>
       }
@@ -120,7 +110,7 @@ sfff = #(make-dynamic-script "sfff")
             \include "../data/arch-2.lyi"
           }
           {
-            \include "../data/shos_cham_Vn1-2_div.lyi"
+            \include "../data/shos_cham_Vn2-2_div.lyi"
           }
         >>
       }
