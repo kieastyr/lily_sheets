@@ -11,10 +11,12 @@
             \revert MultiMeasureRest.staff-position
             d2\rest g,\p
         }
-        \new CueVoice{
-            e2\rest d_"Viol. II"
-            ees c 
-            b2. s4
+        \tag #'cue {
+            \new CueVoice{
+                e2\rest d_"Viol. II"
+                ees c 
+                b2. s4
+            }
         }
     >>
     aes'2 f
@@ -163,8 +165,11 @@
             \override MultiMeasureRest.staff-position = #2
             R1*2 \cueClefUnset
         }
-        \new CueVoice{
-            \cueClef alto gis1^"Viola"_\markup{\dynamic "pp" \italic "cresc."}~ gis
+
+        \tag #'cue {
+            \new CueVoice{
+                \cueClef alto gis1^"Viola"_\markup{\dynamic "pp" \italic "cresc."}~ gis
+            }
         }
     >>
 }

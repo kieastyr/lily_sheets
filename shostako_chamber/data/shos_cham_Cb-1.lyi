@@ -1,0 +1,164 @@
+\relative c {
+  \clef bass
+  \key c \minor
+  \set Score.currentBarNumber = 2
+  \partial 4*2
+  d2\p
+  ees c
+  b2.( c4)
+  c1
+  bes!2( aes)
+  g1
+  des'
+  c
+  f,
+  g~
+  g2 a~
+  a4\>~ a8 r\! d2_\markup{\italic "dim."}
+  ees c4( ees)
+  % 1
+  e1\pp~
+  e2 ees~
+  ees d(
+  ees1~
+  ees~
+  ees2\> ees8) r\! r4
+  R1*4
+  <<
+    {
+      \override MultiMeasureRest.staff-position = #-8
+      R1*2
+      \revert MultiMeasureRest.staff-position
+    }
+    \tag #'cue {
+      \new CueVoice{
+        \stemUp r2 g^"Cello"
+        ees2 f
+      }
+    }
+  >>
+  g,1_\markup{\dynamic "f" \italic "dim."}
+  c
+  c2 c
+  % 2
+  <<
+    {
+      <<
+        {c1\pp~}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1 - 17"}
+        }
+      >>
+      \repeat unfold 15 c1~
+      c\>~
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \repeat percent 17 { s1 }
+    }
+  >>
+  c8 r\! r4 r2
+  % 3
+  r2 d\pp\<
+  ees c
+  b1\p\>~(
+  b2. c4)
+  <<
+    {
+      <<
+        {c1\pp~}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1 - 17"}
+        }
+      >>
+      \repeat unfold 15 c1~
+      c
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \repeat percent 17 { s1 }
+    }
+  >>
+  g1~
+  g~_\markup{\dynamic "pp" \italic "sempre"}
+  g~
+  g
+  % 5
+  <<
+    {
+      <<
+        {c1~}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1 - 8"}
+        }
+      >>
+      \repeat unfold 6 c1~
+      c
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \repeat percent 8 { s1 }
+    }
+  >>
+  % 6
+  g'1\upbow_\markup{\italic "espr. e cresc."}
+  ees
+  f
+  g\mf\>~
+  g
+  c,\p\>~
+  c4\< g\>( c bes)
+  a2\pp~ a8 r r4
+  R1*5
+  <<
+    {
+      \override MultiMeasureRest.staff-position = #-8
+      R1
+      \revert MultiMeasureRest.staff-position
+      r2 fis4\p\<( a)
+    }
+    \tag #'cue {
+      \new CueVoice{
+        \stemUp d'2.^"Cello"( cis4~
+        cis) s2.
+      }
+    }
+  >>
+  cis,2.\!_\markup{\italic "dim."}( c4) \breathe
+  c2\pp( f,4 g)
+  a( b c d)
+  ees2.( d4)
+  f2.( d4)
+  f2( ees4 d~
+  d) cis( c b)
+  bes!( a gis g)
+  fis2\<( f4 e~
+  e2\>) ees
+  d\pp d'
+  ees2 c4( d)
+  e1~
+  e2 ees!~
+  ees d_\markup{\dynamic "pp" \italic "sempre"}(
+  ees1~
+  ees~
+  ees2\>~ ees8) r8\! r4
+  R1*13
+  <<
+      {
+          \override MultiMeasureRest.staff-position = #-8
+          R1*2 \cueClefUnset
+          \revert MultiMeasureRest.staff-position
+      }
+      \tag #'cue {
+        \new CueVoice{
+            gis'1^"Cello"_\markup{\dynamic "pp" \italic "cresc."}~ gis
+        }
+      }
+  >>
+}

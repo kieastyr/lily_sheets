@@ -115,13 +115,15 @@
       R1*6
       \revert MultiMeasureRest.staff-position
     }
-    \new CueVoice{
-      \cueClef alto \stemUp a,,2^"Viola" fis4 a 
-      bes2 a4 fis 
-      a2 fis4 a 
-      bes2 a4 fis
-      bes bes a fis
-      bes bes a fis
+    \tag #'cue {
+      \new CueVoice{
+        \cueClef alto \stemUp a,,2^"Viola" fis4 a 
+        bes2 a4 fis 
+        a2 fis4 a 
+        bes2 a4 fis
+        bes bes a fis
+        bes bes a fis
+      }
     }
   >>
   \cueClefUnset

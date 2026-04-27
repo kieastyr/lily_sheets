@@ -11,8 +11,10 @@
             \revert MultiMeasureRest.staff-position
             r2 \cueClefUnset d2\p 
         }
-        \new CueVoice{
-            \cueClef alto \stemUp r2 a^"Viola" bes s
+        \tag #'cue {
+            \new CueVoice{
+                \cueClef alto \stemUp r2 a^"Viola" bes s
+            }
         }
     >>
     ees c 
@@ -40,10 +42,12 @@
             \revert MultiMeasureRest.staff-position
             r2 \cueClefUnset b_\markup{\dynamic "mf" \italic "espr."} 
         }
-        \new CueVoice{
-            \cueClef alto \stemUp b1^"Viola"~
-            b4 bes---. a---. e---.
-            a2 s
+        \tag #'cue {
+            \new CueVoice{
+                \cueClef alto \stemUp b1^"Viola"~
+                b4 bes---. a---. e---.
+                a2 s
+            }
         }
     >> 
     c2\< aes!~
@@ -58,26 +62,28 @@
             g\>~
             \stemDown g8\! \stemNeutral r r4 r2
         }
+        \tag #'cue {
         \new CueVoice {
-            \voiceOne{
-                e''4\rest ees^"Vn1 solo"( d des)
-                c( b bes a)
-                aes2. ( g4)
-                e'\rest aes,( a bes)
-                b( c aes! c)
-                fes2.( ees4)
-                d2\rest aes4( ces
-                ees2. d4)
-                c!( bes aes g)
-                fis( g des fes)
-                aes2.( g4)
-                d'\rest bes( aes g)
-                d'\rest bes( aes g)
-                fis( g bes, des)
-                f!2.( fes4)
-                ees2.( c4)
-                d'\rest e,( ees c)
-                des2.( c4)
+                \voiceOne{
+                    e''4\rest ees^"Viol I solo"( d des)
+                    c( b bes a)
+                    aes2. ( g4)
+                    e'\rest aes,( a bes)
+                    b( c aes! c)
+                    fes2.( ees4)
+                    d2\rest aes4( ces
+                    ees2. d4)
+                    c!( bes aes g)
+                    fis( g des fes)
+                    aes2.( g4)
+                    d'\rest bes( aes g)
+                    d'\rest bes( aes g)
+                    fis( g bes, des)
+                    f!2.( fes4)
+                    ees2.( c4)
+                    d'\rest e,( ees c)
+                    des2.( c4)
+                }
             }
         }
     >>
@@ -90,9 +96,11 @@
         R1*2
         \revert MultiMeasureRest.staff-position
         }
-        \new CueVoice{
-        \stemUp d'2^"Vn1 solo"( ees4 d)
-        f(ees d c)
+        \tag #'cue {
+            \new CueVoice{
+            \stemUp d'2^"Viol I solo"( ees4 d)
+            f(ees d c)
+            }
         }
     >> 
     g,1\pp~
@@ -105,7 +113,7 @@
     aes2( g)
     des'2( aes4-- aes--)
     bes2.( c4)
-    des2( c4 d)
+    des2( c4 des)
     ees2( c)
     ees2( des4 ees)
     e2( c~
@@ -171,12 +179,14 @@
             \revert MultiMeasureRest.staff-position
             r2 \cueClefUnset d\pp^"solo"
         }
-        \new CueVoice{
-            \cueClef alto \stemUp b2^"Viola"( bes~
-            bes4 a---.) aes---. ees---. 
-            aes2( a~
-            a4 aes4---.) g---. d---.
-            g1
+        \tag #'cue {
+            \new CueVoice{
+                \cueClef alto \stemUp b2^"Viola"( bes~
+                bes4 a---.) aes---. ees---. 
+                aes2( a~
+                a4 aes4---.) g---. d---.
+                g1
+            }
         }
     >>
     ees'2\< c 

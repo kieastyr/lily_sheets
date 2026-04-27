@@ -71,9 +71,11 @@
       \revert MultiMeasureRest.staff-position
       r4 \cueClefUnset d^"Viola" ees c
     }
-    \new CueVoice{
-      r4 \cueClef bass \stemUp d,^"Cello" ees c 
-      b s4 s2
+    \tag #'cue {
+      \new CueVoice{
+        r4 \cueClef bass \stemUp d,^"Cello" ees c 
+        b s4 s2
+      }
     }
   >> 
   b'4 r r2
@@ -242,12 +244,14 @@
       \revert MultiMeasureRest.staff-position
       r2 \cueClefUnset d,
     }
-    \new CueVoice{
-      g2\rest \cueClef bass d^"Cello" 
-      ees c 
-      b a 
-      aes! ges 
-      f s
+    \tag #'cue {
+      \new CueVoice{
+        g2\rest \cueClef bass d^"Cello" 
+        ees c 
+        b a 
+        aes! ges 
+        f s
+      }
     }
   >> 
   ees' c 

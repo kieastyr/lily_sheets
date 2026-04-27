@@ -1,0 +1,57 @@
+\new CueVoice {
+  \relative c'' {
+    s1*333
+    \break
+    \clef "tenor"
+    <<
+      {
+        <<
+          {
+            a4^"Cello" g g fis
+            a1
+          }
+          {
+            \once \hide MultiMeasureRest
+            << {R1}
+              {s2. s4^\markup{\tiny \number "1-5"}}
+            >>
+            \once \hide MultiMeasureRest
+            R1
+          }
+        >>
+        \repeat unfold 4 {
+          a4 g g fis
+          a1
+        }
+      }
+      {
+        \set countPercentRepeats = ##t
+        \hide DoublePercentRepeat
+        \override PercentRepeatCounter.staff-padding = #10
+        \repeat percent 5 { s1 s}
+      }
+    >>
+    <<
+      {
+        <<
+          {a4 g g fis}
+          {
+            \once \hide MultiMeasureRest
+            R1^\markup{\teeny \number "1-5"}
+          }
+        >>
+        a4 g g fis
+        a g g fis
+        a g g fis
+        a g g fis
+      }
+      {
+        \set countPercentRepeats = ##t
+        \hide PercentRepeat
+        \override PercentRepeatCounter.Y-offset = #4
+        \repeat percent 5 {s1}
+      }
+    >>
+    R1\fermata
+  }
+}

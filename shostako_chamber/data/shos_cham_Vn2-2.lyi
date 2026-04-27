@@ -116,13 +116,15 @@
       R1*6
       \revert MultiMeasureRest.staff-position
     }
-    \new CueVoice{
-      \cueClef alto \stemUp a2^"Viola" fis4 a 
-      bes2 a4 fis 
-      a2 fis4 a 
-      bes2 a4 fis
-      bes bes a fis
-      bes bes a fis
+    \tag #'cue {
+      \new CueVoice{
+        \cueClef alto \stemUp a2^"Viola" fis4 a 
+        bes2 a4 fis 
+        a2 fis4 a 
+        bes2 a4 fis
+        bes bes a fis
+        bes bes a fis
+      }
     }
   >>
   R1*6
@@ -133,14 +135,16 @@
       R1*7
       \revert MultiMeasureRest.staff-position
     }
-    \new CueVoice{
-      <>^"Viol. I" \stemUp d'2 b4 b
-      c2 b4 b
-      d2 b4 b
-      c2 b4 b
-      r d ees c
-      b c d ees
-      c d ees f
+    \tag #'cue {
+      \new CueVoice{
+        <>^"Viol. I" \stemUp d'2 b4 b
+        c2 b4 b
+        d2 b4 b
+        c2 b4 b
+        r d ees c
+        b c d ees
+        c d ees f
+      }
     }
   >>
   % 20

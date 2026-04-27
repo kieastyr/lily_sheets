@@ -11,11 +11,13 @@
       R1 
       r2 \cueClefUnset a\p
     }
-    \new CueVoice {
-      \cueClef "bass" \stemUp 
-      d,2^"Cello" 
-      ees c 
-      b2. s4 
+    \tag #'cue {
+      \new CueVoice {
+        \cueClef "bass" \stemUp 
+        d,2^"Cello" 
+        ees c 
+        b2. s4 
+      }
     }
   >>
   \revert MultiMeasureRest.staff-position
@@ -55,30 +57,31 @@
       c\>~
       c8 r\! r4 r2
     }
-    \new CueVoice {
-      \voiceOne{
-        s4 ees''^"Vn1 solo"( d des)
-        c( b bes a)
-        aes2. ( g4)
-        e\rest aes( a bes)
-        b( c aes! c)
-        fes2._( ees4)
-        e,2\rest aes4_( ces
-        ees2. d4)
-        c!( bes aes g)
-        fis( g des fes)
-        aes2.( g4)
-        e\rest bes'( aes g)
-        e\rest bes'( aes g)
-        fis( g bes, des)
-        f!2.( fes4)
-        ees2.( c4)
-        e\rest e( ees c)
-        des2.( c4)
+    \tag #'cue {
+      \new CueVoice {
+        \voiceOne{
+          s4 ees''^"Viol I solo"( d des)
+          c( b bes a)
+          aes2. ( g4)
+          e\rest aes( a bes)
+          b( c aes! c)
+          fes2._( ees4)
+          e,2\rest aes4_( ces
+          ees2. d4)
+          c!( bes aes g)
+          fis( g des fes)
+          aes2.( g4)
+          e\rest bes'( aes g)
+          e\rest bes'( aes g)
+          fis( g bes, des)
+          f!2.( fes4)
+          ees2.( c4)
+          e\rest e( ees c)
+          des2.( c4)
+        }
       }
     }
   >>
-
   % 3
   R1*2
   <<
@@ -87,9 +90,11 @@
       R1*2
       \revert MultiMeasureRest.staff-position
     }
-    \new CueVoice{
-      d2^"Vn1 solo"( ees4 d)
-      f(ees d c)
+    \tag #'cue {
+      \new CueVoice{
+        d2^"Viol I solo"( ees4 d)
+        f(ees d c)
+      }
     }
   >> 
   <<
@@ -106,40 +111,41 @@
       \repeat unfold 6 c1~
       c
     }
-    {
-      \new CueVoice{
-        \voiceOne{
-          s1*5
-          e''1^"Vn1(tutti)" 
-          d2( c)
-          bes1~
-          bes2 aes(
-          g1~
-          g2.) aes4(
-          g1~
-          g)
-          e'1
-          d2( c)
-          bes1
-          aes2( bes)
-          b4( c d ees!)
-          d1
-          c
-          b
-          % 5
-          e
-          d2( c)
-          bes1~
-          bes2 aes(
-          g1~
-          g2.) aes4(
-          g1~
-          g2) f4( ees)
+    \tag #'cue {
+      {
+        \new CueVoice{
+          \voiceOne{
+            s1*5
+            e''1^"Viol I(tutti)" 
+            d2( c)
+            bes1~
+            bes2 aes(
+            g1~
+            g2.) aes4(
+            g1~
+            g)
+            e'1
+            d2( c)
+            bes1
+            aes2( bes)
+            b4( c d ees!)
+            d1
+            c
+            b
+            % 5
+            e
+            d2( c)
+            bes1~
+            bes2 aes(
+            g1~
+            g2.) aes4(
+            g1~
+            g2) f4( ees)
+          }
         }
       }
     }
   >>
-
   % 6
   g,1\upbow_\markup{\italic "espr. e cresc."}
   ges 

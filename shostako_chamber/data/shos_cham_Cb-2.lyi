@@ -1,0 +1,383 @@
+% sfff = #(make-dynamic-script "sfff")
+\relative c {
+  \clef bass
+  \key gis \minor
+  <gis b>4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  R1*4
+  q4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  gis4\sfff r r2
+  R1
+  r2 gis4\sfff r
+  R1
+  % 12
+  R1*4
+  <<
+    {
+      \override MultiMeasureRest.staff-position = #-8
+      R1*5
+      \revert MultiMeasureRest.staff-position
+    }
+    \tag #'cue {
+      \new CueVoice{
+        \cueClef treble \stemUp aes''2^"Cello" g4 fis
+        aes2 g4 fis
+        aes2 g4 fis
+        aes2 g4 fis
+        aes2 g4( fis)
+      }
+      \cueClefUnset
+    }
+  >>
+  % 13
+  <gis,, b>4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  R1*2
+  r2 gis'2->\ff
+  a-> fis-> 
+  f4-> r e f
+  g e f e
+  aes g f e 
+  g f e f 
+  g e f e
+  aes g f e 
+  f g aes bes 
+  b!2 c4 cis 
+  ais!2 b4 c
+  b2 c4 cis 
+  ais!2 b4 c
+  % 15
+  cis! ais cis ais 
+  fis g a ais 
+  a ais b cis 
+  d b d b 
+  gis! a b c 
+  b c d ees 
+  d2 b4 c 
+  d2 b4 d 
+  ees2 d4 b
+  d2 b4 c 
+  d2 b4 d 
+  ees2 d4 ees 
+  f g gis a 
+  % 16
+  gis!2 gis 
+  gis gis 
+  gis gis 
+  gis gis 
+  r4 d, ees c 
+  b r r2
+  R1*4
+  \pageBreak
+  r4 d ees c 
+  % 17
+  b d ees c 
+  b c d ees
+  f ges f ees 
+  d ees f ges 
+  f ges f ees 
+  d ees f ges 
+  f ges f ees 
+  r2 <fis! a>4\sfff r 
+  r2 q4\sfff r
+  r2 q4\sfff r
+  r2 q4\sfff r
+  r2 q4\sfff r
+  r2 <g a>4\sfff r
+  r2 <fis a>4\sfff r
+  r2 <g a>4\sfff r
+  r2 <fis a>4\sfff r
+  r2 <g a>4\sfff r
+  r2 <fis a>4\sfff r
+  r2 <g a>4\sfff r
+  r2 q4\sfff r
+  <fis a>4-> q r2
+  <g a>4-> q r2
+  <fis a>4-> q r2
+  <g a>4-> q r2
+  <<
+    {
+      <<
+        {<fis a>4\downbow r <g a>4\downbow r}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1 - 15"}
+        }
+      >>
+      \repeat unfold 14 {<fis a>4\downbow r <g a>4\downbow r}
+    }
+    {
+      \set countPercentRepeats = ##t
+      \override PercentRepeatCounter.staff-padding = #2.5
+      \hide PercentRepeat
+      \repeat percent 15 { s1 }
+    }
+  >>
+  % 20
+  R1*16
+  \pageBreak
+  <<
+    {
+      \override MultiMeasureRest.staff-position = #-8
+      R1*2
+      \revert MultiMeasureRest.staff-position
+    }
+    \tag #'cue {
+      \new CueVoice{
+        \cueClef tenor \stemUp r2 fis'^"Cello"
+        fis fis
+      }
+    }
+  >>
+  \cueClefUnset
+  % 21
+  <<
+    {
+      <<
+        {c,4 r r2}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1-20"}
+        }
+      >>
+      \repeat unfold 19 {c4 r r2}
+    }
+    {
+      \set countPercentRepeats = ##t
+      \override PercentRepeatCounter.staff-padding = #0
+      \hide PercentRepeat
+      \repeat percent 20 {s1}
+    }
+  >>
+  <<
+    {
+      <<
+        {c4 r c r}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1-6"}
+        }
+      >>
+      \repeat unfold 5 {c4 r c r}
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \repeat percent 6 {s1}
+    }
+  >>
+  \repeat unfold 4 {c4 r r2}
+  % 22
+  R1*16
+  <<
+    {
+      \override MultiMeasureRest.staff-position = #-8
+      R1*3
+      \revert MultiMeasureRest.staff-position
+      s4 \cueClefUnset d ees c 
+    }
+    \tag #'cue {
+      \new CueVoice{
+        \cueClef treble \stemUp des''4^"Viol. I" d ees c
+        b \cueClef tenor d,^"Cello" ees c
+        b \cueClef treble d^"Viol. I" ees c
+        b s2.
+      }
+    }
+  >>
+  \cueClefUnset
+  % 23
+  <<
+    {
+      <<
+        {b,4 d ees c }
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1 - 25"}
+        }
+      >>
+      \repeat unfold 24 {b4 d ees c }
+    }
+    {
+      \set countPercentRepeats = ##t
+      \override PercentRepeatCounter.staff-padding = #1
+      \hide PercentRepeat
+      \repeat percent 25 { s1 }
+    }
+  >>
+  % 25
+  cis4 bis b ais 
+  b ais b bis 
+  cis bis cis d 
+  cis c b ais 
+  b ais a gis 
+  gis g ais g 
+  ais'! g ais g 
+  bes! g bes g 
+  R1*4
+  %26
+  R1*4
+  <<
+    {
+      \override MultiMeasureRest.staff-position = #-8
+      R1*4
+      \revert MultiMeasureRest.staff-position
+      r2 \cueClefUnset d\ff
+    }
+    \tag #'cue {
+      \new CueVoice{
+        a'2\rest \stemUp d^"Cello" 
+        ees c 
+        b a 
+        aes! ges 
+        f s
+      }
+    }
+  >> 
+  ees c 
+  b2( aes'-.)
+  aes-. aes-.
+  \tuplet 3/2 {aes4( beses aes)} g2-.
+  \tuplet 3/2 {g4( aes g)} fis2-.
+  b,( g'-.)
+  g-. g-.
+  \tuplet 3/2 {g4( aes g)} fis2-.
+  \tuplet 3/2 {fis4( g fis)} f2~(
+  f4 e) d c 
+  b c b a 
+  % 27
+  <gis b>4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  R1*3
+  % 28
+  q4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  R1*2 
+  <a d>4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  R1*3
+  q4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  R1*2
+  <e g>4\sfff r r2
+  R1*2
+  q4\sfff r r2
+  R1*2
+  gis!4\sfff r r2
+  gis4\sfff r r2
+  R1*3
+  gis4\sfff r r2
+  gis4\sfff r r2
+  R1
+  gis4\sfff r r2
+  R1*2
+  % 30
+  <gis b>4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  R1*3
+  \pageBreak
+  \tag #'cue {
+    \new CueVoice{
+      \cueClef tenor
+      r2 e''4\sfff r 
+      r2 e4\sfff r 
+      r2 e4\sfff r 
+      r2 e4\sfff r 
+      r2 e4\sfff r 
+      R1
+      % 31
+      d4\ff d ees f 
+      ges ges f ees 
+      d d ees f 
+      ges ges f ees
+      d d ees f 
+      ges ges f ees
+      d d ees f 
+      ges ges f ees
+      d d d d 
+      d d d d 
+      d d ees f 
+      fis g aes a 
+      aes! g aes g 
+      a gis a gis 
+      bes a aes g 
+      fis fis f ees 
+      d_\markup{\dynamic "p" \italic "sub."} d d d 
+      d d d d
+      d d ees f 
+      fis g aes a 
+      aes! g aes g
+      aes g aes g
+      aes g aes g
+      fis_\markup{\italic "cresc."} g aes a 
+      aes! g aes g
+      aes g aes g
+      aes g aes g
+      fis g aes a 
+      aes! g aes g
+      aes g aes g
+      aes g aes g
+      aes g aes g
+      fis g g fis
+      fis g g fis
+      fis\< g g fis\!
+    }
+    \cueClefUnset
+  }
+  % 33
+  <<
+    {
+      <<
+        {g4\ff^"pizz." r r2}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1-25"}
+        }
+      >>
+      \repeat unfold 19 {g4 r r2}
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \repeat percent 20 {s1}
+    }
+  >>
+  <<
+    {
+      <<
+        {g4 r g r}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1-5"}
+        }
+      >>
+      \repeat unfold 2 {g4 r g r}
+      g4\< r g r
+      g4 r g r\!
+    }
+    {
+      \set countPercentRepeats = ##t
+      \override PercentRepeatCounter.staff-padding = #4
+      \hide PercentRepeat
+      \repeat percent 5 {s1}
+    }
+  >>
+  R1\fermata
+}
