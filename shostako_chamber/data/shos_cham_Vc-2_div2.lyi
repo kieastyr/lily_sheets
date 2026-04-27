@@ -1,0 +1,16 @@
+% sfff = #(make-dynamic-script "sfff")
+\relative c, {
+  \clef bass
+  s1*125
+  <<
+    {<c g' ees' c'>4^"pizz."^\markup{\halign #2 \center-column{"altri" "div." " "}}  r q r}
+    {
+      \once \hide MultiMeasureRest
+      R1
+    }
+  >>
+  \omit TupletNumber
+  \omit TupletBracket
+  \repeat unfold 28 {q4 r q r}
+  q4 r r2
+}

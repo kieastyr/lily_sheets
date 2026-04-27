@@ -92,7 +92,7 @@ sfff = #(make-dynamic-script "sfff")
       instrument = \markup{\null}
     }
     
-    \new ChoirStaff \with{\RemoveAllEmptyStaves} \with{midiInstrument = #"violin"}<<
+    \new ChoirStaff \with{\RemoveAllEmptyStaves} \with{midiInstrument = #"cello"}<<
       \new Staff \with{\consists Page_turn_engraver}{
         <<
           {
@@ -100,20 +100,33 @@ sfff = #(make-dynamic-script "sfff")
           }
           {
             \compressEmptyMeasures
-            \include "../data/shos_cham_Vn2-2.lyi"
+            \include "../data/shos_cham_Vc-2.lyi"
           }
+
         >>
       }
-      \new Staff {
-        <<
-          {
-            \include "../data/arch-2.lyi"
-          }
-          {
-            \include "../data/shos_cham_Vn2-2_div.lyi"
-          }
-        >>
-      }
+      \new ChoirStaff <<
+        \new Staff {
+          <<
+            {
+              \include "../data/arch-2.lyi"
+            }
+            {
+              \include "../data/shos_cham_Vc-2_div1.lyi"
+            }
+          >>
+        }
+        \new Staff {
+          <<
+            {
+              \include "../data/arch-2.lyi"
+            }
+            {
+              \include "../data/shos_cham_Vc-2_div2.lyi"
+            }
+          >>
+        }
+      >>
     >>
     \layout {
       indent = 0\cm %%0にするといい

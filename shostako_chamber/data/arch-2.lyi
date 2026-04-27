@@ -58,7 +58,6 @@
   s1*10
   \mark \default
   s1*15
-  \break
   <<
     R1^\markup{\bold "G.P."}
     {s2. s8 s8_"attacca"}

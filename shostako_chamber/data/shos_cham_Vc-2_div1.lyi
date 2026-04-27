@@ -1,0 +1,18 @@
+% sfff = #(make-dynamic-script "sfff")
+\relative c, {
+  \clef bass 
+  s1*125
+  \break
+  <<
+    {\tuplet 3/2 {c4_( g' ees')} \tuplet 3/2 {c'4( ees, g,)}}
+    {
+      \once \hide MultiMeasureRest
+      R1
+    }
+  >>
+  \omit TupletNumber
+  \omit TupletBracket
+  \repeat unfold 28 {\tuplet 3/2 {c,4_( g' ees')} \tuplet 3/2 {c'4( ees, g,)}}
+  \tuplet 3/2 {c,4_( g' ees')} c'4 r
+  \break
+}

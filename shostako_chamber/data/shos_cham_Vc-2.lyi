@@ -1,0 +1,413 @@
+% sfff = #(make-dynamic-script "sfff")
+\relative c {
+  \clef bass
+  \key gis \minor
+  <gis b>4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  R1*4
+  q4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  gis4\sfff r r2
+  R1
+  r2 gis4\sfff r
+  R1
+  % 12
+  r2 g''4\sfff r
+  r2 g4\sfff r
+  r2 g4\sfff r
+  r2 g4\sfff r
+  aes2->\sf g4 fis!
+  aes2-> g4 fis!
+  aes2-> g4 fis!
+  aes2-> g4 fis!
+  aes2-> g4-.( fis!-.)
+  % 13
+  <gis,, b>4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  R1*2
+  r2 gis'2->\ff
+  a-> fis-> 
+  f4-> r e f
+  g e f e
+  aes g f e 
+  g f e f 
+  g e f e
+  aes g f e 
+  f g aes bes 
+  b!2 c4 cis 
+  ais!2 b4 c
+  b2 c4 cis 
+  ais!2 b4 c
+  % 15
+  cis! ais cis ais 
+  fis g a ais 
+  a ais b cis 
+  d b d b 
+  gis! a b c 
+  b c d ees 
+  d2 b4 c 
+  d2 b4 d 
+  ees2 d4 b
+  d2 b4 c 
+  d2 b4 d 
+  ees2 d4 ees 
+  f g gis a 
+  % 16
+  gis!2 gis 
+  gis gis 
+  gis gis 
+  gis gis 
+  r4 d, ees c 
+  b r r2
+  e'!4-> r r2 
+  r2 d4-> r 
+  ees4-> r e-> r 
+  f4-> r r2
+  r4 d, ees c 
+  % 17
+  b d ees c 
+  b c d ees
+  f ges f ees 
+  d ees f ges 
+  f ges f ees 
+  d ees f ges 
+  f ges f ees 
+  r2 <fis! a>4\sfff r 
+  r2 q4\sfff r
+  r2 q4\sfff r
+  r2 q4\sfff r
+  r2 q4\sfff r
+  r2 <g a>4\sfff r
+  r2 <fis a>4\sfff r
+  r2 <g a>4\sfff r
+  r2 <fis a>4\sfff r
+  r2 <g a>4\sfff r
+  r2 <fis a>4\sfff r
+  r2 <g a>4\sfff r
+  r2 q4\sfff r
+  <fis a>4-> q r2
+  <g a>4-> q r2
+  <fis a>4-> q r2
+  <g a>4-> q r2
+  <<
+    {
+      <<
+        {<fis a>4\downbow r <g a>4\downbow r}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1 - 15"}
+        }
+      >>
+      \repeat unfold 14 {<fis a>4\downbow r <g a>4\downbow r}
+    }
+    {
+      \set countPercentRepeats = ##t
+      \override PercentRepeatCounter.staff-padding = #2.5
+      \hide PercentRepeat
+      \repeat percent 15 { s1 }
+    }
+  >>
+  % 20
+  r2 \clef tenor d'2-> 
+  ees-> c-> 
+  b1-> 
+  r2 d-> 
+  ees-> c-> 
+  b1-> 
+  <<
+    {
+      <<
+        {r2 g'4\sfff r}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1 - 6"}
+        }
+      >>
+      \repeat unfold 5 {r2 g4\sfff r}
+    }
+    {
+      \set countPercentRepeats = ##t
+      \override PercentRepeatCounter.staff-padding = #3
+      \hide PercentRepeat
+      \repeat percent 6 { s1 }
+    }
+  >>
+  r2 g\ff
+  gis! a 
+  r gis! 
+  a ais 
+  r fis->
+  fis-> fis->
+  % 21
+  <<
+    fis1~\fff^"leggio I"
+    {s2 s_\markup{\italic "molto espr."}}
+  >>
+  fis2 g
+  c, c
+  c1
+  fis~
+  fis2 g
+  c, c
+  c1
+  c
+  g'
+  <<
+    {
+      <<
+        {
+          a4 g g fis
+          a1
+        }
+        {
+          \once \hide MultiMeasureRest
+          << {R1}
+             {s2. s4^\markup{\tiny \number "1-5"}}
+          >>
+          \once \hide MultiMeasureRest
+          R1
+        }
+      >>
+      \repeat unfold 4 {
+        a4 g g fis
+        a1
+      }
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide DoublePercentRepeat
+      \once \override PercentRepeatCounter.Y-offset = #10
+      \repeat percent 5 { s1 s}
+    }
+  >>
+  a4 g g fis
+  a g g fis
+  a g g fis
+  a g g fis
+  des ees des ees 
+  c1
+  fis~ 
+  fis2 g 
+  c, c 
+  c r2
+  % 22
+  <<
+    {
+      <<
+        {fis4\downbow\ff^"unis. arco" r g\downbow r }
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1 - 6"}
+        }
+      >>
+      \repeat unfold 5 {fis4\downbow r g\downbow r }
+    }
+    {
+      \set countPercentRepeats = ##t
+      \once \override PercentRepeatCounter.Y-offset = #6
+      \hide PercentRepeat
+      \repeat percent 6 { s1 }
+    }
+  >>
+  R1*2
+  dis4\downbow r e\downbow r 
+  dis\downbow r e\downbow r 
+  dis\downbow r e\downbow r 
+  dis\downbow r e\downbow r
+  R1
+  des4\downbow r d\downbow r 
+  des\downbow r d\downbow r 
+  des\downbow r d\downbow r
+  \clef bass 
+  R1
+  r4 d-> ees-> c->
+  b-> r r2
+  % 23
+  r4 d, ees c 
+  <<
+    {
+      <<
+        {b4 d ees c }
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1 - 25"}
+        }
+      >>
+      \repeat unfold 24 {b4 d ees c }
+    }
+    {
+      \set countPercentRepeats = ##t
+      \override PercentRepeatCounter.staff-padding = #-3
+      \hide PercentRepeat
+      \repeat percent 25 { s1 }
+    }
+  >>
+  % 25
+  cis4 bis b ais 
+  b ais b bis 
+  cis bis cis d 
+  cis c b ais 
+  b ais a gis 
+  gis g ais g 
+  ais'! g ais g 
+  bes! g bes g 
+  r e' f e 
+  g e f e  
+  r dis e dis 
+  fis dis e dis 
+  b2\fff( g'-.)
+  g-. g-.
+  \tuplet 3/2 {g4( aes? g)} fis2-.
+  \tuplet 3/2 {fis4( g fis)} f2-.
+  r2 d 
+  ees c 
+  b a 
+  aes! ges 
+  f d 
+  ees c 
+  b2( aes'-.)
+  aes-. aes-.
+  \tuplet 3/2 {aes4( beses aes)} g2-.
+  \tuplet 3/2 {g4( aes g)} fis2-.
+  b,( g'-.)
+  g-. g-.
+  \tuplet 3/2 {g4( aes g)} fis2-.
+  \tuplet 3/2 {fis4( g fis)} f2~(
+  f4 e) d c 
+  b c b a 
+  % 27
+  <gis b>4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  R1*3
+  % 28
+  q4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  R1*2 
+  <a d>4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  R1*3
+  q4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  R1*2
+  <e g>4\sfff r r2
+  R1*2
+  q4\sfff r r2
+  R1*2
+  gis!4\sfff r r2
+  gis4\sfff r r2
+  R1*3
+  gis4\sfff r r2
+  gis4\sfff r r2
+  R1
+  gis4\sfff r r2
+  R1*2
+  % 30
+  <gis b>4\sfff r r2
+  R1
+  q4\sfff r r2
+  R1
+  R1*3
+  r2 e''4\sfff r 
+  r2 e4\sfff r 
+  r2 e4\sfff r 
+  r2 e4\sfff r 
+  r2 e4\sfff r 
+  R1
+  % 31
+  \clef tenor
+  d4\ff d ees f 
+  ges ges f ees 
+  d d ees f 
+  ges ges f ees
+  d d ees f 
+  ges ges f ees
+  d d ees f 
+  ges ges f ees
+  d d d d 
+  d d d d 
+  d d ees f 
+  fis g aes a 
+  aes! g aes g 
+  a gis a gis 
+  bes a aes g 
+  fis fis f ees 
+  d_\markup{\dynamic "p" \italic "sub."} d d d 
+  d d d d
+  d d ees f 
+  fis g aes a 
+  aes! g aes g
+  aes g aes g
+  aes g aes g
+  fis_\markup{\italic "cresc."} g aes a 
+  aes! g aes g
+  aes g aes g
+  aes g aes g
+  fis g aes a 
+  aes! g aes g
+  aes g aes g
+  aes g aes g
+  aes g aes g
+  fis g g fis
+  fis g g fis
+  fis\< g g fis
+  % 33
+  fis1\fff~
+  fis2 g
+  c, c
+  c1
+  fis~
+  fis2 g
+  c, c
+  c1
+  c
+  g'
+  <<
+    {
+      <<
+        {
+          a4 g g fis
+          a1
+        }
+        {
+          \once \hide MultiMeasureRest
+          << {R1}
+             {s2. s4^\markup{\tiny \number "1-5"}}
+          >>
+          \once \hide MultiMeasureRest
+          R1
+        }
+      >>
+      \repeat unfold 4 {
+        a4 g g fis
+        a1
+      }
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide DoublePercentRepeat
+      \override PercentRepeatCounter.Y-offset = #10
+      \repeat percent 5 { s1 s}
+    }
+  >>
+  a4 g g fis
+  a g g fis
+  a g g fis
+  a\< g g fis
+  a g g fis\!
+  R1\fermata
+  \clef bass
+}

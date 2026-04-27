@@ -31,7 +31,7 @@ sfff = #(make-dynamic-script "sfff")
       % \override #'(font-name . "HGSSoeiKakupoptai")
       "Bearbeitung: Rudolf Barschai"
     }
-    instrument = \markup{\bold "Violin I"}
+    instrument = \markup{\bold "Violine I"}
   }
 
   \paper {
