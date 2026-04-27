@@ -1,0 +1,58 @@
+% sfff = #(make-dynamic-script "sfff")
+\new CueVoice{
+  \relative c''{
+    \key gis \minor
+    s1*100
+    \break
+    <>^"Viol. I" d2 b4 b
+    c2 b4 b
+    d2 b4 b
+    c2 b4 b
+    r d ees c
+    b c d ees
+    c d ees f
+    \break
+    s1*38
+    \break
+    \ottava #1
+    \set Staff.ottavation = "8va"
+    <>^"Viol. I" a'4 g g fis
+    a g g fis
+    a g g fis
+    a g g fis
+    des ees des ees 
+    c1
+    fis~ 
+    fis2 g 
+    c, c 
+    c c4 ees 
+    \break
+    s1*22
+    \break
+    <>^"Viol. I" d1
+    ees 
+    c 
+    b2( aes'-.)
+    aes-. aes-.
+    \tuplet 3/2 {aes4( beses aes)} g2-.
+    \tuplet 3/2 {g4( aes g)} fis2-.
+    b,( g'-.)
+    g-. g-.
+    \tuplet 3/2 {g4( aes g)} fis2-.
+    \tuplet 3/2 {fis4( g fis)} f2-.
+    R1
+    % 24
+    d1
+    ees 
+    c 
+    bes2( f-.)
+    f-. f-.
+    \tuplet 3/2 {fis4( f fis)} g2-.
+    \tuplet 3/2 {g4( fis g)} aes2-.
+    aes( f-.)
+    d-. d-.
+    \tuplet 3/2 {ees4( d ees)} e2-.
+    \tuplet 3/2 {e4( dis e)} f2-.
+    \break
+  }
+}

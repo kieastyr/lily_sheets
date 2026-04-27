@@ -1,10 +1,23 @@
 % sfpp = #(make-dynamic-script "sfpp")
 \relative c'' {
+  \set Score.currentBarNumber = 2
     \partial 4*2
     r2
-    R1*4
-    r2 g\p
-    aes f
+    R1*2
+    <<
+        {
+            \override MultiMeasureRest.staff-position = #2
+            R1*2
+            \revert MultiMeasureRest.staff-position
+            d2\rest g,\p
+        }
+        \new CueVoice{
+            e2\rest d_"Viol. II"
+            ees c 
+            b2. s4
+        }
+    >>
+    aes'2 f
     e2.( f4)
     f1
     ees?1~
@@ -22,9 +35,9 @@
     d1~
     d2 d4.( ees!8)
     c1~
-    c2 d\mf
-    ees\<_\markup{\italic "espr."} c
-    b2.\f_\markup{\italic "dim."}( c4)
+    c2 d_\markup{\dynamic "mf" \italic "espr."}
+    ees\< c
+    b2.\!_\markup{\dynamic "f" \italic "dim."}( c4)
     \break
     c1^"solo"(
     g4\pp) r r2
@@ -37,7 +50,7 @@
     fes2.( ees4)
     r2 aes,4\upbow( ces
     ees2. d4)
-    c!( bes aes g)
+    c!^"solo"( bes aes g)
     fis( g des fes)
     aes2.( g4)
     r bes( aes g)
@@ -46,10 +59,10 @@
     f!2.( fes4)
     ees2.( c4)
     r c( ees c)
-    des2.( c4)
+    des2.^"solo" ( c4)
     % 3
     b1\<
-    c^"(solo)"
+    c
     d!2\p\>( ees4 d)
     f( ees d c)
     c2\pp( g4-- g--)
@@ -145,5 +158,13 @@
     g\p~\>
     g~
     g8\! r r4 r2
-    R1*2
+    <<
+        {
+            \override MultiMeasureRest.staff-position = #2
+            R1*2 \cueClefUnset
+        }
+        \new CueVoice{
+            \cueClef alto gis1^"Viola"_\markup{\dynamic "pp" \italic "cresc."}~ gis
+        }
+    >>
 }

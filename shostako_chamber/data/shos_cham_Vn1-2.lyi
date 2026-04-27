@@ -108,9 +108,25 @@
   b d
   ees1~\<
   ees4\! r4 r2
-  R1*17
+  R1*11
+  <<
+    {
+      \override MultiMeasureRest.staff-position = #-8
+      R1*6
+      \revert MultiMeasureRest.staff-position
+    }
+    \new CueVoice{
+      \cueClef alto \stemUp a,,2^"Viola" fis4 a 
+      bes2 a4 fis 
+      a2 fis4 a 
+      bes2 a4 fis
+      bes bes a fis
+      bes bes a fis
+    }
+  >>
+  \cueClefUnset
   % 19
-  d,2\ff b4 b
+  d'2\ff b4 b
   c2 b4 b
   d2 b4 b
   c2 b4 b

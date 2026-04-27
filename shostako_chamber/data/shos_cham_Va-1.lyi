@@ -1,0 +1,193 @@
+\relative c' {
+  \clef alto
+  \key c \minor
+  \set Score.currentBarNumber = 2
+  \partial 4*2
+  \override MultiMeasureRest.staff-position = #-8
+  \override Rest.staff-position = #-6
+  <<
+    {
+      r2
+      R1 
+      r2 \cueClefUnset a\p
+    }
+    \new CueVoice {
+      \cueClef "bass" \stemUp 
+      d,2^"Cello" 
+      ees c 
+      b2. s4 
+    }
+  >>
+  \revert MultiMeasureRest.staff-position
+  \revert Rest.staff-position
+  bes'!2 g 
+  fis2.( g4)
+  g2( fis)
+  f!( g)
+  aes( g
+  \break
+  bes) a^"sole"_\markup{\italic "poco espr."}
+  bes g 
+  fis2.( g4)
+  g1_\markup{\italic "dim."}~
+  g1~
+  % 1
+  g2\pp\< gis~
+  gis\> g!~ 
+  g\! fis(
+  g1)_\markup{\dynamic "pp" \italic "sempre"}
+  fis1~
+  fis2\>~ fis8 r\! r4
+  cis'1\mp~
+  cis4 c!---. b---. fis---.
+  b1~
+  b4 bes---. a---. e---.
+  a2 g_\markup{\dynamic "mf" \italic "espr."}~
+  g f!4\<( ees)
+  d1\!_\markup{\dynamic "f" \italic "dim."}
+  c1
+  c2 c 
+  %2
+  <<
+    {
+      c1\pp~
+      \repeat unfold 15 c1~
+      c\>~
+      c8 r\! r4 r2
+    }
+    \new CueVoice {
+      \voiceOne{
+        s4 ees''^"Vn1 solo"( d des)
+        c( b bes a)
+        aes2. ( g4)
+        e\rest aes( a bes)
+        b( c aes! c)
+        fes2._( ees4)
+        e,2\rest aes4_( ces
+        ees2. d4)
+        c!( bes aes g)
+        fis( g des fes)
+        aes2.( g4)
+        e\rest bes'( aes g)
+        e\rest bes'( aes g)
+        fis( g bes, des)
+        f!2.( fes4)
+        ees2.( c4)
+        e\rest e( ees c)
+        des2.( c4)
+      }
+    }
+  >>
+
+  % 3
+  R1*2
+  <<
+    {
+      \override MultiMeasureRest.staff-position = #-6
+      R1*2
+      \revert MultiMeasureRest.staff-position
+    }
+    \new CueVoice{
+      d2^"Vn1 solo"( ees4 d)
+      f(ees d c)
+    }
+  >> 
+  <<
+    {
+      c,1\pp~  
+      \repeat unfold 15 c1~
+      c
+      g'1~
+      g~_\markup{\dynamic "pp" \italic "sempre"}
+      g~
+      g
+      % 5
+      c,1~
+      \repeat unfold 6 c1~
+      c
+    }
+    {
+      \new CueVoice{
+        \voiceOne{
+          s1*5
+          e''1^"Vn1(tutti)" 
+          d2( c)
+          bes1~
+          bes2 aes(
+          g1~
+          g2.) aes4(
+          g1~
+          g)
+          e'1
+          d2( c)
+          bes1
+          aes2( bes)
+          b4( c d ees!)
+          d1
+          c
+          b
+          % 5
+          e
+          d2( c)
+          bes1~
+          bes2 aes(
+          g1~
+          g2.) aes4(
+          g1~
+          g2) f4( ees)
+        }
+      }
+    }
+  >>
+
+  % 6
+  g,1\upbow_\markup{\italic "espr. e cresc."}
+  ges 
+  f 
+  fes2\mf\>( ees~
+  ees4 d2.)
+  c1\p\>
+  c2 c 
+  % 7
+  c\pp c4--( c--)
+  a'1 ~
+  a~
+  a2. g4\<(
+  gis a2.\>~
+  a2\!) a( 
+  b) cis4_\markup{\italic "cresc."}( b 
+  a b) a2~( 
+  a2._\markup{\italic "dim."} c!4) \breathe
+  c1\pp~ 
+  c2 b~
+  b a~
+  a gis~
+  gis a~
+  a1~
+  a 
+  r4 a2\<( gis4~
+  gis2\> g2~)
+  g1\pp~
+  g~
+  g2\< gis4( a)
+  gis2\>( g~
+  g\!) fis_\markup{\dynamic "pp" \italic "sempre"}(
+  g1)
+  fis~
+  fis2\>~ fis8 r\! r4
+  cis'1\downbow\mp~(
+  cis4 c!---.) b---. fis---.
+  b2( bes~
+  bes4 a---.) aes---. ees---. 
+  aes2_\markup{\italic "dim."}( a~
+  a4 aes4---.) g---. d---.
+  g1\pp 
+  ges2\< f 
+  fes\mf( ees_\markup{\italic "dim."}~
+  ees d)
+  c1\p\>~
+  c~
+  c8 r\! r4 r2
+  gis'1_\markup{\dynamic "pp" \italic "cresc."}~
+  gis 
+}

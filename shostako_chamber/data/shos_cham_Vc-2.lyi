@@ -104,7 +104,9 @@
           R1^\markup{\tiny \number "1 - 15"}
         }
       >>
-      \repeat unfold 14 {<fis a>4\downbow r <g a>4\downbow r}
+      \repeat unfold 7 {<fis a>4\downbow r <g a>4\downbow r}
+      \pageBreak
+      \repeat unfold 7 {<fis a>4\downbow r <g a>4\downbow r}
     }
     {
       \set countPercentRepeats = ##t
@@ -216,6 +218,7 @@
     }
   >>
   R1*2
+  \pageBreak
   dis4\downbow r e\downbow r 
   dis\downbow r e\downbow r 
   dis\downbow r e\downbow r 
@@ -321,6 +324,7 @@
   q4\sfff r r2
   R1
   R1*3
+  \pageBreak
   r2 e''4\sfff r 
   r2 e4\sfff r 
   r2 e4\sfff r 
@@ -399,15 +403,31 @@
     {
       \set countPercentRepeats = ##t
       \hide DoublePercentRepeat
-      \override PercentRepeatCounter.Y-offset = #10
+      \override PercentRepeatCounter.staff-padding = #10
       \repeat percent 5 { s1 s}
     }
   >>
-  a4 g g fis
-  a g g fis
-  a g g fis
-  a\< g g fis
-  a g g fis\!
+  <<
+    {
+      <<
+        {a4 g g fis}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1-5"}
+        }
+      >>
+      a4 g g fis
+      a g g fis
+      a\< g g fis
+      a g g fis\!
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide DoublePercentRepeat
+      \override PercentRepeatCounter.Y-offset = #4
+      \repeat percent 5 {s1}
+    }
+  >>
   R1\fermata
   \clef bass
 }

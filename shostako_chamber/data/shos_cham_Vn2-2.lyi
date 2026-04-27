@@ -108,10 +108,43 @@
   ees c 
   b1\<~
   b4\! r r2
-  R1*17
-  R1*13
+  R1*11
+  \pageBreak
+  <<
+    {
+      \override MultiMeasureRest.staff-position = #-8
+      R1*6
+      \revert MultiMeasureRest.staff-position
+    }
+    \new CueVoice{
+      \cueClef alto \stemUp a2^"Viola" fis4 a 
+      bes2 a4 fis 
+      a2 fis4 a 
+      bes2 a4 fis
+      bes bes a fis
+      bes bes a fis
+    }
+  >>
+  R1*6
+  \cueClefUnset
+  <<
+    {
+      \override MultiMeasureRest.staff-position = #-8
+      R1*7
+      \revert MultiMeasureRest.staff-position
+    }
+    \new CueVoice{
+      <>^"Viol. I" \stemUp d'2 b4 b
+      c2 b4 b
+      d2 b4 b
+      c2 b4 b
+      r d ees c
+      b c d ees
+      c d ees f
+    }
+  >>
   % 20
-  fis!4\ff g fis g 
+  fis,!4\ff g fis g 
   fis g fis g
   aes g aes g 
   fis g fis g
@@ -198,7 +231,7 @@
     {
       \set countPercentRepeats = ##t
       \hide PercentRepeat
-      \override PercentRepeatCounter.staff-padding = #2
+      \override PercentRepeatCounter.Y-offset = #5
       \repeat percent 6 { s1 }
     }
   >>

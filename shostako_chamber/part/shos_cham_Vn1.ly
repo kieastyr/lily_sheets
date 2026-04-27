@@ -103,6 +103,16 @@ sfff = #(make-dynamic-script "sfff")
     }
     
     \new ChoirStaff \with{\RemoveAllEmptyStaves} \with{midiInstrument = #"violin"}<<
+      \new Staff {
+        <<
+          {
+            \include "../data/arch-2.lyi"
+          }
+          {
+            \include "../data/shos_cham_va-2_cue.lyi"
+          }
+        >>
+      }
       \new Staff \with{\consists Page_turn_engraver}{
         <<
           {
@@ -128,5 +138,6 @@ sfff = #(make-dynamic-script "sfff")
     \layout {
       indent = 0\cm %%0にするといい
     } 
+    \midi{}
   }
 }

@@ -31,7 +31,7 @@ sfff = #(make-dynamic-script "sfff")
       % \override #'(font-name . "HGSSoeiKakupoptai")
       "Bearbeitung: Rudolf Barschai"
     }
-    instrument = \markup{\bold "Violoncello"}
+    instrument = \markup{\bold "Viola"}
   }
 
   \paper {
@@ -51,8 +51,8 @@ sfff = #(make-dynamic-script "sfff")
     score-markup-spacing.basic-distance = #20
 
     print-page-number = ##t
-    print-first-page-number = ##f
-    first-page-number = 1
+    print-first-page-number = ##t
+    first-page-number = 2
   }
 
   \score {
@@ -64,18 +64,7 @@ sfff = #(make-dynamic-script "sfff")
       poet = \markup{\null}
       instrument = \markup{\null}
     }
-    \new ChoirStaff \with{\RemoveAllEmptyStaves} \with{midiInstrument = #"cello"}<<
-      \new Staff{
-        <<
-          {
-            \include "../data/arch-1.lyi"
-          }
-          {
-            \compressEmptyMeasures
-            \include "../data/shos_cham_Vn1-1_cue.lyi"
-          }
-        >>
-      }
+    \new ChoirStaff \with{\RemoveAllEmptyStaves} \with{midiInstrument = #"viola"}<<
       \new Staff \with{\consists Page_turn_engraver}{
         <<
           {
@@ -83,15 +72,15 @@ sfff = #(make-dynamic-script "sfff")
           }
           {
             \compressEmptyMeasures
-            \include "../data/shos_cham_Vc-1.lyi"
+            \include "../data/shos_cham_Va-1.lyi"
+
           }
         >>
       }
-    >> 
+    >>
     \layout {
       indent = 0\cm %%0にするといい 
     }
-    \midi{}
   }
 
   \score {
@@ -103,15 +92,15 @@ sfff = #(make-dynamic-script "sfff")
       poet = \markup{\null}
       instrument = \markup{\null}
     }
-    \new ChoirStaff \with{\RemoveAllEmptyStaves} \with{midiInstrument = #"cello"}<<
+    \new ChoirStaff \with{\RemoveAllEmptyStaves} \with{midiInstrument = #"viola"}<<
       \new Staff {
         <<
           {
             \include "../data/arch-2.lyi"
           }
           {
-            \include "../data/shos_cham_Vn1-2_cueForCello.lyi"
-          }
+            \include "../data/shos_cham_Vn1-2_cue.lyi"
+          }     
         >>
       }
       \new Staff \with{\consists Page_turn_engraver}{
@@ -121,7 +110,8 @@ sfff = #(make-dynamic-script "sfff")
           }
           {
             \compressEmptyMeasures
-            \include "../data/shos_cham_Vc-2.lyi"
+            \include "../data/shos_cham_Va-2.lyi"
+            
           }
         >>
       }
@@ -131,17 +121,7 @@ sfff = #(make-dynamic-script "sfff")
             \include "../data/arch-2.lyi"
           }
           {
-            \include "../data/shos_cham_Vc-2_div1.lyi"
-          }
-        >>
-      }
-      \new Staff {
-        <<
-          {
-            \include "../data/arch-2.lyi"
-          }
-          {
-            \include "../data/shos_cham_Vc-2_div2.lyi"
+            \include "../data/shos_cham_Va-2_div.lyi"
           }
         >>
       }
@@ -149,5 +129,6 @@ sfff = #(make-dynamic-script "sfff")
     \layout {
       indent = 0\cm %%0にするといい
     } 
+    \midi{}
   }
 }

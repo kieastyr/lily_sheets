@@ -1,9 +1,20 @@
 \relative c' {
     \key c \minor
+    \set Score.currentBarNumber = 2
     \partial 4*2
     r2
-    R1*2
-    r2 d2\p 
+    R1
+    <<
+        {
+            \override MultiMeasureRest.staff-position = #-8
+            R1
+            \revert MultiMeasureRest.staff-position
+            r2 \cueClefUnset d2\p 
+        }
+        \new CueVoice{
+            \cueClef alto \stemUp r2 a^"Viola" bes s
+        }
+    >>
     ees c 
     b2.( c4)
     c1~
@@ -21,35 +32,70 @@
     c4.\mp d8( b4.) c8(
     a4.) ais8( b4.) c8(
     cis) r r4 r2
-    R1*3
-    r2 b\mf 
-    c_\markup{\italic "espr."}\< aes!~
+    R1
+    <<
+        {
+            \override MultiMeasureRest.staff-position = #-8
+            R1*2
+            \revert MultiMeasureRest.staff-position
+            r2 \cueClefUnset b_\markup{\dynamic "mf" \italic "espr."} 
+        }
+        \new CueVoice{
+            \cueClef alto \stemUp b1^"Viola"~
+            b4 bes---. a---. e---.
+            a2 s
+        }
+    >> 
+    c2\< aes!~
     aes\f g_\markup{\italic "dim."}
     g1~
     g2 g 
     % 2
     <<
         {
-            <<
-                {g1\pp~} 
-                {
-                    \once \hide MultiMeasureRest 
-                    R1^\markup{\tiny \number "1 - 17"}
-                }
-            >>
+            g1\pp~
             \repeat unfold 15 g1~
             g\>~
+            \stemDown g8\! \stemNeutral r r4 r2
         }
-        {
-            \set countPercentRepeats = ##t
-            \hide PercentRepeat
-            \repeat percent 17 { s1 }
+        \new CueVoice {
+            \voiceOne{
+                e''4\rest ees^"Vn1 solo"( d des)
+                c( b bes a)
+                aes2. ( g4)
+                e'\rest aes,( a bes)
+                b( c aes! c)
+                fes2.( ees4)
+                d2\rest aes4( ces
+                ees2. d4)
+                c!( bes aes g)
+                fis( g des fes)
+                aes2.( g4)
+                d'\rest bes( aes g)
+                d'\rest bes( aes g)
+                fis( g bes, des)
+                f!2.( fes4)
+                ees2.( c4)
+                d'\rest e,( ees c)
+                des2.( c4)
+            }
         }
     >>
-    g8\! r r4 r2
     % 3
-    R1*4
-    g1\pp~
+    R1*2
+    \pageBreak
+    <<
+        {
+        \override MultiMeasureRest.staff-position = #-8
+        R1*2
+        \revert MultiMeasureRest.staff-position
+        }
+        \new CueVoice{
+        \stemUp d'2^"Vn1 solo"( ees4 d)
+        f(ees d c)
+        }
+    >> 
+    g,1\pp~
     g 
     c2_\markup{\italic "poco espr."}( g4-- g--)
     aes2( g)
@@ -117,12 +163,23 @@
     c4.\mf d8( b4.) c8(
     a4.) ais8( b4.) c8(
     cis) r r4 r2
-    R1*3
-    % 10
-    R1*2
-    \break
-    r2 d\pp^"solo"
-    ees\< c 
+    R1
+    <<
+        {
+            \override MultiMeasureRest.staff-position = #-8
+            R1*4
+            \revert MultiMeasureRest.staff-position
+            r2 \cueClefUnset d\pp^"solo"
+        }
+        \new CueVoice{
+            \cueClef alto \stemUp b2^"Viola"( bes~
+            bes4 a---.) aes---. ees---. 
+            aes2( a~
+            a4 aes4---.) g---. d---.
+            g1
+        }
+    >>
+    ees'2\< c 
     << {b1\mf~(} {s2 s_\markup{\italic "dim."}}>>
     b2. c4)
     c2\p\>( g4-- g--)

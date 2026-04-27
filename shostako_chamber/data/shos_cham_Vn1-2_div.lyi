@@ -8,7 +8,7 @@
     {
       \set countPercentRepeats = ##t
       \hide PercentRepeat
-      \override PercentRepeatCounter.staff-padding = #-5
+      \override PercentRepeatCounter.Y-offset = #6
       \repeat percent 10 { s1 }
     }
   >>
@@ -29,7 +29,7 @@
     {
       \set countPercentRepeats = ##t
       \hide PercentRepeat
-      \override PercentRepeatCounter.staff-padding = #-5
+      \override PercentRepeatCounter.Y-offset = #4
       \repeat percent 15 { s1 }
     }
   >>

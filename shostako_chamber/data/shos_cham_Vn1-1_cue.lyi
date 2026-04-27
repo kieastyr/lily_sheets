@@ -1,0 +1,60 @@
+% sfpp = #(make-dynamic-script "sfpp")
+\new CueVoice{
+    \relative c' {
+        \partial 4*2
+        s2
+        s1*27
+        % 2
+        \break 
+        r4 ees'^"Vn1 solo"( d des)
+        c( b bes a)
+        aes2. ( g4)
+        r aes( a bes)
+        b( c aes! c)
+        fes2.( ees4)
+        r2 aes,4( ces
+        ees2. d4)
+        c!( bes aes g)
+        fis( g des fes)
+        aes2.( g4)
+        r bes( aes g)
+        r bes( aes g)
+        fis( g bes, des)
+        f!2.( fes4)
+        ees2.( c4)
+        r c( ees c)
+        des2.( c4)
+        \break
+        % 3
+        s1*9
+        \break
+        % 4
+        e'1^"Vn1(tutti)"
+        d2( c)
+        bes1~
+        bes2 aes(
+        g1~
+        g2.) aes4(
+        g1~
+        g)
+        e'1
+        d2( c)
+        bes1
+        aes2( bes)
+        b4( c d ees!)
+        d1
+        c
+        b
+        % 5
+        e
+        d2( c)
+        bes1~
+        bes2 aes(
+        g1~
+        g2.) aes4(
+        g1~
+        g2) f4( ees)
+        \break 
+    }
+
+}

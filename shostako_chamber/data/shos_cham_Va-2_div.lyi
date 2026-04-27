@@ -1,0 +1,26 @@
+% sfff = #(make-dynamic-script "sfff")
+\relative c {
+  \clef alto
+  s1*125
+  <<
+    {
+      <<
+        {<ees c' g' ees'>4^"pizz."^\markup{\halign #2 \center-column{"altri" "div." " "}}  r q r}
+        {
+          \once \hide MultiMeasureRest
+          R1^\markup{\tiny \number "1 - 29"}
+        }
+      >>
+      \omit TupletNumber
+      \omit TupletBracket
+      \repeat unfold 28 {q4 r q r}
+    }
+    {
+      \set countPercentRepeats = ##t
+      \hide PercentRepeat
+      \override PercentRepeatCounter.Y-offset = #6
+      \repeat percent 29 { s1 }
+    }
+  >>
+  q4 r r2
+}

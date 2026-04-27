@@ -1,0 +1,29 @@
+\new CueVoice {
+  \relative c''' {
+    s1*343
+    \break
+    \clef "treble"
+    <<
+      {
+        <<
+          {a4^"Viola" g g fis}
+          {
+            \once \hide MultiMeasureRest
+            R1^\markup{\teeny \number "1-5"}
+          }
+        >>
+        a4 g g fis
+        a g g fis
+        a g g fis
+        a g g fis
+      }
+      {
+        \set countPercentRepeats = ##t
+        \hide PercentRepeat
+        \override PercentRepeatCounter.Y-offset = #4
+        \repeat percent 5 {s1}
+      }
+    >>
+    R1\fermata
+  }
+}

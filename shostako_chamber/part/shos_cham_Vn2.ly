@@ -5,7 +5,7 @@ sfpp = #(make-dynamic-script "sfpp")
 sfff = #(make-dynamic-script "sfff")
 %%ここまで、定義
 
-#(set-global-staff-size 21)
+#(set-global-staff-size 20.5)
 #(set-default-paper-size "a4" )
 
 \book{
@@ -36,7 +36,7 @@ sfff = #(make-dynamic-script "sfff")
 
   \paper {
     print-all-headers = ##t
-    page-breaking = #ly:page-turn-breaking
+    page-breaking = #ly:optimal-breaking
 
     #(set-paper-size "a4")
     top-margin = 2\cm
@@ -51,8 +51,8 @@ sfff = #(make-dynamic-script "sfff")
     score-markup-spacing.basic-distance = #20
 
     print-page-number = ##t
-    print-first-page-number = ##t
-    first-page-number = 2
+    print-first-page-number = ##f
+    first-page-number = 1
   }
 
   \score {
@@ -76,6 +76,7 @@ sfff = #(make-dynamic-script "sfff")
           }
         >>
       }
+
       \new Staff {
         <<
           {
@@ -90,6 +91,7 @@ sfff = #(make-dynamic-script "sfff")
     \layout {
       indent = 0\cm %%0にするといい 
     }
+    \midi{}
   }
 
   \score {
@@ -101,8 +103,17 @@ sfff = #(make-dynamic-script "sfff")
       poet = \markup{\null}
       instrument = \markup{\null}
     }
-    
     \new ChoirStaff \with{\RemoveAllEmptyStaves} \with{midiInstrument = #"violin"}<<
+      \new Staff {
+        <<
+          {
+            \include "../data/arch-2.lyi"
+          }
+          {
+            \include "../data/shos_cham_va-2_cue.lyi"
+          }
+        >>
+      }
       \new Staff \with{\consists Page_turn_engraver}{
         <<
           {

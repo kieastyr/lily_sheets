@@ -1,6 +1,7 @@
 \relative c {
   \clef bass
   \key c \minor
+  \set Score.currentBarNumber = 2
   \partial 4*2
   d2\p
   ees c
@@ -62,7 +63,9 @@
           R1^\markup{\tiny \number "1 - 17"}
         }
       >>
-      \repeat unfold 15 c1~
+      \repeat unfold 12 c1~
+      \pageBreak
+      \repeat unfold 3 c1~
       c
     }
     {
