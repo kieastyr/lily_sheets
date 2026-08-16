@@ -99,8 +99,17 @@
   b r a-> r 
   ais-> r b-> r 
   % 17
-  b,-> r r2
-  r d'\ff 
+  b,-> r 
+
+  <<
+    {r2 r}
+    \tag #'cue {
+      \new CueVoice{
+        \stemUp d''2^"Viol. I" ees
+      }
+    }
+  >>
+  d,\ff 
   ees c 
   b d 
   ees c 

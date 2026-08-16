@@ -91,7 +91,6 @@ sfff = #(make-dynamic-script "sfff")
     \layout {
       indent = 0\cm %%0にするといい 
     }
-    \midi{}
   }
 
   \score {

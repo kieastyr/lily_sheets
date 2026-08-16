@@ -170,6 +170,8 @@
   \omit TupletBracket
   \repeat unfold 28 {\tuplet 3/2 {ees,4( c' g')} \tuplet 3/2 {ees'4( g, c,)}}
   \tuplet 3/2 {ees,4_( c' g')} ees'4 r
+  \undo \omit TupletNumber
+  \undo \omit TupletBracket
   % 22
   <<
     {
